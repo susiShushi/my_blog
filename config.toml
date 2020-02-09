@@ -1,5 +1,5 @@
 baseurl = "https://susishushi.github.io/my_blog/"
-relativeurls = true
+relativeurls = false
 languageCode = "ja-jp"
 publishDir = "docs"
 hasCJKLanguage = true
@@ -16,8 +16,6 @@ googleAnalytics = "UA-131372772-3"
 # enableRobotsTXT = true
 
 [params]
-  home = "/my_blog"
-  Home = "/my_blog"
   background = "black"
   # backgroundImage = "/me/background.jpg"
   linkColor = "seagreen"
