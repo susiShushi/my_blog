@@ -9,7 +9,7 @@ theme = "hugo-theme-dream"
 
 # copyright = ""
 
-# googleAnalytics = ""
+googleAnalytics = "UA-131372772-3"
 
 # disqusShortname = ""
 
@@ -31,7 +31,7 @@ theme = "hugo-theme-dream"
   # codepen = ""
   # stackoverflow = ""
 
-  siteStartYear = 2016
+  siteStartYear = 2020
 
   # favicon = "/favicon.ico"
 
