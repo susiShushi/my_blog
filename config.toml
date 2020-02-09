@@ -1,8 +1,8 @@
-baseurl = "https://example.com"
+baseurl = "https:/susishushi.github.io/my_blog/"
 languageCode = "ja-jp"
 publishDir = "public"
 hasCJKLanguage = true
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["_files$", "_cache$"]
 title = "NSブログ"
 theme = "hugo-theme-dream"
 
