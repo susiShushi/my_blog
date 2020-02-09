@@ -39,3 +39,5 @@ googleAnalytics = "UA-131372772-3"
   darkLinkColor = "darkseagreen"
   darkNav = true 
   dark404Button = true
+  
+  Home = "https://susishushi.github.io/my_blog/"
