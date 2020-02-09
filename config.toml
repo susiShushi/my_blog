@@ -1,5 +1,4 @@
-baseurl = "/"
-relativeurls = true
+baseurl = "https://susishushi.github.io/my_blog/"
 languageCode = "ja-jp"
 publishDir = "docs"
 hasCJKLanguage = true
