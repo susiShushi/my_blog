@@ -6,7 +6,7 @@ hasCJKLanguage = true
 ignoreFiles = ["_files$", "_cache$"]
 title = "NSブログ"
 theme = "hugo-theme-dream"
-
+url = "https://susishushi.github.io/my_blog/"
 # copyright = ""
 
 googleAnalytics = "UA-131372772-3"
