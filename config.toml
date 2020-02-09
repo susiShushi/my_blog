@@ -1,6 +1,6 @@
 baseurl = "https:/susishushi.github.io/my_blog/"
 languageCode = "ja-jp"
-publishDir = "public"
+publishDir = "docs"
 hasCJKLanguage = true
 ignoreFiles = ["_files$", "_cache$"]
 title = "NSブログ"
