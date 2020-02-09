@@ -3,67 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/my_blog/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/</loc>
+    <loc>/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/post/start/</loc>
+    <loc>/post/start/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/%E6%97%A5%E8%A8%98/</loc>
+    <loc>/tags/%E6%97%A5%E8%A8%98/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/categories/%E6%97%A5%E8%A8%98/</loc>
+    <loc>/categories/%E6%97%A5%E8%A8%98/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/%E9%9B%91%E8%AB%87/</loc>
+    <loc>/tags/%E9%9B%91%E8%AB%87/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/post/2015-07-23-r-rmarkdown/</loc>
+    <loc>/post/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/plot/</loc>
+    <loc>/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/categories/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/r-markdown/</loc>
+    <loc>/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/my_blog/tags/regression/</loc>
+    <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
