@@ -1,9 +1,10 @@
 ---
-title: "Start"
+title: "スタート"
 date: 2020-02-09T20:12:57+09:00
 draft: true
 categories: ["日記"]
 tags: ["雑談", "日記"]
+summary: "新しいblogはじめました"
 ---
 <br>
 若者もすなる日記といふものを<br>

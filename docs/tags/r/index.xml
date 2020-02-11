@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NSブログ</title>
-    <link>/</link>
-    <description>Recent content on NSブログ</description>
+    <title>R on NSブログ</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on NSブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 09 Feb 2020 20:12:57 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>スタート</title>
-      <link>/post/start/</link>
-      <pubDate>Sun, 09 Feb 2020 20:12:57 +0900</pubDate>
-      
-      <guid>/post/start/</guid>
-      <description>新しいblogはじめました</description>
-    </item>
     
     <item>
       <title>[R]interactions packageのガバガバ紹介</title>
