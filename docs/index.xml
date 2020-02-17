@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>心理学系研究者のブログ</title>
+    <title>とある心理学系研究者のブログ</title>
     <link>/</link>
-    <description>Recent content on 心理学系研究者のブログ</description>
+    <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 09 Feb 2020 20:12:57 +0900</lastBuildDate>
@@ -27,6 +27,15 @@
       
       <guid>/post/interaction/</guid>
       <description>連続変数を含む回帰モデルの交互作用Plot</description>
+    </item>
+    
+    <item>
+      <title>交差再帰定量化解析（Cross Recurrence Quantification Analysis）について</title>
+      <link>/post/crqa1/</link>
+      <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+      
+      <guid>/post/crqa1/</guid>
+      <description>RQA (再帰定量化解析) で時系列データ解析！</description>
     </item>
     
   </channel>

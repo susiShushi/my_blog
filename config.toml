@@ -4,7 +4,7 @@ languageCode = "ja-jp"
 publishDir = "docs"
 hasCJKLanguage = true
 ignoreFiles = ["_files$", "_cache$"]
-title = "心理学系研究者のブログ"
+title = "とある心理学系研究者のブログ"
 theme = "hugo-theme-dream"
 # copyright = ""
 
@@ -19,10 +19,10 @@ googleAnalytics = "UA-131372772-3"
   # backgroundImage = "/me/background.jpg"
   linkColor = "seagreen"
 
-  author = "しゆし"
+  author = "なんばいきん"
   # description = ""
   avatar = "/img/avatar_bai.png"
-  motto = "おれのモットーはとくにない"
+  motto = "表情の研究してます。左上のアイコンで夜モードにできるけどそしたらコードが全部見えなくなる。"
   
   email = "@gmail.com"
   # github = ""
