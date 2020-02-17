@@ -4,7 +4,7 @@ languageCode = "ja-jp"
 publishDir = "docs"
 hasCJKLanguage = true
 ignoreFiles = ["_files$", "_cache$"]
-title = "NSブログ"
+title = "心理学系研究者のブログ"
 theme = "hugo-theme-dream"
 # copyright = ""
 

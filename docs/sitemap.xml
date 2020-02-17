@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-02-09T20:12:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
@@ -24,6 +19,11 @@
   
   <url>
     <loc>/post/start/</loc>
+    <lastmod>2020-02-09T20:12:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
     <lastmod>2020-02-09T20:12:57+09:00</lastmod>
   </url>
   
