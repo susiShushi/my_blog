@@ -1,5 +1,5 @@
 ---
-title: "交差再帰定量化解析（Cross Recurrence Quantification Analysis）について"
+title: "[R]交差再帰定量化解析（Cross Recurrence Quantification Analysis）について"
 
 date: 2018-12-08T00:00:00+09:00
 draft: true

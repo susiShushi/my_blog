@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on とある心理学系研究者のブログ</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on とある心理学系研究者のブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 20 Feb 2020 20:30:55 +0900</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>自己紹介</title>
+      <link>/about/desc/</link>
+      <pubDate>Thu, 20 Feb 2020 20:30:55 +0900</pubDate>
+      
+      <guid>/about/desc/</guid>
+      <description>某大学で助教をやっています。私の業績とかはGoogle HPの方を見てください。このブログでは読書感想文とか落書きとか、自分が『面白い！』と思</description>
+    </item>
+    
+  </channel>
+</rss>
