@@ -2,8 +2,9 @@
 title: "スタート"
 date: 2020-02-09T20:12:57+09:00
 draft: true
-cover: "/img/image_pikon.png"
+
 categories: ["日記"]
+cover: "/img/image_pikon.png"
 tags: ["雑談", "日記"]
 summary: "新しいblogはじめました"
 ---

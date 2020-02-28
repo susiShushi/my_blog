@@ -3,7 +3,6 @@ title: 自己紹介
 date: 2020-02-20T20:30:55+09:00
 lastmod: 2020-02-20T20:30:55+09:00
 draft: true
-cover: "/img/avatar_bai.png"
 ---
 
 某大学で助教をやっています。<br>
