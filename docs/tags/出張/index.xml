@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>出張 on とある心理学系研究者のブログ</title>
+    <link>/tags/%E5%87%BA%E5%BC%B5/</link>
+    <description>Recent content in 出張 on とある心理学系研究者のブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 29 Feb 2020 20:59:19 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/%E5%87%BA%E5%BC%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[お役立ち]Airbnbを利用しないか？</title>
+      <link>/post/airbnb/</link>
+      <pubDate>Sat, 29 Feb 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/airbnb/</guid>
+      <description>国際学会・短期留学にはAirbnbがオヌヌメ</description>
+    </item>
+    
+  </channel>
+</rss>
