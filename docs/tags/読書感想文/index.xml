@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>日記 on とある心理学系研究者のブログ</title>
-    <link>/tags/%E6%97%A5%E8%A8%98/</link>
-    <description>Recent content in 日記 on とある心理学系研究者のブログ</description>
+    <title>読書感想文 on とある心理学系研究者のブログ</title>
+    <link>/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/</link>
+    <description>Recent content in 読書感想文 on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 08 Mar 2020 23:25:21 +0900</lastBuildDate>
     
-	<atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>/post/rt/</guid>
       <description>「心理学,認知・行動科学のための反応時間ハンドブック」を読みました</description>
-    </item>
-    
-    <item>
-      <title>スタート</title>
-      <link>/post/start/</link>
-      <pubDate>Sun, 09 Feb 2020 20:12:57 +0900</pubDate>
-      
-      <guid>/post/start/</guid>
-      <description>新しいblogはじめました</description>
     </item>
     
   </channel>
