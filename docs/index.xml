@@ -6,7 +6,7 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 11 Mar 2020 23:25:21 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック</title>
       <link>/post/rt/</link>
-      <pubDate>Wed, 11 Mar 2020 23:25:21 +0900</pubDate>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/rt/</guid>
       <description>「心理学, 認知・行動科学のための反応時間ハンドブック」を読みました</description>
@@ -45,15 +45,6 @@
       
       <guid>/post/start/</guid>
       <description>新しいblogはじめました</description>
-    </item>
-    
-    <item>
-      <title>[R]interactions packageのガバガバ紹介</title>
-      <link>/post/interaction/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/interaction/</guid>
-      <description>連続変数を含む回帰モデルの交互作用Plot</description>
     </item>
     
     <item>

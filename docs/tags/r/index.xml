@@ -6,19 +6,10 @@
     <description>Recent content in R on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Dec 2018 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>[R]interactions packageのガバガバ紹介</title>
-      <link>/post/interaction/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/interaction/</guid>
-      <description>連続変数を含む回帰モデルの交互作用Plot</description>
-    </item>
     
     <item>
       <title>[R]交差再帰定量化解析について</title>
