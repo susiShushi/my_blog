@@ -33,12 +33,12 @@
   </url>
   
   <url>
-    <loc>/categories/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/</loc>
+    <loc>/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/</loc>
     <lastmod>2020-03-11T23:25:21+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/</loc>
+    <loc>/categories/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87/</loc>
     <lastmod>2020-03-11T23:25:21+09:00</lastmod>
   </url>
   
@@ -48,12 +48,12 @@
   </url>
   
   <url>
-    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
     <lastmod>2020-02-29T20:59:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
     <lastmod>2020-02-29T20:59:19+09:00</lastmod>
   </url>
   
@@ -110,11 +110,6 @@
   <url>
     <loc>/post/crqa1/</loc>
     <lastmod>2018-12-08T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/rt/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
