@@ -1,15 +1,14 @@
 ---
 title: "[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック"
-date: 2020-03-11T23:25:21+09:00
-draft: true
+date: "2020-03-11T00:00:00"
+draft: True
+
 categories: ["読書感想文"]
 cover: "/img/image_book.png"
 tags: ["日記", "読書感想文"]
 summary: "「心理学, 認知・行動科学のための反応時間ハンドブック」を読みました"
 ---
- 
-## 心理学, 認知・行動科学のための反応時間ハンドブック
-  <!-- START MoshimoAffiliateEasyLink -->
+<!-- START MoshimoAffiliateEasyLink -->
 <script type="text/javascript">
 (function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
 b[a]=b[a]||function(){arguments.currentScript=c.currentScript
