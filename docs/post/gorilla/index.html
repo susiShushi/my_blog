@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-スタート
+[お役立ち]Gorilla.scでオンライン実験
 </title>
 
     
@@ -19,21 +19,21 @@
 
 <meta name="generator" content="Hugo 0.64.0" />
 
-<link rel="canonical" href="../../post/start/" />
+<link rel="canonical" href="../../post/gorilla/" />
 
 
-<meta property="og:title" content="スタート" />
-<meta property="og:description" content="新しいblogはじめました" />
+<meta property="og:title" content="[お役立ち]Gorilla.scでオンライン実験" />
+<meta property="og:description" content="Gorilla.scでオンライン実験ができるよ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/start/" />
-<meta property="article:published_time" content="2020-02-09T20:12:57+09:00" />
-<meta property="article:modified_time" content="2020-02-09T20:12:57+09:00" />
+<meta property="og:url" content="/post/gorilla/" />
+<meta property="article:published_time" content="2020-03-27T20:59:19+09:00" />
+<meta property="article:modified_time" content="2020-03-27T20:59:19+09:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="スタート"/>
-<meta name="twitter:description" content="新しいblogはじめました"/>
+<meta name="twitter:title" content="[お役立ち]Gorilla.scでオンライン実験"/>
+<meta name="twitter:description" content="Gorilla.scでオンライン実験ができるよ"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -85,24 +85,65 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          スタート
-          <div class="sub header">@ なんばいきん · Sunday, Feb 9, 2020 · 1 minute read · Update at Feb 9, 2020</div>
+          [お役立ち]Gorilla.scでオンライン実験
+          <div class="sub header">@ なんばいきん · Friday, Mar 27, 2020 · 5 minute read · Update at Mar 27, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>若者もすなる日記といふものを<!-- raw HTML omitted -->
-我もしてみむとてするなり。<!-- raw HTML omitted --></p>
-<p>私の業績とかは<a href="https://sites.google.com/view/nambaikin/%E3%83%9B%E3%83%BC%E3%83%A0">Google HP</a>の方を見てください。
-このブログでは読書感想文とか落書きとか、自分が『面白い！』と思うこととか、日々のなにがしを書いてみたりする予定です。</p>
-<p>ほな。</p>
+      <article style="margin-top: 2rem;"><h2 id="gorillascでオンライン実験ができるよって話">Gorilla.scでオンライン実験ができるよって話</h2>
+<p>オンライン実験、、、したくない？<br>
+最近は便利なもので<a href="https://www.jspsych.org/">jspsych</a>や<a href="https://www.psychopy.org/index.html">PsychoPy</a>あたりが、心理実験課題の作成によく使われる。しかしそれらを<strong>オンライン</strong>でやるとなると、サーバーだのなんだの色々と調べたりすることがあって大変である。</p>
+<p>特に、「やべぇ！今すぐ実験作って先生に見せないと！」とか「やべぇ！研究費の報告があるから急いで使い切るために残り3日でオンライン実験をしなきゃ！」って時にゼロからいきなり運用可能なレベルでのオンライン実験課題を作成するのは相当苦労するであろう。知らんけど。</p>
+<p>そういう時に提案したいのが、 <strong><a href="https://gorilla.sc/">Gorilla</a></strong> である。</p>
+<p><a href="https://gorilla.sc/"><img src="../../img/gorilla.jpg" alt="Gorilla.sc"></a><!-- raw HTML omitted --></p>
+<h2 id="どういう人におすすめか">どういう人におすすめか</h2>
+<p>Gorilla.scは以下のような感じの人におすすめ。</p>
+<ol>
+<li>プログラム言語とかサーバーとか難しいことわからん</li>
+<li>でもオンラインで心理実験をやりたい</li>
+<li>課題作成も出来る限り楽なやつがいい</li>
+<li>共同研究者と一緒に作業可能だと嬉しい</li>
+<li>行った実験課題をOpenにしたい</li>
+</ol>
+<p>基本は『オンライン実験課題作成に必要となるであろうコストをカットしたい』というのがモチベであろう。<!-- raw HTML omitted --></p>
+<p>Gorilla.scの欠点と言えば以下の通りだ。</p>
+<ol>
+<li>オンライン実験につきものの問題（timing issue)</li>
+<li><strong>有料</strong>(一人分のデータ保存にアカデミックで約1ドル)</li>
+</ol>
+<p>後でちゃんと参考文献を紹介するが、Gorillaは参加者ごとの回線やブラウザの問題をわたしにはわからない&quot;ECMAScript&quot;だの&quot;QRTEngine&quot;だので、できる限りTiming issue (反応時間のずれ) を回避しようとしている。えらい。なので実質問題は有料であること、のみである (個人の感想です)。</p>
+<h2 id="どういうシステム">どういうシステム？</h2>
+<p>公式HPにもある通り、アカウント作成および実験課題の作成は<strong>無料</strong>でできる。</p>
+<p>ではいつお金が必要なのか？それは実験課題で測定したデータを保存するときである。実験で測定されたデータをオンライン上で保存するときにTokenと呼ばれるものが必要になる。このTokenは2020年3月現在はアカデミック価格一人1.08ドル（約120円）である。ちなみにPsychopyで作成したものなどをオンラインで使用するための<a href="https://pavlovia.org/">Pavlovia</a>も似たようなシステムを採用しており、こちらは一人0.2£ (約30円)である。</p>
+<p>いやいやわかる。「Gorillaの方が高いやんけ！」とゴリラのごとく石を投げたくなる気持ちもわかる。一応以下でGorillaがいかに優れているかを簡単に書いておこう。</p>
+<h3 id="信頼と実績の実験hostingを提供">信頼と実績の実験Hostingを提供</h3>
+<p>実験心理学者がオンライン実験をするとき、気になるのが『反応時間を測定する際に、環境によってどの程度ノイズが入っちゃうんだろう…』ということであろう。安心してほしい。その疑問には<a href="https://link.springer.com/article/10.3758%2Fs13428-019-01237-x">Anwyl-Irvine et al. (2020)</a>で調査済みである。</p>
+<p>この論文では、『Gorilla最高ウホ』ということを示すために、ケータイレベルのネット回線を含むいろんな環境の子供たちやProfilic (欧州のMturkみたいなやつ) でフランカー課題 (反応時間を測定する課題) を適用し、環境による反応時間に差がないことや分散が想定よりも小さい (ある程度信頼できる反応時間を測定できる) ことを明らかにしたのである。イントロダクションにはそれを実現する技術的なバックグラウンドも紹介しているので興味のある方はしっかり目を通すとよい。<del>Gorillaとそれ以外の環境との違い？知らん。</del>
+　
+　</p>
+<h3 id="充実のサポートコンテンツ">充実のサポートコンテンツ</h3>
+<p>まずは<a href="https://gorilla.sc/support/samples">コチラ</a>を見てほしい。Dot probe課題、IAT、確率学習課題 (2WFC)、N-back課題などよく名だたる心理学実験課題のデモが体験できる。</p>
+<p>どういうことか？「やべぇ！いますぐIAT作らなきゃ！！」とかいうとき、このデモをそのままコピーすればよいのだ。ズボラな研究者にはたまらないね。あとは画像を入れ替えて条件を増やしたりするだけでよい。すごくない？</p>
+<p>そもそも実験課題は以下のようなGUI（ボタンぽちぽち）で作られる。
+　</p>
+<p><img src="../../img/Gor_ex.png" alt="Example_Gorilla"><!-- raw HTML omitted --></p>
+<p>課題の作成方法の詳細は公式に勝るガイドラインなし、ということで<a href="https://gorilla.sc/support">公式サポート</a>を確認するとよい。動画も組み合わせつつ多種多様な例が紹介されてるので、あなたの「したい」がきっと見つかる（適当）</p>
+<p>その他の利点として、作成した実験課題を使いまわすことができたり、アカウントを持つ共同研究者と共同で実験課題を確認出来たり、実際に行った実験課題をGorilla上でオープンにすることができる（例：<a href="https://gorilla.sc/openmaterials/36172">Gorilla最高ウホ論文で用いたフランカー課題の詳細</a>）
+　</p>
+<h3 id="まとめ">まとめ</h3>
+<p>お金に余裕があり、オンライン実験課題の作成コスト (サーバーの管理、ネット環境ごとの信頼性検証など) をできるだけ下げたい場合にはGorilla.scが選択肢の一つに挙げられるだろう。</p>
+<p>ちなみに<a href="https://gorilla.sc/signup?referral_token=E249F017-4B19-4737-A61D-729C93C2C7AC">ここ</a>から登録すると、20Token分までは半額 (約60円) で買えるゾ！それでもPavloviaよりも二倍高いじゃねーか？そうだね！ゴメン！！
+　</p>
+<p>ゴリラ使ってお手軽にオンライン実験を試してみようじゃないか、って記事でした！<br>
+ほな。</p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="../../tags/%E9%9B%91%E8%AB%87" title="雑談">雑談</a>
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
         
-          <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+          <a class="ui label" href="../../tags/%E5%AE%9F%E9%A8%93" title="実験">実験</a>
         
       
       <div

@@ -38,7 +38,7 @@ Airbnbは以下の人におすすめです。
 それがなかなかすばらしいとこだったんですよ。  
   
   
-![Australia](/img/image_hotel.JPG)<br>
+![Australia](/img/image_hotel.JPG)  <br>
 オーストラリアの中心地でこれすごない？（自慢）  
 しかもNetflix, PS4完備だったんで一緒に泊まった友達とナチョス食いながら映画見て、よくわからん格ゲーを夜通しやってました。  
   
