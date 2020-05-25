@@ -3,9 +3,9 @@ title: "[音楽]Amazon musicでオシャレな音楽"
 date: "2020-05-10T00:00:00"
 draft: True
 
-categories: ["音楽"]
+categories: ["音楽","お役立ち"]
 cover: "/img/image_amazon.png"
-tags: ["日記", "音楽"]
+tags: ["日記", "音楽","お役立ち"]
 summary: "自分の好きなオシャレアーティスト3選紹介"
 ---
 
