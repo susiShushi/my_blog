@@ -1,0 +1,69 @@
+---
+title: "[読書感想文]The War for Kindness (洋書)"
+date: "2020-06-18T00:00:00"
+draft: True
+
+categories: ["読書感想文"]
+cover: "/img/image_Ebook.png"
+tags: ["日記", "読書感想文"]
+summary: "「The War for Kindness: Building Empathy in a Fractured World」を読みました"
+---
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
+msmaflink({"n":"The War for Kindness: Building Empathy in a Fractured World (English Edition)","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/516l2gjCsyL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B07K23G92Y","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"esMiF","s":"s"});
+</script>
+<div id="msmaflink-esMiF">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+  
+## The War for Kindness
+  『The War for Kindness: Building Empathy in a Fractured World』を読んでみた。この本は長年”共感がどのように機能するのか”、そして”我々がより共感的になるにはどうするべきか”について第一線で研究してきたJamil Zaki氏が魂を込めて執筆した(多分)著作である。<br>
+  <br>
+  洋書なので日本語では書かれてないが、**共感の科学**に興味があるヒトには是非目を通してほしい。この本は科学的な知見とそれに基づく主張だけでなく、著者の経験（両親の離別や自身が関わった病院内のスタッフとのやりとり）が生々しくダイレクトに描写されているので、『単なる科学読みもの』以上のものに仕上がっている。
+  <br>
+  ※ちなみにこの本での共感は体験の共有・内的状態の推論・他者への関心、という三軸が相互に影響し合う構成概念を仮定している（本書Appendix A参照）<br>
+  <br>
+  <br>
+  この本では各チャプターでの主張が明確である。各Chapterの要約を以下にまとめていく。<br>
+  Chapter 1は『共感は安定的で固定的な特性である、という考えは間違いである』ということを訴える。<br>
+  Chapter 2では感情制御の研究者であるGrossらの知見も踏まえながら『感情や共感は制御可能である』ということ、<br>
+  Chapter 3では差別主義者であった人たちの事例を通して『憎しみがContactによって癒えうる』ことを、<br>
+  Chapter 4では『Fictionが他者の内的状態推定を正確にするかもしれない』ということを訴える。<br>
+  Chapter 5では病院で働く人たちのバーンアウトを含めて『他者を思いすぎることの弊害について』の話を展開していく。<br>
+  Chapter 6では『規範(norm)の脅威と共感への介入可能性』を展開していく。<br>
+  Chapter 7ではインターネットなどの『現代的技術の発展が引き起こす弊害と希望』を共感の観点から議論していく。まぁ多分だいたいそんな感じだ。<br>
+  どうよ面白そうだろう？面白いからね！<br>
+  <br>
+  この本で著者が訴えたい内容は多岐にわたるだろうが、是非皆さんにも覚えていただきたいポイントは『共感は特性ではなく、スキルである。』という主張であるだろう。<br>
+  実際彼のトークでも多くの場合、その内容が紹介されている。（洋書を読むのはちょっと…という人は映像で彼のトークを見てほしい）<br>
+  [![](https://img.youtube.com/vi/nQwlAWG4ZkI/0.jpg)](https://www.youtube.com/watch?v=nQwlAWG4ZkI)<br>
+  [![](https://img.youtube.com/vi/-DspKSYxYDM/0.jpg)](https://www.youtube.com/watch?v=-DspKSYxYDM)<br>
+  この記事をなにかの不幸な縁で目にしている皆様には是非『共感は変えようがないものだ』というマインドセットを捨てて、『共感はスキルなので共感ムッキムキマンを目指すぞ！』という気概で明日から生きていってほしい。、<br>
+  <br>
+  
+## エビデンスのレベル
+  
+  この『The war for kindness』は、各チャプターで紹介されている内容が『どの程度確からしいか』を論文の蓄積や結果の信頼性などから著者のグループで評価しており、**[公式HPでもそれが確認できる](https://www.warforkindness.com/)** 。<br><br>
+  この本をもとに原典までさかのぼって勉強したい人は、Dataタブ内の各チャプター末尾にある”Download Full Claims List With Citations”からリストをDLして文献情報をぜひ確認してほしい。<br><br>
+こういう取り組みは大変素晴らしいので、和書にも同様の取り組みを期待したい。いや、まぁ「おまえがやれよぉ！」と言われたら曖昧に笑ってごまかしますけどね。<br>
+<br>
+<br>
+  
+## 個人的な興味（想像性が共感を育む）
+  
+  この本のChapter 4では演劇の経験なり、Fictionの消費なりが、他者の理解に関する共感を高めうることについて紹介している。この内容は私がいま取り組んでる、『は？想像性が共感正確性（他者の内的状態を正確に読み取ることができる能力）と関連するんだが？』という研究内容と非常に合致したテーマであって大変興味深く読むことができた。<br><br>
+  
+  喜び勇んでエビデンスレベルを確認するとそんなに高くなくてわろたが、ワイがこのテーマを深堀りしたる！！と思ってたけど同論文が6回ほどリジェクトされたんで、このテーマやめます。クソが！！<br>
+  今投稿してる最中の論文に関する詳細は採択されたらこのブログでも紹介しましょうかね。いつになることやら…。今日はこの辺で。
+<br><br><br>
+
+##### 他にこんな本読んだ
+ [文化がヒトを進化させた](https://susishushi.github.io/my_blog/post/cul_evo/)
+  <br>
+[FACTFULNESS](https://susishushi.github.io/my_blog/post/factful/)
