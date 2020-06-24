@@ -7,7 +7,7 @@ body {
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 120%;
 }
 
@@ -71,11 +71,14 @@ body {
   display: flex !important;
   height: $ContainerHeight;
 
-  .dream-404-image {
-    padding-bottom: 10rem;
+  .ui.header {
+    margin-bottom: 2rem;
+
+    .sub.header {
+      margin-top: 0.5rem;
+    }
   }
 }
-
 .ui.menu.dream-menu {
   margin-left: 0;
   margin-right: 0;
@@ -97,9 +100,19 @@ body {
   }
 }
 
+
 .dream-header {
   position: relative;
   z-index: 999;
+
+  .header-socials {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .dream-socials {
+      justify-content: center;
+    }
+  }
 }
 
 .dream-tags {
@@ -112,7 +125,7 @@ body {
   .ui.accordion {
     .ui.list {
       .item {
-        padding-left: 1.5rem;
+        padding-left: 1rem;
       }
     }
   }
@@ -130,17 +143,34 @@ body {
 }
 
 .ui.card.dream-card {
+  &.inverted {
+    background: #1b1c1d;
+
+    .content {
+      .header > a {
+        color: #fff !important;
+      }
+
+      .meta {
+        color: rgba(#fff, 0.4);
+      }
+
+      .description {
+        color: rgba(#fff, 0.87);
+      }
+    }
+  }
+
   .content {
-    .header {
-      margin-top: 1rem;
+    .header > a {
+      color: #000 !important;
     }
 
     .description {
       margin: 1.5rem 0 1rem 0;
-      color: rgba(black, 0.87);
+      color: rgba(#000, 0.87);
     }
   }
-}
 
 .dream-paginator {
   position: fixed;
