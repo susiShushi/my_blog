@@ -66,4 +66,5 @@ msmaflink({"n":"The War for Kindness: Building Empathy in a Fractured World (Eng
 ##### 他にこんな本読んだ
  [文化がヒトを進化させた](https://susishushi.github.io/my_blog/post/cul_evo/)
   <br>
-[FACTFULNESS](https://susishushi.github.io/my_blog/post/factful/)
+[FACTFULNESS](https://susishushi.github.io/my_blog/post/factful/)<br>
+[ヒトの目、驚異の進化](https://susishushi.github.io/my_blog/post/visual_revo/)
