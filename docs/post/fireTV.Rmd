@@ -10,8 +10,6 @@ summary: "「fire TV stick」でマジで人生変わった"
 output:
     thumbnails: true
 ---
-　　
-  
 <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=48&l=ur1&category=smp&banner=1DN5AMXVF3GDR54KGRG2&f=ifr&linkID=55a53c11c3685f6ead68fd29e0e95433&t=sushishushi-22&tracking_id=sushishushi-22" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
   
   
@@ -22,8 +20,10 @@ output:
   これはやばい。洗い物しながらNetflixを見て娘を寝かしつけながらYoutubeを見ることができる。これのおかげで人生満足度が激上がりでマジでやばい（語彙なし）ので、是非みんなにも買ってほしい。ここ最近でほんとに一番いい買い物で、先日誕生日だったんだけどこれさえあればもう何もいらなくなった。
   <br>
   え？大画面で何見てるかって？アマガミ (恋愛シミュレーション) のゲーム実況です。<br>
-  では。
   <br>
+  では。
+<br>
+<br>
   <!-- START MoshimoAffiliateEasyLink -->
 <script type="text/javascript">
 (function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
@@ -37,8 +37,6 @@ msmaflink({"n":"エビコレ+ アマガミ(通常版)","b":"角川ゲームス",
 <div id="msmaflink-rB5Qz">リンク</div>
 <!-- MoshimoAffiliateEasyLink END -->
 
-<br>
-<br>
 <br>
 
 ##### 関連リンク
