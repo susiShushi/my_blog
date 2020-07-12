@@ -74,3 +74,4 @@ msmaflink({"n":"The War for Kindness: Building Empathy in a Fractured World (Eng
 [FACTFULNESS](https://susishushi.github.io/my_blog/post/factful/)<br>
 [ヒトの目、驚異の進化](https://susishushi.github.io/my_blog/post/visual_revo/)
 <br>
+[なぜ心を読みすぎるのか](https://susishushi.github.io/my_blog/post/kokoro/)

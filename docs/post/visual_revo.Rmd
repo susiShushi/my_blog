@@ -51,4 +51,5 @@ msmaflink({"n":"ヒトの目、驚異の進化　視覚革命が文明を生ん�
 ##### 他にこんな本読んだ
 [心理学, 認知・行動科学のための反応時間ハンドブック]( https://susishushi.github.io/my_blog/post/rt/)
   <br>
-[文化がヒトを進化させた](https://susishushi.github.io/my_blog/post/cul_evo/)
+[文化がヒトを進化させた](https://susishushi.github.io/my_blog/post/cul_evo/)<br>
+[The War for Kindness](https://susishushi.github.io/my_blog/post/buildingemp/)
