@@ -21,18 +21,28 @@ theme = "hugo-theme-dream"
   # description = ""
   avatar = "/img/avatar.jpg"
   motto = "Motto"
+
+  # rss = true
+
+  # utterancesRepo = ""
   
   email = "g1enyy0ung@gmail.com"
-  # github = ""
+  # twitter = ""
+  # facebook = ""
+  # instagram = ""
   # linkedin = ""
-  # codepen = ""
+  # github = ""
   # stackoverflow = ""
+  # codepen = ""
 
   siteStartYear = 2016
 
   # favicon = "/favicon.ico"
 
+  # options
+  showSummaryCoverInPost = true
+
   # dark mode
   darkLinkColor = "darkseagreen"
   darkNav = true 
-  dark404Button = true
+  dark404 = true

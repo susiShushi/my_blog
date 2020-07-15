@@ -1,5 +1,5 @@
 [blogAlias]
-other = "的博客"
+other = " 的博客"
 
 [home]
 other = "首页"
@@ -48,3 +48,6 @@ other = '上一页'
 
 [nextPage]
 other = '下一页'
+
+[saveAsImage]
+other = "保存为图片"

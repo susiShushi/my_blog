@@ -1,5 +1,5 @@
 {{ define "title" }}
-{{ .Title }}
+{{- .Title -}}
 {{ end }}
 
 {{ define "main" }}
@@ -8,11 +8,16 @@
 
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
-        <h2 class="ui header">
+        <h1 class="ui large header">
           {{ .Title }}
           <div class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Monday, Jan 2, 2006" }} · {{ .ReadingTime }}{{ i18n "minuteRead" }} · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
-        </h2>
+        </h1>
       </header>
+
+      {{ if .Site.Params.showSummaryCoverInPost }}
+        <img class="ui image" style="margin-top: 2rem;" src="{{ .Params.Cover }}" />
+      {{ end }}
+
       <article style="margin-top: 2rem;">{{ .Content | emojify }}</article>
     </section>
 
@@ -26,9 +31,9 @@
       {{ end }}
       <div
         class="ui label"
-        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        style="float: right; cursor: pointer;"
         onclick="savePostAsImg()">
-        <i class="save icon"></i> Save as image
+        <i class="save icon"></i>{{ i18n "saveAsImage" }}
       </div>
     </footer>
 
@@ -62,10 +67,26 @@
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </footer>
     {{ end }}
+    
+    {{ if .Site.Params.utterancesRepo }}
+      <div class="ui segment utterances-comments">
+        <script src="https://utteranc.es/client.js"
+          repo="{{ .Site.Params.utterancesRepo }}"
+          issue-term="og:title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    {{ end }}
 
   </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     {{ partial "header.html" . }}
   </div>
 </div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/js/html2canvas.min.js" | relURL }}"></script>
 {{ end }}

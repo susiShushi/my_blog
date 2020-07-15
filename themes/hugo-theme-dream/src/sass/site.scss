@@ -1,14 +1,13 @@
 @import 'common';
-::-webkit-scrollbar {
-  display: none;
-}   
 
 body {
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  font-size: 24px;
-  line-height: 120%;
+
+  @media screen and (max-width: 768px) {
+    background-attachment: scroll;
+  }
 }
 
 .flip-container {
@@ -79,9 +78,19 @@ body {
     }
   }
 }
+
 .ui.menu.dream-menu {
   margin-left: 0;
   margin-right: 0;
+
+  &.dream-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item:first-child {
+      padding-left: 0.5rem;
+    }
+  }
 
   .item {
     padding: 0.5rem;
@@ -95,11 +104,10 @@ body {
     }
 
     a {
-      color: rgba(black, 0.87);
+      color: rgba(#000, 0.87);
     }
   }
 }
-
 
 .dream-header {
   position: relative;
@@ -169,11 +177,22 @@ body {
     .description {
       margin: 1.5rem 0 1rem 0;
       color: rgba(#000, 0.87);
+
+      img {
+        max-width: 100%;
+      }
     }
   }
+}
 
 .dream-paginator {
   position: fixed;
   top: -1rem;
   left: 10.5rem;
+}
+
+.utterances-comments {
+  .utterances {
+    max-width: unset;
+  }
 }
