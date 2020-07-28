@@ -58,7 +58,7 @@ Windows10 proとかMacとかそういう人たちはとてもシンプルに普�
 <br>
   
 1. Docker desktop for windowsでいく(参照：[ちこさんの記事](https://note.com/tico0602/n/n02d53e4d5dec))
-2. Docker Toolboxでいく(参照：[公式Doc](https://docs.docker.com/toolbox/toolbox_install_windows/)[exeファイル](https://github.com/docker/toolbox/releases))
+2. Docker Toolboxでいく(参照：[公式Doc](https://docs.docker.com/toolbox/toolbox_install_windows/)、 [exeファイル](https://github.com/docker/toolbox/releases))
   
   
   Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
