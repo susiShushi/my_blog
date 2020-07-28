@@ -6,10 +6,19 @@
     <description>Recent content in お役立ち on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</title>
+      <link>/post/docker_new/</link>
+      <pubDate>Tue, 28 Jul 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/docker_new/</guid>
+      <description>Windows Homeのあなたでもできる(多分)</description>
+    </item>
     
     <item>
       <title>[音楽]Amazon musicでオシャレな音楽</title>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>自己紹介 | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]WindowsでDockerつこて心理学者用のR環境構築 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,21 +17,21 @@
 
 <meta name="generator" content="Hugo 0.73.0" />
 
-<link rel="canonical" href="../../about/desc/" />
+<link rel="canonical" href="../../post/docker_new/" />
 
 
-<meta property="og:title" content="自己紹介" />
-<meta property="og:description" content="某大学で助教をやっています。私の業績とかはGoogle HPの方を見てください。このブログでは読書感想文とか落書きとか、自分が『面白い！』と思" />
+<meta property="og:title" content="[お役立ち]WindowsでDockerつこて心理学者用のR環境構築" />
+<meta property="og:description" content="Windows Homeのあなたでもできる(多分)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/about/desc/" />
-<meta property="article:published_time" content="2020-02-20T20:30:55+09:00" />
-<meta property="article:modified_time" content="2020-02-20T20:30:55+09:00" />
+<meta property="og:url" content="/post/docker_new/" />
+<meta property="article:published_time" content="2020-07-28T20:59:19+09:00" />
+<meta property="article:modified_time" content="2020-07-28T20:59:19+09:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="自己紹介"/>
-<meta name="twitter:description" content="某大学で助教をやっています。私の業績とかはGoogle HPの方を見てください。このブログでは読書感想文とか落書きとか、自分が『面白い！』と思"/>
+<meta name="twitter:title" content="[お役立ち]WindowsでDockerつこて心理学者用のR環境構築"/>
+<meta name="twitter:description" content="Windows Homeのあなたでもできる(多分)"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -83,23 +83,110 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          自己紹介
-          <div class="sub header">@ なんばいきん · Thursday, Feb 20, 2020 · 1 minute read · Update at Feb 20, 2020</div>
+          [お役立ち]WindowsでDockerつこて心理学者用のR環境構築
+          <div class="sub header">@ なんばいきん · Tuesday, Jul 28, 2020 · 4 minute read · Update at Jul 28, 2020</div>
         </h1>
       </header>
 
       
 
-      <article style="margin-top: 2rem;"><p>某大学で助教をやっています。<!-- raw HTML omitted -->
-私の業績とかは<a href="https://sites.google.com/view/nambaikin/%E3%83%9B%E3%83%BC%E3%83%A0">Google HP</a>の方を見てください。<!-- raw HTML omitted -->
-このブログでは読書感想文とか落書きとか、自分が『面白い！』と思うこととか、日々のなにがしを書いてみたりする予定です。<!-- raw HTML omitted -->
-<!-- raw HTML omitted --></p>
+      <article style="margin-top: 2rem;">
+
+
+<div id="windows-homeでもdockerで心理学者用の解析執筆環境を構築したい" class="section level2">
+<h2>Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい</h2>
+<p>Dockerが今僕の中でアツいので心理系含む一般人への布教用に記事を書くこととしました。<br>
+Dockerとは「環境を簡単に構築するツール」です。いちいちいろんなアプリをインスコせずとも、仮想環境を作る⇒いらなくなったらポイ。で(ローカル)環境にも優しい！<br><br>
+この記事の対象は以下の人達です。<br>
+<br></p>
+</div>
+<div id="対象" class="section level2">
+<h2>対象</h2>
+<ol style="list-style-type: decimal">
+<li>コマンドプロンプトの意味が分かる</li>
+<li>「cd」←これくらいの意味はわかる</li>
+<li>Rでcmdstanrとか使いたいけどよくわからん←私</li>
+<li>でも全然がんばりたくないWindows User←私</li>
+<li>Dockerは試したけどインスコの時になんかエラー出てやめた←私</li>
+</ol>
+<p><br></p>
+</div>
+<div id="この記事では何をする" class="section level2">
+<h2>この記事では何をする</h2>
+<p>上にも書きましたが、<strong>Docker</strong>とは「環境を簡単に構築するツール」です。<br>
+<br>
+専修大学の国里先生(神)が作成したDockerfileがあります：<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">https://hub.docker.com/r/ykunisato/paper-r-jp</a><br>
+<br>
+このDockerfileのおかげで「パッケージが充実しまくったRstudioがブラウザ上で利用」できます。すごい。<br>
+この記事では「パッケージが充実しまくったRstudioがブラウザ上で利用できる」ことを目指します。「詳しい使い方の前にまぁ慣れようや」がコンセプトです。<br><br>
+ゴールまでのプロセスは以下の通り。<br></p>
+<ol style="list-style-type: decimal">
+<li>なんとかしてDockerをインストール</li>
+<li>コマンドプロンプトで「docker…」のコマンド入力</li>
+<li>ブラウザにアドレス入力</li>
+<li><strong>おわり</strong></li>
+</ol>
+<p><br>
+は？簡単…。
+<br><br></p>
+</div>
+<div id="windowsにdockerをなんとかしてインストル" class="section level2">
+<h2>WindowsにDockerをなんとかしてインスト―ル</h2>
+<p>Windows10 proとかMacとかそういう人たちはとてもシンプルに普通にDockerをインスコできます。適当に調べてください。<br>
+さて、私含むWindows10 homeの人達には以下の二つのアプローチがあります(私の狭い知識レベルでは)。
+<br>
+<br></p>
+<ol style="list-style-type: decimal">
+<li>Docker desktop for windowsでいく(参照：<a href="https://note.com/tico0602/n/n02d53e4d5dec">ちこさんの記事</a>)</li>
+<li>Docker Toolboxでいく(参照：<a href="https://docs.docker.com/toolbox/toolbox_install_windows/">公式Doc</a><a href="https://github.com/docker/toolbox/releases">exeファイル</a>)</li>
+</ol>
+<p>Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
+2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認⇒<a href="https://github.com/docker/toolbox/releases">https://github.com/docker/toolbox/releases</a>のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
+<strong>※Docker Toolboxの場合「localhost:」は使えず、代わりに「192.168.99.100」を入力することを絶対に忘れない!!</strong>
+<br>
+<br></p>
+</div>
+<div id="dockerで環境構築" class="section level2">
+<h2>Dockerで環境構築</h2>
+<p>ターミナル(ぼくはかっこいいからgit bashつこてます)で任意のフォルダに「cd」(移動)なり「ls」(内容確認)なり「mkdir」(ファイル・フォルダ作成)なり駆使して移動。<br>
+その後以下のように入力するともう勝手にいろいろ起きる。<br><br></p>
+<pre class="docker:run"><code>docker run -e PASSWARD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：//c/user/hoge/Documents/test)://home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp</code></pre>
+<p><br>
+これをしてしばらく待つ。「-v ‘path’」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
+※“/”が常識よりも先頭に一個多いのは僕のノートPCのWindows環境(Toolbox, Gitbash)ではこうしないとうまく動かなかったためです。うまくいかないのは大体このパス関連が失敗してるのでいろいろ調べたりしてみてください
+<br>
+<br></p>
+</div>
+<div id="ブラウザでrstudioを開く" class="section level2">
+<h2>ブラウザでRstudioを開く</h2>
+<p>ブラウザ(Google chromeとか)を開いて、urlバーに「localhost:8787」とタイプする。Docker Toolboxの人は「192.168.99.100:8787」
+<br>
+IDにrstudio, passに上で書いた任意のパスワードを入力する。<br>
+<br>
+多分これでブラウザ上でめちゃくちゃいい感じのパッケージが入ったRstudioがブラウザ上で操作できるはず！パッケージの詳細は<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">こちら！</a>お疲れ様でした！Rの大海原を泳ぎまくろう！！<br>
+泳ぎつかれたら「docker stop コンテナID」で止めたり、「docker rm コンテナID」で消したりしよう！<br>
+<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/gorilla/">Gorilla.scでオンライン実験</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/firetv/">fire TV stickで大画面Youtube</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/kokoro/">なぜ心を読みすぎるのか</a></p>
+</div>
+</div>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
-          <a class="ui label">No Tags</a>
+        
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+        
+          <a class="ui label" href="../../tags/r" title="R">R</a>
+        
+          <a class="ui label" href="../../tags/docker" title="Docker">Docker</a>
+        
       
       <div
         class="ui label"

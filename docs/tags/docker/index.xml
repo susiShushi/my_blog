@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on とある心理学系研究者のブログ</title>
-    <link>/tags/r/</link>
-    <description>Recent content in R on とある心理学系研究者のブログ</description>
+    <title>Docker on とある心理学系研究者のブログ</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in Docker on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 28 Jul 2020 20:59:19 +0900</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>/post/docker_new/</guid>
       <description>Windows Homeのあなたでもできる(多分)</description>
-    </item>
-    
-    <item>
-      <title>[R]交差再帰定量化解析について</title>
-      <link>/post/crqa1/</link>
-      <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
-      
-      <guid>/post/crqa1/</guid>
-      <description>RQA (再帰定量化解析) で時系列データ解析！</description>
     </item>
     
   </channel>
