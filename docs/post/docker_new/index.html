@@ -151,7 +151,7 @@ Dockerfileは「仮想環境の設計図」と理解してください。<br>
 <h2>Dockerで環境構築</h2>
 <p>ターミナル(ぼくはかっこいいからgit bashつこてます)で任意のフォルダに「cd」(移動)なり「ls」(内容確認)なり「mkdir」(ファイル・フォルダ作成)なり駆使して移動。<br>
 その後以下のように入力するともう勝手にいろいろ起きる。<br><br></p>
-<pre class="docker:run"><code>docker run -e PASSWARD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp</code></pre>
+<pre class="docker:run"><code>docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp</code></pre>
 <p><br>
 これをしてしばらく待つ。「-v ‘path’」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
 ※僕のノートPCのWindows環境(Toolbox, Gitbash)では先頭に“/”がもう一つ必要になります。うまくいかないのは大体このパス関連が失敗してるのでいろいろ調べたりしてみてください

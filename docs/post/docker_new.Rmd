@@ -75,7 +75,7 @@ Windows10 proとかMacとかそういう人たちはとてもシンプルに普�
 その後以下のように入力するともう勝手にいろいろ起きる。<br><br>
 
 ```docker:run
-docker run -e PASSWARD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp
+docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp
 ```  
 <br>
 これをしてしばらく待つ。「-v 'path'」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
