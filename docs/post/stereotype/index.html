@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[お役立ち]WindowsでDockerつこて心理学者用のR環境構築 | とある心理学系研究者のブログ</title>
+    <title>[読書感想文]ステレオタイプの科学 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,21 +17,21 @@
 
 <meta name="generator" content="Hugo 0.73.0" />
 
-<link rel="canonical" href="../../post/docker_new/" />
+<link rel="canonical" href="../../post/stereotype/" />
 
 
-<meta property="og:title" content="[お役立ち]WindowsでDockerつこて心理学者用のR環境構築" />
-<meta property="og:description" content="Windows Homeのあなたでもできる(多分)" />
+<meta property="og:title" content="[読書感想文]ステレオタイプの科学" />
+<meta property="og:description" content="「ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか」を読みました" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/docker_new/" />
-<meta property="article:published_time" content="2020-07-28T20:59:19+09:00" />
-<meta property="article:modified_time" content="2020-07-28T20:59:19+09:00" />
+<meta property="og:url" content="/post/stereotype/" />
+<meta property="article:published_time" content="2020-07-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-31T00:00:00+00:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[お役立ち]WindowsでDockerつこて心理学者用のR環境構築"/>
-<meta name="twitter:description" content="Windows Homeのあなたでもできる(多分)"/>
+<meta name="twitter:title" content="[読書感想文]ステレオタイプの科学"/>
+<meta name="twitter:description" content="「ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか」を読みました"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -83,8 +83,8 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [お役立ち]WindowsでDockerつこて心理学者用のR環境構築
-          <div class="sub header">@ なんばいきん · Tuesday, Jul 28, 2020 · 4 minute read · Update at Jul 28, 2020</div>
+          [読書感想文]ステレオタイプの科学
+          <div class="sub header">@ なんばいきん · Friday, Jul 31, 2020 · 4 minute read · Update at Jul 31, 2020</div>
         </h1>
       </header>
 
@@ -93,86 +93,56 @@
       <article style="margin-top: 2rem;">
 
 
-<div id="windows-homeでもdockerで心理学者用の解析執筆環境を構築したい" class="section level2">
-<h2>Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい</h2>
-<p>Dockerが今僕の中でアツいので心理系含む一般人への布教用に記事を書くこととしました。<br>
-Dockerとは、正確には「コンテナ仮想化を用いてアプリを開発云々プラットフォーム」ですが、ここでは「環境を簡単に構築するツール」と実用上考えましょう。いちいちいろんなアプリをインスコせずとも、仮想環境を作る⇒いらなくなったらポイ。で(ローカル)環境にも優しい！詳しくはググろう！<br><br>
-この記事の対象は以下の人達です。<br>
-<br></p>
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
+msmaflink({"n":"ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか","b":"英治出版","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/51Mephj9+aL.jpg","\/41+bKtjbhVL.jpg","\/51LmA+fnC7L.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4862762875","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"J1wnF","s":"s"});
+</script>
+<div id="msmaflink-J1wnF">
+リンク
 </div>
-<div id="対象" class="section level2">
-<h2>対象</h2>
-<ol style="list-style-type: decimal">
-<li>コマンドプロンプトの意味が分かる</li>
-<li>「cd」←これくらいの意味はわかる</li>
-<li>Rでcmdstanrとか使いたいけどよくわからん←私</li>
-<li>でも全然がんばりたくないWindows User←私</li>
-<li>Dockerは試したけどインスコの時になんかエラー出てやめた←私</li>
-</ol>
-<p><br></p>
-</div>
-<div id="この記事では何をする" class="section level2">
-<h2>この記事では何をする</h2>
-<p>上にも書きましたが、<strong>Docker</strong>とは「環境を簡単に構築するツール」です。<br>
-<br>
-専修大学の国里先生(神)が作成したDockerfileがあります：<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">https://hub.docker.com/r/ykunisato/paper-r-jp</a><br>
-Dockerfileは「仮想環境の設計図」と理解してください。<br>
-<br>
-とにかく、我々はこの国里先生が作りたもうたDockerfileのおかげで「パッケージが充実しまくったRstudioがブラウザ上で利用」できます。すごい。<br>
-この記事では「パッケージが充実しまくったRstudioがブラウザ上で利用できる」ことをとりあえず目指します。「詳しい使い方の前にまぁ慣れようや」がコンセプトです。<br><br>
-ゴールまでのプロセスは以下の通り。<br></p>
-<ol style="list-style-type: decimal">
-<li>なんとかしてDockerをインストール</li>
-<li>コマンドプロンプトで「docker…」のコマンド入力</li>
-<li>ブラウザにアドレス入力</li>
-<li><strong>おわり</strong></li>
-</ol>
-<p><br>
-は？簡単…。
-<br><br></p>
-</div>
-<div id="windowsにdockerをなんとかしてインストル" class="section level2">
-<h2>WindowsにDockerをなんとかしてインスト―ル</h2>
-<p>Windows10 proとかMacとかそういう人たちはとてもシンプルに普通にDockerをインスコできます。適当に調べてください。<br>
-さて、私含むWindows10 homeの人達には以下の二つのアプローチがあります(私の狭い知識レベルでは)。
-<br>
-<br></p>
-<ol style="list-style-type: decimal">
-<li>Docker desktop for windowsでいく(参照：<a href="https://note.com/tico0602/n/n02d53e4d5dec">ちこさんの記事</a>)</li>
-<li>Docker Toolboxでいく(参照：<a href="https://docs.docker.com/toolbox/toolbox_install_windows/">公式Doc</a>、 <a href="https://github.com/docker/toolbox/releases">exeファイル</a>)</li>
-</ol>
-<p>Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
-2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認⇒<a href="https://github.com/docker/toolbox/releases">https://github.com/docker/toolbox/releases</a>のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
-<strong>※Docker Toolboxの場合「localhost:」は使えず、代わりに「192.168.99.100」を入力することを絶対に忘れない!!</strong>
+<!-- MoshimoAffiliateEasyLink END -->
+<div id="ステレオタイプの科学" class="section level2">
+<h2>ステレオタイプの科学</h2>
+<p>ステレオタイプについて、学部生のときに講義で習って以来（9－10年前？）あまり知識を更新していなかったので、『<a target="_blank" href="https://www.amazon.co.jp/gp/product/B0869F8XFW/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B0869F8XFW&linkCode=as2&tag=sushishushi-22&linkId=5db901d34643fb7d7c7e758e6d7ff707">ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sushishushi-22&l=am2&o=9&a=B0869F8XFW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />』で再入門することにした。<br><br>
+「ステレオタイプ」とは、あるカテゴリーの人に対する固定観念である。<br>
+身近な例でいえば、「男性は共感的でなく、女性は数学が得意でない」とかそういう系統のものだ。その「イメージ」に基づいて他者にネガティブな感情や行動をとるのはよくない。わかっていても改めて強調しておく必要がある程度に、我々の社会にはこの「ステレオタイプ」（とそれによって生じるネガティブな事象）が蔓延している。
 <br>
 <br></p>
 </div>
-<div id="dockerで環境構築" class="section level2">
-<h2>Dockerで環境構築</h2>
-<p>ターミナル(ぼくはかっこいいからgit bashつこてます)で任意のフォルダに「cd」(移動)なり「ls」(内容確認)なり「mkdir」(ファイル・フォルダ作成)なり駆使して移動。<br>
-その後以下のように入力するともう勝手にいろいろ起きる。<br><br></p>
-<pre class="docker:run"><code>docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp</code></pre>
-<p><br>
-これをしてしばらく待つ。「-v ‘path’」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
-※僕のノートPCのWindows環境(Toolbox, Gitbash)では先頭に“/”がもう一つ必要になります。うまくいかないのは大体このパス関連が失敗してるのでいろいろ調べたりしてみてください
+<div id="ステレオタイプ脅威" class="section level2">
+<h2>ステレオタイプ脅威</h2>
+<p>この本の画期的な点（というか「あっ、そっちの話なんだ」と思った点）は、他者が相手に対して抱くステレオタイプについて焦点を当てているのではなく、<strong>自分自身が社会を通して自身のステレオタイプに注意を向けることで何が起きるのか</strong>、という点に焦点を当てている点である。<br><br>
+例えば、『運動神経を測定する』と教示されたゴルフでは黒人が白人の成績を上回るのに対し、『スポーツインテリジェンスを測定する』と教示されたゴルフでは白人が黒人の成績を上回る。どちらも同じゴルフタスクに関わらず、である。<br>
+この差は本来のパフォーマンスが『運動神経のない白人』『頭の悪い黒人』という自身が抱えるステレオタイプに対して、それらをあてはめられる見通しだけで自己防衛的な反応が自動的に喚起され、その人の実際の能力を奪ってしまうのである。<br>
+この現象はステレオタイプ脅威と呼ばれ、本書ではこのステレオタイプ脅威についての科学的検証を懇切丁寧に紹介する力作である。
 <br>
 <br></p>
 </div>
-<div id="ブラウザでrstudioを開く" class="section level2">
-<h2>ブラウザでRstudioを開く</h2>
-<p>ブラウザ(Google chromeとか)を開いて、urlバーに「localhost:8787」とタイプする。Docker Toolboxの人は「192.168.99.100:8787」
+<div id="ステレオタイプ脅威を縮小する具体的な筋道" class="section level2">
+<h2>ステレオタイプ脅威を縮小する具体的な筋道</h2>
+<p>本書を通してステレオタイプ脅威についての理解を深めると、集団間の格差に関する理解はより一段と豊かになる。さらに本書は『こういう現象がある。悲しいね。ちゃんちゃん。』では終わらず、ステレオタイプ脅威を引き下げるための仕組みの一部を紹介してくれている。<br><br></p>
+<p>フレームワークの再構築、ステレオタイプを打破できる構成員の集団内における十分な存在、多様な人間との相互作用、成功を期待するナラティブ構築のサポート、などどんな場面でもステレオタイプ脅威を抑える万能薬があるわけではないが、対処するためのヒントは随所に散らばっている。そうした希望をデータという根拠に基づいて提供してくれているのは本書の大きな強みである。<br>
 <br>
-Usernameに“rstudio”, passwordには“任意のパスワード”を入力する。<br>
+<br></p>
+</div>
+<div id="出版社の提供するコンテンツ" class="section level2">
+<h2>出版社の提供するコンテンツ</h2>
+<p>英治出版が提供する、特別連載：「<a href="https://eijionline.com/m/m0f211c954adc">ステレオタイプから、自由になる</a>」を読めば、この本をより楽しむことができる。<br><br>
+このメディアでは身近なステレオタイプに対して多様な視点から考えるヒントとしての記事が3つ連載されている。<br><br>
+一つ目の東洋大学の<a href="https://eijionline.com/n/n4bbff236e8a0">北村先生による記事</a>は『ステレオタイプの科学』に掲載されている内容を丸々載せてくれている。「読んでみようかな」、という人はまずこの記事からチェックしてみてもいいかもしれない。<br><br>
+残り二つは元陸上選手の<a href="https://eijionline.com/n/n5a2979784407">為末さん</a>と東京大学の<a href="https://eijionline.com/n/na333fc832278">四本先生</a>の記事もぜひご一読いただきたい。日常に潜む様々なステレオタイプを意識するきっかけや、そこを乗り越えるためのヒントがいっぱい載っている。本を読み終わった後もこんなに楽しませていただけて感謝感謝である。
 <br>
-多分これでブラウザ上でめちゃくちゃいい感じのパッケージが入ったRstudioがブラウザ上で操作できるはず！パッケージの詳細は<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">こちら！</a>お疲れ様でした！Rの大海原を泳ぎまくろう！！<br>
-泳ぎつかれたら「docker stop コンテナID」で止めたり、「docker rm コンテナID」で消したりしよう！<br>
-<br><br></p>
-<div id="他にこんな記事があるよ" class="section level5">
-<h5>他にこんな記事があるよ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/gorilla/">Gorilla.scでオンライン実験</a>
-<br>
-<a href="https://susishushi.github.io/my_blog/post/firetv/">fire TV stickで大画面Youtube</a>
-<br>
+<br></p>
+<div id="他にこんな本読んだ" class="section level5">
+<h5>他にこんな本読んだ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/rt/">心理学, 認知・行動科学のための反応時間ハンドブック</a><br>
+<a href="https://susishushi.github.io/my_blog/post/factful/">FACTFULNESS</a><br>
 <a href="https://susishushi.github.io/my_blog/post/kokoro/">なぜ心を読みすぎるのか</a></p>
 </div>
 </div>
@@ -182,11 +152,9 @@ Usernameに“rstudio”, passwordには“任意のパスワード”を入力�
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+          <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
         
-          <a class="ui label" href="../../tags/r" title="R">R</a>
-        
-          <a class="ui label" href="../../tags/docker" title="Docker">Docker</a>
+          <a class="ui label" href="../../tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
         
       
       <div

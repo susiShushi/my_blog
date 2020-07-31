@@ -59,3 +59,10 @@ summary: "自分の好きなオシャレアーティスト3選紹介"
   軽い気持ちでこの記事書いたけど自分の好きなアーティストの話するの超楽し～ッ！！多分続く！！今日は以上！みんなもAmazon music unlimitedに加入してぼくと好きなアーティストについての「あるあるいいたい～」しようぜ！！
   <br>
   <br>
+  
+  <br>
+
+##### 他にこんな記事があるよ
+[fire TV stickで大画面Youtube](https://susishushi.github.io/my_blog/post/firetv/)
+<br>
+[なぜ心を読みすぎるのか](https://susishushi.github.io/my_blog/post/kokoro/)
