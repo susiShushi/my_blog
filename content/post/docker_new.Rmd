@@ -63,7 +63,7 @@ Windows10 proとかMacとかそういう人たちはとてもシンプルに普�
   
   
   Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
-  2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認⇒[https://github.com/docker/toolbox/releases](https://github.com/docker/toolbox/releases)のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
+  2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認[(仮想化確認の詳細はこちら)](http://www.dwapp.top/environment/virtualization/817)⇒[https://github.com/docker/toolbox/releases](https://github.com/docker/toolbox/releases)のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
 **※Docker Toolboxの場合「localhost:」は使えず、代わりに「192.168.99.100」を入力することを絶対に忘れない!!**
   <br>
 <br>
