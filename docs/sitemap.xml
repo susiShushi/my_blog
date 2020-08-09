@@ -23,16 +23,6 @@
   </url>
   
   <url>
-    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
@@ -74,6 +64,16 @@
   
   <url>
     <loc>/tags/r/</loc>
+    <lastmod>2020-07-28T20:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <lastmod>2020-07-28T20:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
     <lastmod>2020-07-28T20:59:19+09:00</lastmod>
   </url>
   
