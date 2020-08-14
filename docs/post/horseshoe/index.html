@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[音楽]Amazon musicでオシャレな音楽 | とある心理学系研究者のブログ</title>
+    <title>[R]brmsでhorseshoeによるスパース回帰 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,21 +17,21 @@
 
 <meta name="generator" content="Hugo 0.73.0" />
 
-<link rel="canonical" href="../../post/am_music1/" />
+<link rel="canonical" href="../../post/horseshoe/" />
 
 
-<meta property="og:title" content="[音楽]Amazon musicでオシャレな音楽" />
-<meta property="og:description" content="自分の好きなオシャレアーティスト3選紹介" />
+<meta property="og:title" content="[R]brmsでhorseshoeによるスパース回帰" />
+<meta property="og:description" content="par_ratio=p/Dでおわり" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/am_music1/" />
-<meta property="article:published_time" content="2020-05-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-10T00:00:00+00:00" />
+<meta property="og:url" content="/post/horseshoe/" />
+<meta property="article:published_time" content="2020-08-14T11:59:19+09:00" />
+<meta property="article:modified_time" content="2020-08-14T11:59:19+09:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[音楽]Amazon musicでオシャレな音楽"/>
-<meta name="twitter:description" content="自分の好きなオシャレアーティスト3選紹介"/>
+<meta name="twitter:title" content="[R]brmsでhorseshoeによるスパース回帰"/>
+<meta name="twitter:description" content="par_ratio=p/Dでおわり"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -83,80 +83,43 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [音楽]Amazon musicでオシャレな音楽
-          <div class="sub header">@ なんばいきん · Sunday, May 10, 2020 · 4 minute read · Update at May 10, 2020</div>
+          [R]brmsでhorseshoeによるスパース回帰
+          <div class="sub header">@ なんばいきん · Friday, Aug 14, 2020 · 2 minute read · Update at Aug 14, 2020</div>
         </h1>
       </header>
 
       
 
-      <article style="margin-top: 2rem;">
+      <article style="margin-top: 2rem;"><p>どうも。</p>
+<p>今日は<strong>brms</strong>で馬蹄事前分布 (horseshoe prior：以下馬) を用いた回帰分析の仕方を紹介します。</p>
+<p>ベイズでスパース回帰するときの利点<br>
+1. 回帰係数の分散が95%確信区間により簡便に評価できる<br>
+2. ベイズである</p>
+<p>馬はベイズでスパース回帰するときの一つの選択肢で、近年そのハイパーパラメータの設定がいろいろ提案されてます。
+<a href="https://www.sciencedirect.com/science/article/pii/S0022249618300567?via%3Dihub">van Erp et al. 2019のシミュレーション研究</a>からわかるように、Regularized horseshoe(以下R馬)とよばれる分布がベイジアンスパース回帰の中でもまずまずの性能、といった感じですね。</p>
+<p>R馬は自分の予測した説明変数の数を事前情報として組み込む事前分布で、通常の馬よりも収束しやすくデータと説明変数の数が近い状態でも割といい感じの結果を出力します (詳しくはvan Erp et al. 2019や馬蹄事前分布を愛しすぎてしまった研究者<a href="https://arxiv.org/abs/1707.01694">Piironenらの研究</a>を参照して下さい)。</p>
+<p>brmsでのR馬の実装方法は以下の通りです。必要な引数(=set_prior(&ldquo;horseshoe(par_ratio=p/D)&quot;))を入力すれば簡単に行うことができます。</p>
+<pre><code class="language-r:horseshoe" data-lang="r:horseshoe">library(brms)
 
+# サンプルです。走らせても動きません。
+# par_ratio = p/Dのpは予測した説明変数の数、Dは全部の予測説明変数の数です。
+summary(brm(y  ~ x1 + ... + x100, 
+            data=data, prior = set_prior(&quot;horseshoe(par_ratio=p/D)&quot;),
+            control=list(adapt_delta = 0.999, max_treedepth=15)))
 
-<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&amp;p=12&amp;l=ur1&amp;category=musicunlimited&amp;banner=145C9T3K8K0AZHVBRHG2&amp;f=ifr&amp;linkID=37224e6edbb8f7beaa63fbd5055005af&amp;t=sushishushi-22&amp;tracking_id=sushishushi-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0">
-</iframe>
-<div id="amazon-music-unlimited" class="section level2">
-<h2>Amazon Music Unlimited</h2>
-<p>いつからか忘れたけど気が付いたらぼくはAmazon prime 会員だったし，気が付いたらAmazon music unlimitedに加入していた。いわゆるサブスク (お金払って一定期間サービス受けまくるやつ) である。まるで魔法のようにいつの間にかぼくはAmazon music unlimitedを常に立ち上げるマンになっていたのだ。
-<br>
-<br>
-Amazon music unlimited加入の背景としては，ぼくは割とCDを買うタイプなので月に1枚は音楽アルバム (大体3000円) を購入していたのね。しかし，全く身に覚えはないのだがいつのまにかAmazon prime会員だった自分はAmazon musicをPrime会員レベルまで聞けることに気づいた。そしてAmazon musicをはじめて2時間もたたないうちに「月780円だったら，毎月誰かの新譜聞けばめっちゃお得じゃね？」ということに気づいたぼくはAmazon music unlimitedに加入していた。今では週に2，3枚は今まで聞いたことなかったアルバムを耳にしている。楽しい。
-<br>
-<br>
-<br>
-そんなこんなでAmazon music unlimitedに加入したのだ。全然中身のない話で済まない。
-今日はそんなぼくが最近特に気に入っている音楽を一方的に紹介するコーナーをやろうと思う。話し相手がいないのだ。付き合ってくれ。今日のテーマはオシャレ感だ。具体的にはサチモスとかそーゆーの好きな人が好きな奴だ。多分。
-<br>
-<br>
-<br></p>
-</div>
-<div id="ren" class="section level2">
-<h2>Ren</h2>
-<p>和製エドシーランと勝手に呼んでいる。アコギのループマシン（同じフレーズを録音して繰り返すやつ）を駆使したり，キャッチ―かつオシャレな音楽をスモーキーな声にのせて我々のお耳に届けるのだ。粋な奴だ。とりあえず“Life saver”だけでも聞いてほしい。多分「エドシーランやんけ！」というはずだ。2020年4月30日に新譜 (Demos (Do Not Share)) が出ていたので聞いてみたらいきなりラップがはじまったので，「へー，こういう方向性もはじめたんだ。すげーな引き出しの数が」としばらく思いながら聞いていた。全然違う人だった。誰だお前。ちなみにこのrenもかっこよかった。2020年にLoveって曲があったので聞いた。こっちは女のrenだった。誰なんだお前ら。
-<br>
-<br>
-<br></p>
-</div>
-<div id="sirup" class="section level2">
-<h2>SIRUP</h2>
-<p>はじめて聞いたとき衝撃を受けた。オシャレの波動があふれ出てる。この溢れかえる色気におぼれていたい。小気味よいリズムに身体がゆれちゃう。声そのものは特別個性があるわけではないような感じがする。しかし，その持ち前のリズム感と音運びの技術でものっすごい色気が出ているのだ。そのテクニックで声質が特別艶っぽいわけではないのに，歌声が特別艶っぽくなっているのだ。それってなんかいやらしくない？特にSynapseという曲がお気に入りなのだが歌詞の一部を見てみよう。<br>
-『Ey 目から知るdaylight. 肌で知る cold night. 同じように君感じていたい（daylight）』<br>
-どうだろう，もう…オシャレだろう？ダメ押しのdaylightだ。君も同じようにSIRUPを感じてほしい（daylight）。
-<br>
-<br>
-<br></p>
-</div>
-<div id="unchain" class="section level2">
-<h2>UNCHAIN</h2>
-<p>最後はバンドだ。とにかく楽器隊含めた総合技術力の高いバンドだ。ただSIRUPとはうってかわってボーカルのクセが強い。うまいけど。それはそうなんだけど曲によってはもうとてもクセが強い。でもそれがあってる。このバンドは「自分たちがいいと思う音楽」をやっている感じがしてとってもよろしいのだ。そういうバンドは好きなのだ（他にはthe band apartとかも多分そう）。<br></p>
-<p>知らないアーティストを聞くとき「せめて知ってる曲を」と思いカバー曲を聴こうとする気持ちはわかるのだが（多分彼らはカバーアルバムから有名になった，気がする），彼らの曲を初めて聞くのであれば是非彼らのオリジナル曲である“テレスコープ・トリッパ－”を聞いてほしい。出だしの「デーデデデデッデッデッデーデデデ」っていうベースの始まりからもう最高に渋い。100点満点あげちゃう。1番・2番サビの終わりの歌詞が「離さないあなたへと」で終わり，そのままくそかっこいい各パートのソロになるのがもう最高なのよ。曲としての完成度があまりにも高い。東京事変の“丸の内サディスティック”クラス。是非。
-<br>
-<br></p>
-</div>
-<div id="終わりに" class="section level2">
-<h2>終わりに</h2>
-<p>軽い気持ちでこの記事書いたけど自分の好きなアーティストの話するの超楽し～ッ！！多分続く！！今日は以上！みんなもAmazon music unlimitedに加入してぼくと好きなアーティストについての「あるあるいいたい～」しようぜ！！
-<br>
-<br></p>
-<p><br></p>
-<div id="他にこんな記事があるよ" class="section level5">
-<h5>他にこんな記事があるよ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/firetv/">fire TV stickで大画面Youtube</a>
-<br>
-<a href="https://susishushi.github.io/my_blog/post/kokoro/">なぜ心を読みすぎるのか</a></p>
-</div>
-</div>
+</code></pre><p>ちなみに馬蹄事前分布を普通に使った場合にはcontrolの設定は必須な場合が多いです。R馬だと多少はましになりますが、まぁ一応つけておきましょう。
+いうまでもありませんが、常にR馬が最強というものではないことにご注意を。<br>
+stanベースの<a href="https://github.com/sara-vanerp/bayesreg">bayesregパッケージ</a>というのもあるみたいです。これで様々なベイジアンスパース回帰分析をひょひょいっとできそうですね。僕はまだ試してませんが。
+今回は以上です。ただの備忘録でした。</p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
+          <a class="ui label" href="../../tags/r" title="R">R</a>
+        
           <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
-        
-          <a class="ui label" href="../../tags/%E9%9F%B3%E6%A5%BD" title="音楽">音楽</a>
-        
-          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
         
       
       <div

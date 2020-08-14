@@ -4,6 +4,7 @@ title: "[R]交差再帰定量化解析について"
 date: 2018-12-08T00:00:00+09:00
 draft: true
 
+categories: ["R"]
 cover: "/img/image_PC.png"
 tags: ["R"]
 summary: "RQA (再帰定量化解析) で時系列データ解析！"
