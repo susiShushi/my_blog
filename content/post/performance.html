@@ -1,0 +1,91 @@
+---
+title: "[R]performance packageでモデル評価"
+date: 2020-08-19T20:59:19+09:00
+draft: true
+
+categories: ["R"]
+cover: "/img/image_baikinR_pe.jpg"
+tags: ["お役立ち","R"]
+summary: "モデルのVIFとか決定係数とか出すパッケージ"
+---
+
+
+
+<div id="performance-package" class="section level2">
+<h2>performance package</h2>
+<p>回帰分析のモデル評価を簡単にできるパッケージ<a href="https://cran.r-project.org/web/packages/performance/performance.pdf">(performance)</a>の紹介。<br>
+このパッケージのいい点<br />
+1. glm, lmerやbrmsなどの一般化線形、階層、ベイジアンモデルに適用可能<br />
+2. R2とかRMSEとかVIFとか地味に必要なことがある指標がすぐ手に入る<br />
+3. 0過剰モデルとかでも適用可能<br />
+<br>
+すごいね！まぁ最後のやつは自分の目で確かめてくれ！<br></p>
+</div>
+<div id="サンプルデータ" class="section level2">
+<h2>サンプルデータ</h2>
+<p>使うのはbrmsに入っとるepilepsyデータ:</p>
+<pre class="r"><code>library(brms)
+library(lme4)
+library(performance)
+
+data(&quot;epilepsy&quot;)
+summary(epilepsy)</code></pre>
+<pre><code>##       Age             Base        Trt        patient    visit 
+##  Min.   :18.00   Min.   :  6.00   0:112   1      :  4   1:59  
+##  1st Qu.:23.00   1st Qu.: 12.00   1:124   2      :  4   2:59  
+##  Median :28.00   Median : 22.00           3      :  4   3:59  
+##  Mean   :28.34   Mean   : 31.22           4      :  4   4:59  
+##  3rd Qu.:32.00   3rd Qu.: 41.00           5      :  4         
+##  Max.   :42.00   Max.   :151.00           6      :  4         
+##                                           (Other):212         
+##      count              obs           zAge              zBase        
+##  Min.   :  0.000   1      :  1   Min.   :-1.65125   Min.   :-0.9444  
+##  1st Qu.:  2.750   2      :  1   1st Qu.:-0.85270   1st Qu.:-0.7197  
+##  Median :  4.000   3      :  1   Median :-0.05414   Median :-0.3453  
+##  Mean   :  8.254   4      :  1   Mean   : 0.00000   Mean   : 0.0000  
+##  3rd Qu.:  9.000   5      :  1   3rd Qu.: 0.58471   3rd Qu.: 0.3662  
+##  Max.   :102.000   6      :  1   Max.   : 2.18182   Max.   : 4.4853  
+##                    (Other):230</code></pre>
+</div>
+<div id="ポアソン回帰モデルの評価" class="section level2">
+<h2>ポアソン回帰モデルの評価</h2>
+<p>回帰モデルを推定したObjectを用意して、model_performance()でモデルを評価しましょう:</p>
+<pre class="r"><code>fit1 &lt;- glmer(count ~ zAge + zBase * Trt + (1|patient),
+             data = epilepsy, family = poisson())
+
+model_performance(fit1)</code></pre>
+<pre><code>## # Indices of model performance
+## 
+##     AIC |     BIC | R2_conditional | R2_marginal |  ICC | RMSE | SCORE_LOG | SCORE_SPHERICAL
+## --------------------------------------------------------------------------------------------
+## 1357.58 | 1378.37 |           0.82 |        0.53 | 0.61 | 1.32 |     -2.50 |            0.06</code></pre>
+<p>R2_conditionalはmixed modelの, R2_marginalは固定要因のみのモデル指標になります！<br>
+さらにcheck_collinearity()で多重共線性を評価しましょう:</p>
+<pre class="r"><code>check_collinearity(fit1)</code></pre>
+<pre><code>## # Check for Multicollinearity
+## 
+## Low Correlation
+## 
+##  Parameter  VIF Increased SE
+##       zAge 1.10         1.05
+##      zBase 2.28         1.51
+##        Trt 1.02         1.01
+##  zBase:Trt 2.39         1.55</code></pre>
+<pre class="r"><code># plot
+x &lt;- check_collinearity(fit1)
+plot(x)</code></pre>
+<p><img src="/post/performance_files/figure-html/poisson1-1.png" width="672" /></p>
+</div>
+<div id="bayesian用の使い方" class="section level2">
+<h2>Bayesian用の使い方</h2>
+<p>BayesianはVIFとか見れないものもいくつかあります。<br>
+まぁ以下みたいなやつをみればよいでしょうよ(推定結果は面倒なので省略):</p>
+<pre class="r"><code># 上述のモデルと全く一緒
+fit1b &lt;- brm(count ~ zAge + zBase * Trt + (1|patient),
+            data = epilepsy, family = poisson())
+
+# Bayesian用の指標が報告される（あたりまえ
+model_performance(fit1b)</code></pre>
+<p>まぁ、基本こんなもんでしょう。<br>
+今日はここまで。ではまた。</p>
+</div>

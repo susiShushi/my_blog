@@ -6,10 +6,28 @@
     <description>Recent content in Tags on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Wed, 19 Aug 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>お役立ち</title>
+      <link>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</link>
+      <pubDate>Wed, 19 Aug 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>日記</title>
@@ -30,29 +48,11 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Fri, 14 Aug 2020 11:59:19 +0900</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Docker</title>
       <link>/tags/docker/</link>
       <pubDate>Tue, 28 Jul 2020 20:59:19 +0900</pubDate>
       
       <guid>/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>お役立ち</title>
-      <link>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</link>
-      <pubDate>Tue, 28 Jul 2020 20:59:19 +0900</pubDate>
-      
-      <guid>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</guid>
       <description></description>
     </item>
     

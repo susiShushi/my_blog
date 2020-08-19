@@ -1,0 +1,83 @@
+---
+title: "[R]performance packageでモデル評価"
+date: 2020-08-19T20:59:19+09:00
+draft: true
+
+categories: ["R"]
+cover: "/img/image_baikinR_pe.jpg"
+tags: ["お役立ち","R"]
+summary: "モデルのVIFとか決定係数とか出すパッケージ"
+---
+
+
+```{r setup, include=FALSE}
+```
+
+## performance package
+
+回帰分析のモデル評価を簡単にできるパッケージ[(performance)](https://cran.r-project.org/web/packages/performance/performance.pdf)の紹介。<br>
+このパッケージのいい点  
+    1. glm, lmerやbrmsなどの一般化線形、階層、ベイジアンモデルに適用可能   
+    2. R2とかRMSEとかVIFとか地味に必要なことがある指標がすぐ手に入る  
+    3. 0過剰モデルとかでも適用可能  
+<br>
+すごいね！まぁ最後のやつは自分の目で確かめてくれ！<br>
+
+## サンプルデータ
+
+使うのはbrmsに入っとるepilepsyデータ:
+
+```{r set, message=F}
+library(brms)
+library(lme4)
+library(performance)
+
+data("epilepsy")
+summary(epilepsy)
+```
+
+## ポアソン回帰モデルの評価
+
+回帰モデルを推定したObjectを用意して、model_performance()でモデルを評価しましょう:
+
+```{r poisson}
+fit1 <- glmer(count ~ zAge + zBase * Trt + (1|patient),
+             data = epilepsy, family = poisson())
+
+model_performance(fit1)
+
+```
+
+
+R2_conditionalはmixed modelの, R2_marginalは固定要因のみのモデル指標になります！<br>
+さらにcheck_collinearity()で多重共線性を評価しましょう:
+
+```{r poisson1}
+check_collinearity(fit1)
+
+# plot
+x <- check_collinearity(fit1)
+plot(x)
+
+```
+
+
+
+## Bayesian用の使い方
+
+BayesianはVIFとか見れないものもいくつかあります。<br>
+まぁ以下みたいなやつをみればよいでしょうよ(推定結果は面倒なので省略):
+
+```{r bayes,　eval=F}
+# 上述のモデルと全く一緒
+fit1b <- brm(count ~ zAge + zBase * Trt + (1|patient),
+            data = epilepsy, family = poisson())
+
+# Bayesian用の指標が報告される（あたりまえ
+model_performance(fit1b)
+
+```
+
+まぁ、基本こんなもんでしょう。<br>
+今日はここまで。ではまた。
+

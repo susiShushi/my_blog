@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[読書感想文]文化がヒトを進化させた | とある心理学系研究者のブログ</title>
+    <title>[R]performance packageでモデル評価 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,21 +17,21 @@
 
 <meta name="generator" content="Hugo 0.73.0" />
 
-<link rel="canonical" href="../../post/cul_evo/" />
+<link rel="canonical" href="../../post/performance/" />
 
 
-<meta property="og:title" content="[読書感想文]文化がヒトを進化させた" />
-<meta property="og:description" content="「文化がヒトを進化させた―人類の繁栄と〈文化-遺伝子革命〉」を読みました" />
+<meta property="og:title" content="[R]performance packageでモデル評価" />
+<meta property="og:description" content="モデルのVIFとか決定係数とか出すパッケージ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/cul_evo/" />
-<meta property="article:published_time" content="2020-03-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-21T00:00:00+00:00" />
+<meta property="og:url" content="/post/performance/" />
+<meta property="article:published_time" content="2020-08-19T20:59:19+09:00" />
+<meta property="article:modified_time" content="2020-08-19T20:59:19+09:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[読書感想文]文化がヒトを進化させた"/>
-<meta name="twitter:description" content="「文化がヒトを進化させた―人類の繁栄と〈文化-遺伝子革命〉」を読みました"/>
+<meta name="twitter:title" content="[R]performance packageでモデル評価"/>
+<meta name="twitter:description" content="モデルのVIFとか決定係数とか出すパッケージ"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -83,8 +83,8 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [読書感想文]文化がヒトを進化させた
-          <div class="sub header">@ なんばいきん · Saturday, Mar 21, 2020 · 4 minute read · Update at Mar 21, 2020</div>
+          [R]performance packageでモデル評価
+          <div class="sub header">@ なんばいきん · Wednesday, Aug 19, 2020 · 2 minute read · Update at Aug 19, 2020</div>
         </h1>
       </header>
 
@@ -93,43 +93,83 @@
       <article style="margin-top: 2rem;">
 
 
-<!-- START MoshimoAffiliateEasyLink -->
-<script type="text/javascript">(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;b[a]=b[a]||function(){arguments.currentScript=c.currentScript||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};c.getElementById(a)||(d=c.createElement(f),d.src=g,d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");msmaflink({"n":"文化がヒトを進化させた―人類の繁栄と〈文化-遺伝子革命〉","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/41fFiLZMtyL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4826902115","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"tscCV","s":"s"});</script>
-<div id="msmaflink-tscCV">
-リンク
+<div id="performance-package" class="section level2">
+<h2>performance package</h2>
+<p>回帰分析のモデル評価を簡単にできるパッケージ<a href="https://cran.r-project.org/web/packages/performance/performance.pdf">(performance)</a>の紹介。<br>
+このパッケージのいい点<br />
+1. glm, lmerやbrmsなどの一般化線形、階層、ベイジアンモデルに適用可能<br />
+2. R2とかRMSEとかVIFとか地味に必要なことがある指標がすぐ手に入る<br />
+3. 0過剰モデルとかでも適用可能<br />
+<br>
+すごいね！まぁ最後のやつは自分の目で確かめてくれ！<br></p>
 </div>
-<!-- MoshimoAffiliateEasyLink END -->
-<p>　</p>
-<div id="文化ヒトを進化させた人類の繁栄と文化-遺伝子革命" class="section level2">
-<h2>文化ヒトを進化させた―人類の繁栄と〈文化-遺伝子革命〉</h2>
-<p>ヒトは、オーストラリアの砂漠から凍てつくシベリアの大地まで、どんな陸生哺乳類よりも多種多様な環境に生息するようになった。それはなぜなのか？
-<br>
-<br>
-本書の冒頭では上記のものを含めた様々な疑問が提起される。我々ヒトの身体は力も弱く、俊敏さにかけ、木登りもできず、消化管も貧弱であり、腸も胃も歯も小さい。そして特大のサイズの脳を持っているにもかかわらず、個々のヒトはそれほど聡明でもない（そんなことはない、という人は是非本書の冒頭でその幻想を打ち砕かれると良い）。
-<br>そんな我々がなぜ地球上のありとあらゆる環境でぶいぶいいわせることができたのだろう？バスケのスター選手が自動車保険を売り込む力を持っているのはなぜ？青い瞳の人がいるのはなぜだろう？信号が青になるまで律義に待つ人が他者と協力して行動する傾向があるのはなぜなのか？
-<br><br>
-それらの答えは、著者によると文化が人の進化を駆動してきたとする「文化－遺伝子共進化」仮説に収斂される（収斂という単語を使ってみたかった）。他者（あるいはその地域集団）を通して学ぶことのできた我々の「文化」こそが、ヒトの解剖学的構造・心理メカニズムを変化させてきたことをこれまでに得られた科学的知見とともに提案する。
-<br>いやもうマジ読んで。こんな記事読んでも伝わらんから。<br>
-<br></p>
+<div id="サンプルデータ" class="section level2">
+<h2>サンプルデータ</h2>
+<p>使うのはbrmsに入っとるepilepsyデータ:</p>
+<pre class="r"><code>library(brms)
+library(lme4)
+library(performance)
+
+data(&quot;epilepsy&quot;)
+summary(epilepsy)</code></pre>
+<pre><code>##       Age             Base        Trt        patient    visit 
+##  Min.   :18.00   Min.   :  6.00   0:112   1      :  4   1:59  
+##  1st Qu.:23.00   1st Qu.: 12.00   1:124   2      :  4   2:59  
+##  Median :28.00   Median : 22.00           3      :  4   3:59  
+##  Mean   :28.34   Mean   : 31.22           4      :  4   4:59  
+##  3rd Qu.:32.00   3rd Qu.: 41.00           5      :  4         
+##  Max.   :42.00   Max.   :151.00           6      :  4         
+##                                           (Other):212         
+##      count              obs           zAge              zBase        
+##  Min.   :  0.000   1      :  1   Min.   :-1.65125   Min.   :-0.9444  
+##  1st Qu.:  2.750   2      :  1   1st Qu.:-0.85270   1st Qu.:-0.7197  
+##  Median :  4.000   3      :  1   Median :-0.05414   Median :-0.3453  
+##  Mean   :  8.254   4      :  1   Mean   : 0.00000   Mean   : 0.0000  
+##  3rd Qu.:  9.000   5      :  1   3rd Qu.: 0.58471   3rd Qu.: 0.3662  
+##  Max.   :102.000   6      :  1   Max.   : 2.18182   Max.   : 4.4853  
+##                    (Other):230</code></pre>
 </div>
-<div id="おもしろかったところ" class="section level2">
-<h2>おもしろかったところ</h2>
-<p>第12章ヒトの集団脳については特に興味深かった。<br>
-個々人が互いに他者から学べるようになるとその社会集団には <strong>集団脳</strong> と呼ぶべき累積的文化進化の産物が生まれる。そのことを例示する頭の良い集団 (テンサイ族) と頭の悪い集団 (チャライ族) による思考実験が以下の通りだ。<br><br>
-テンサイ族はチャライ族の100倍賢い。しかし、チャライ族はテンサイ族の10倍社会性に富んでいる。他者から正しく知識を伝えられる可能性が50％だとして、イノベーションが普及するのはどちらか？<br><br>
-答えは圧倒的にチャライ族なのだ (本書で紹介されてる参考文献は<a href="https://henrich.fas.harvard.edu/files/henrich/files/henrich_2009-2.pdf">こちら</a>)。
-つまり、クールなテクノロジーを手に入れたければ、頭をよくするよりも人づき合いをよくした方がいい、らしい。学会の懇親会で誰とも懇親できず隅っこでひたすらご飯を食べるマンとなっている私にとっては耳の痛い話だ。チャラくなりたい…。<br>
-<br>
-<br>
-あとこんな話もあった。<br>
-読み書き能力の高い人は、言語性情報についての脳領域を特化させることでその隣にある顔認識担当の領域である紡錘状回が割を食うために顔認識が苦手になるらしい。ぼくは昔から顔認識に困難を抱いている（だれがだれだかわからない）のだが、その代償として得られたものがこの記事レベルの読み書き能力だとしたら割に合わない話である。<br>この記事が日本の文化進化を促す集団脳の一助となることを信じて。<br><br><br></p>
-<div id="他にこんな本読んだ" class="section level5">
-<h5>他にこんな本読んだ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/rt/">心理学, 認知・行動科学のための反応時間ハンドブック</a>
-<br>
-<a href="https://susishushi.github.io/my_blog/post/visual_revo/">ヒトの目、驚異の進化</a><br>
-<a href="https://susishushi.github.io/my_blog/post/buildingemp/">The War for Kindness</a></p>
+<div id="ポアソン回帰モデルの評価" class="section level2">
+<h2>ポアソン回帰モデルの評価</h2>
+<p>回帰モデルを推定したObjectを用意して、model_performance()でモデルを評価しましょう:</p>
+<pre class="r"><code>fit1 &lt;- glmer(count ~ zAge + zBase * Trt + (1|patient),
+             data = epilepsy, family = poisson())
+
+model_performance(fit1)</code></pre>
+<pre><code>## # Indices of model performance
+## 
+##     AIC |     BIC | R2_conditional | R2_marginal |  ICC | RMSE | SCORE_LOG | SCORE_SPHERICAL
+## --------------------------------------------------------------------------------------------
+## 1357.58 | 1378.37 |           0.82 |        0.53 | 0.61 | 1.32 |     -2.50 |            0.06</code></pre>
+<p>R2_conditionalはmixed modelの, R2_marginalは固定要因のみのモデル指標になります！<br>
+さらにcheck_collinearity()で多重共線性を評価しましょう:</p>
+<pre class="r"><code>check_collinearity(fit1)</code></pre>
+<pre><code>## # Check for Multicollinearity
+## 
+## Low Correlation
+## 
+##  Parameter  VIF Increased SE
+##       zAge 1.10         1.05
+##      zBase 2.28         1.51
+##        Trt 1.02         1.01
+##  zBase:Trt 2.39         1.55</code></pre>
+<pre class="r"><code># plot
+x &lt;- check_collinearity(fit1)
+plot(x)</code></pre>
+<p><img src="../../post/performance_files/figure-html/poisson1-1.png" width="672" /></p>
 </div>
+<div id="bayesian用の使い方" class="section level2">
+<h2>Bayesian用の使い方</h2>
+<p>BayesianはVIFとか見れないものもいくつかあります。<br>
+まぁ以下みたいなやつをみればよいでしょうよ(推定結果は面倒なので省略):</p>
+<pre class="r"><code># 上述のモデルと全く一緒
+fit1b &lt;- brm(count ~ zAge + zBase * Trt + (1|patient),
+            data = epilepsy, family = poisson())
+
+# Bayesian用の指標が報告される（あたりまえ
+model_performance(fit1b)</code></pre>
+<p>まぁ、基本こんなもんでしょう。<br>
+今日はここまで。ではまた。</p>
 </div>
 </article>
     </section>
@@ -137,9 +177,9 @@
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
         
-          <a class="ui label" href="../../tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
+          <a class="ui label" href="../../tags/r" title="R">R</a>
         
       
       <div
