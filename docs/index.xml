@@ -6,10 +6,19 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 19 Aug 2020 20:59:19 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[日記]おれはMonsterを応援するぞ</title>
+      <link>/post/monster/</link>
+      <pubDate>Sat, 22 Aug 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/monster/</guid>
+      <description>おれはモンスターを飲む。君たちはどうだ？</description>
+    </item>
     
     <item>
       <title>[R]performance packageでモデル評価</title>
@@ -102,7 +111,7 @@
     </item>
     
     <item>
-      <title>[音楽]Amazon musicでオシャレな音楽</title>
+      <title>[お役立ち]Amazon musicでオシャレな音楽</title>
       <link>/post/am_music1/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       

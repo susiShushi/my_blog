@@ -6,10 +6,19 @@
     <description>Recent content in 日記 on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[日記]おれはMonsterを応援するぞ</title>
+      <link>/post/monster/</link>
+      <pubDate>Sat, 22 Aug 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/monster/</guid>
+      <description>おれはモンスターを飲む。君たちはどうだ？</description>
+    </item>
     
     <item>
       <title>[読書感想文]測りすぎ――なぜパフォーマンス評価は失敗するのか？</title>
@@ -84,7 +93,7 @@
     </item>
     
     <item>
-      <title>[音楽]Amazon musicでオシャレな音楽</title>
+      <title>[お役立ち]Amazon musicでオシャレな音楽</title>
       <link>/post/am_music1/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
