@@ -7,11 +7,6 @@ categories: ["読書感想文"]
 cover: "/img/image_Ebook.png"
 tags: ["日記", "読書感想文"]
 summary: "「The War for Kindness: Building Empathy in a Fractured World」を読みました"
-header-includes:
-  - \usepackage{titling}
-  - \pretitle{\begin{center}
-    \includegraphics[width=2in,height=2in]"/img/image_Ebook.png"\LARGE\\}
-  - \posttitle{\end{center}}
 ---
 
 <!-- START MoshimoAffiliateEasyLink -->

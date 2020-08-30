@@ -6,10 +6,19 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 22 Aug 2020 20:59:19 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[読書感想文]データ分析のための数理モデル入門</title>
+      <link>/post/compmodel/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/compmodel/</guid>
+      <description>「データ分析のための数理モデル入門 本質をとらえた分析のために」を読みました</description>
+    </item>
     
     <item>
       <title>[日記]おれはMonsterを応援するぞ</title>
