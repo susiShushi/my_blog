@@ -6,10 +6,19 @@
     <description>Recent content in Posts on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[R]datadrivencvでオシャレなCVを作ろう</title>
+      <link>/post/datacv/</link>
+      <pubDate>Sun, 06 Sep 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/datacv/</guid>
+      <description>Google spreadsheetで保存した内容からCVを作るゾ</description>
+    </item>
     
     <item>
       <title>[読書感想文]データ分析のための数理モデル入門</title>

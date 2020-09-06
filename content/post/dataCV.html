@@ -1,0 +1,56 @@
+---
+title: "[R]datadrivencvでオシャレなCVを作ろう"
+date: 2020-09-06T20:59:19+09:00
+draft: true
+
+categories: ["R"]
+cover: "/img/image_cv.png"
+tags: ["お役立ち","R"]
+summary: "Google spreadsheetで保存した内容からCVを作るゾ"
+---
+
+
+
+<div id="datadrivencv-package" class="section level2">
+<h2>datadrivencv package</h2>
+<p>「ふえぇぇ…。オシャレなCVが作りたいよぉ…」とCVのテンプレを夜な夜なあさってたんだけど、なんかRでつくれることがわかった。<br>
+Googleのスプレッドシート（CSVファイルでも可）からモダンな感じにCVを出力してくれる神パッケージ。それが<a href="http://nickstrayer.me/datadrivencv/">datadrivencv</a>なのである。<br>
+<br>
+このパッケージ使ってできたのが<a href="https://www.nshushi-s-e.com/files/cv.html">これ</a>
+<br>
+すごいね！<br></p>
+</div>
+<div id="作り方" class="section level2">
+<h2>作り方</h2>
+<p><a href="http://nickstrayer.me/datadrivencv/">公式ドキュメント</a>に全部書いてあるのでそれを見てほしい:</p>
+<pre class="r"><code># まずはインストール。関連パッケージがごちゃごちゃめんどうだけど一つ一つ解決していけばおｋ
+# install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;nstrayer/datadrivencv&quot;)</code></pre>
+</div>
+<div id="テンプレ通りのスプレッドシートを作る" class="section level2">
+<h2>テンプレ通りのスプレッド―シートを作る</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/14MQICF2F8-vf8CKPF1m4lyGKO6_thG-4aSwat1e2TWc/edit#gid=917338460">パッケージの作者によるSpreadsheet</a>から「Make a copy」で自身のGoogle driveにお引越し。できたものをコツコツ修正していく。<br>
+<br>
+<br>
+ほんで以下のようなコードをぶん回す:</p>
+<pre class="r"><code># run ?datadrivencv::use_datadriven_cv to see more details
+datadrivencv::use_datadriven_cv(
+  full_name = &quot;君の名前&quot;,
+  data_location = &quot;spreadsheetの場所。アクセス権限に注意&quot;,
+  pdf_location = &quot;任意の場所&quot;,
+  html_location = &quot;Current folderにすればよくね？&quot;,
+  source_location = &quot;よくわからんかったから使わんかった←&quot;
+)</code></pre>
+<p>そしたらrender_cv.rというRファイルが作成されるので、そのRコードをぶん回せばhtmlやpdfファイルが作成されるぞ！<br>
+これで今後はSpreadsheetに情報を加える⇒render_cv.rを回す、というプロセスでモダンなCVを作り続けるマシーンになれる。細かい内容の習性はcv.rmdのセクション名を変えたりすればよい。
+<br>
+<br>
+## 難点</p>
+<p>クソ重い。<br><br>
+<br><br>
+##### 他の記事
+<a href="https://susishushi.github.io/my_blog/post/mmeasure/">測りすぎ――なぜパフォーマンスは失敗するのか？</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/monster/">おれはMonsterを応援するぞ</a><br>
+<a href="https://susishushi.github.io/my_blog/post/performance/">performance packageでモデル評価</a></p>
+</div>
