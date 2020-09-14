@@ -74,7 +74,7 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
         -p 8888:8888 \
             --user root \
             -e NB_GID=100 \
-            -v &quot;/$(PWD)&quot;:/home/jovyan/work \
+            -v &quot;$$PWD/work:/home/jovyan/work&quot; \
             -it --name jupyter_octave jupyter_octave:1.0 \
 </code></pre>
 <p><br>
@@ -84,7 +84,7 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
 “–rm”＝コンテナ終了時に環境の自動消去 (fileは以下のマウントフォルダに残る)<br>
 “-p”＝コンテナport:host port<br>
 “-e”=環境変数のセット。詳細は<a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html">こちら</a><br>
-“-v”=ローカルで使うフォルダ:コンテナ上のフォルダ＋Windowsだと書き方がターミナルによって異なる（例：Docker Quickstart＝ -v ${PWD}:/app　GitBash＝ -v “/＄(PWD)”:/app　PowerShell＝-v /c/Users/username/projectname:/app）。<br>
+“-v”=ローカルで使うフォルダ:コンテナ上のフォルダ＋Windowsだと書き方がターミナルによって異なる（例：Docker Quickstart＝ -v ${PWD}:/app　GitBash＝ -v “/＄(PWD)”://app　PowerShell＝-v /c/Users/username/projectname:/app）。困ったら絶対パスで書くのだ。<br>
 あとはまぁいいでしょ。<br>
 <br>
 <br>
