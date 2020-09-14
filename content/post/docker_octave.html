@@ -30,27 +30,25 @@ Octaveとは：無償のMATLAB（プログラミング言語）<br></p>
 <div id="作り方" class="section level2">
 <h2>作り方</h2>
 <p>任意のフォルダ上で以下のDockerfileを作る (e.g., VScodeで立ち上げるならコマンドプロンプトで任意のフォルダ上で“code Dockerfile”と入力)。<br></p>
-<pre class="docker:file"><code># Imageの作成
+<pre class="docker:file"><code>
+# Imageの作成
 FROM jupyter/base-notebook
     
 # metadataの記述
 LABEL Description=&quot;Jupyter Octave&quot;
     
-# RUNさせるための権限付与
+# RUNさせるための権限付与 + 作図用のgnuplotとOctaveをインスコ
 USER root
-
-# 作図用のgnuplotとOctaveをインスコ
-RUN apt-get update &amp;&amp; \ 
+RUN apt-get update &amp;&amp; \
     apt-get install -y gnuplot octave &amp;&amp; \
     apt-get clean
-
+    
 # pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
 USER jovyan
 RUN pip install octave_kernel &amp;&amp; \
-    export OCTAVE_EXECUTABLE=$(which octave)
-</code></pre>
+    export OCTAVE_EXECUTABLE=$(which octave)</code></pre>
 <p><br><br>
-このDockerfileができたら準備完了です（サラマンダーよりはやい）。</p>
+このDockerfileができたら準備完了です。</p>
 <p><br><br></p>
 </div>
 <div id="docker-imageの作成" class="section level2">

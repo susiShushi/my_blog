@@ -36,29 +36,27 @@ Octaveとは：無償のMATLAB（プログラミング言語）<br>
 
 
 ```docker:file
+
 # Imageの作成
 FROM jupyter/base-notebook
     
 # metadataの記述
 LABEL Description="Jupyter Octave"
     
-# RUNさせるための権限付与
+# RUNさせるための権限付与 + 作図用のgnuplotとOctaveをインスコ
 USER root
-
-# 作図用のgnuplotとOctaveをインスコ
-RUN apt-get update && \ 
+RUN apt-get update && \
     apt-get install -y gnuplot octave && \
     apt-get clean
-
+    
 # pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
 USER jovyan
 RUN pip install octave_kernel && \
     export OCTAVE_EXECUTABLE=$(which octave)
-
 ```  
 
 <br><br>
-このDockerfileができたら準備完了です（サラマンダーよりはやい）。
+このDockerfileができたら準備完了です。
 
 <br><br>
 
