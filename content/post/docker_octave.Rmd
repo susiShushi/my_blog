@@ -91,12 +91,12 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
 
 ```docker:makefile
 serve:
-        @docker container run --rm \
-                -p 8888:8888 \
-                --user root \
-                -e NB_GID=100 \
-                -v "$$PWD/work:/home/jovyan/work" \
-                -it --name jupyter_octave jupyter_octave:1.0 \
+	@winpty docker container run --rm \
+		-p 8888:8888 \
+			--user root \
+			-e NB_GID=100 \
+			-v "/$(PWD)":/home/jovyan/work \
+			-it --name jupyter_octave jupyter_octave:1.0 \
 
 ```  
 
