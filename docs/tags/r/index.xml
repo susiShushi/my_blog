@@ -6,10 +6,19 @@
     <description>Recent content in R on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 06 Sep 2020 20:59:19 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 20:59:19 +0900</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[お役立ち]DockerでJupyter &#43; Octave環境構築</title>
+      <link>/post/docker_octave/</link>
+      <pubDate>Tue, 15 Sep 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/docker_octave/</guid>
+      <description>DockerでOctaveとかしたい人用記事</description>
+    </item>
     
     <item>
       <title>[R]datadrivencvでオシャレなCVを作ろう</title>
