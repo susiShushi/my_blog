@@ -91,7 +91,7 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
 
 ```docker:makefile
 serve:
-	@winpty docker container run --rm \
+	@docker container run --rm \
 		-p 8888:8888 \
 			--user root \
 			-e NB_GID=100 \
@@ -102,6 +102,7 @@ serve:
 
 
 <br>
+※なんか理由がわからないんですけどぼくの環境だと@がうまく機能しなかったりするんでTabを消したりつけたりしてみてください<br>
 以下に簡単なメモを残しときます。<br>
 “--rm”＝コンテナ終了時に環境の自動消去 (fileは以下のマウントフォルダに残る)<br>
 “-p”＝コンテナport:host port<br>
@@ -116,7 +117,7 @@ make serve <br><br>
 <br>
 http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない<br><br>
 みたいなんが出てくる。これをブラウザにコピペしたらJupyter notebookでOctave環境の完成！これで毎週のCouseraでのプログラミング課題をJupyter notebook上のOctaveでできる。やったね！
-<br>
+<br>うまくいかんかったら[Twitter](https://twitter.com/NSushi)で聞いて下せえ（解決できるとはいっていない）
 <br><br>
 
 ##### 他にこんな記事があるよ

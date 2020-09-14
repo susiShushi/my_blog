@@ -152,7 +152,7 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
 中身は以下のように作る<br>
 <br></p>
 <pre class="docker:makefile"><code>serve:
-    @winpty docker container run --rm \
+    @docker container run --rm \
         -p 8888:8888 \
             --user root \
             -e NB_GID=100 \
@@ -160,6 +160,7 @@ Octave環境を立ち上げるためにいちいちこんな長いの入力す�
             -it --name jupyter_octave jupyter_octave:1.0 \
 </code></pre>
 <p><br>
+※<a href="mailto:なんか理由がわからないんですけどぼくの環境だと@がうまく機能しなかったりするんでTabを消したりつけたりしてみてください" class="email">なんか理由がわからないんですけどぼくの環境だと@がうまく機能しなかったりするんでTabを消したりつけたりしてみてください</a><br>
 以下に簡単なメモを残しときます。<br>
 “–rm”＝コンテナ終了時に環境の自動消去 (fileは以下のマウントフォルダに残る)<br>
 “-p”＝コンテナport:host port<br>
@@ -174,7 +175,7 @@ make serve <br><br>
 <br>
 <a href="http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない" class="uri">http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない</a><br><br>
 みたいなんが出てくる。これをブラウザにコピペしたらJupyter notebookでOctave環境の完成！これで毎週のCouseraでのプログラミング課題をJupyter notebook上のOctaveでできる。やったね！
-<br>
+<br>うまくいかんかったら<a href="https://twitter.com/NSushi">Twitter</a>で聞いて下せえ（解決できるとはいっていない）
 <br><br></p>
 <div id="他にこんな記事があるよ" class="section level5">
 <h5>他にこんな記事があるよ</h5>
