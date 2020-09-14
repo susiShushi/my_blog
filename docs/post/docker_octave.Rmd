@@ -9,7 +9,7 @@ tags: ["お役立ち", "R", "Docker"]
 summary: "DockerでOctaveとかしたい人用記事"
 ---
 
-## Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい 
+## 機械学習についての勉強をした
   
   
 突然だけど先日Cousera（オンライン講義を受けれる営利団体）の機械学習に関するオンライン講義を受講し終えた (修了証は[こちら](https://www.coursera.org/account/accomplishments/certificate/KYW45CANBU32))。<br>
@@ -36,18 +36,21 @@ Octaveとは：無償のMATLAB（プログラミング言語）<br>
 
 
 ```docker:file
-FROM jupyter/base-notebook /* Imageの作成 */
+# Imageの作成
+FROM jupyter/base-notebook
     
-LABEL Description="Jupyter Octave" /* metadataの記述 */
+# metadataの記述
+LABEL Description="Jupyter Octave"
     
-USER root /* RUNさせるための権限付与 */
+# RUNさせるための権限付与
+USER root
 
-/* 作図用のgnuplotとOctaveをインスコ */
+# 作図用のgnuplotとOctaveをインスコ
 RUN apt-get update && \ 
     apt-get install -y gnuplot octave && \
     apt-get clean
 
-/* pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ */
+# pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
 USER jovyan
 RUN pip install octave_kernel && \
     export OCTAVE_EXECUTABLE=$(which octave)

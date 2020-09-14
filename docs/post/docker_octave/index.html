@@ -93,8 +93,8 @@
       <article style="margin-top: 2rem;">
 
 
-<div id="windows-homeでもdockerで心理学者用の解析執筆環境を構築したい" class="section level2">
-<h2>Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい</h2>
+<div id="機械学習についての勉強をした" class="section level2">
+<h2>機械学習についての勉強をした</h2>
 <p>突然だけど先日Cousera（オンライン講義を受けれる営利団体）の機械学習に関するオンライン講義を受講し終えた (修了証は<a href="https://www.coursera.org/account/accomplishments/certificate/KYW45CANBU32">こちら</a>)。<br>
 Neural Networkのアルゴリズムをプログラム言語で直書きしたり、「知ってるだけ」という手法の中身を一歩一歩丁寧に記述することも含めながら学習する機会ができてとてもよかった。
 <br>
@@ -112,18 +112,21 @@ Octaveとは：無償のMATLAB（プログラミング言語）<br></p>
 <div id="作り方" class="section level2">
 <h2>作り方</h2>
 <p>任意のフォルダ上で以下のDockerfileを作る (e.g., VScodeで立ち上げるならコマンドプロンプトで任意のフォルダ上で“code Dockerfile”と入力)。<br></p>
-<pre class="docker:file"><code>FROM jupyter/base-notebook /* Imageの作成 */
+<pre class="docker:file"><code># Imageの作成
+FROM jupyter/base-notebook
     
-LABEL Description=&quot;Jupyter Octave&quot; /* metadataの記述 */
+# metadataの記述
+LABEL Description=&quot;Jupyter Octave&quot;
     
-USER root /* RUNさせるための権限付与 */
+# RUNさせるための権限付与
+USER root
 
-/* 作図用のgnuplotとOctaveをインスコ */
+# 作図用のgnuplotとOctaveをインスコ
 RUN apt-get update &amp;&amp; \ 
     apt-get install -y gnuplot octave &amp;&amp; \
     apt-get clean
 
-/* pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ */
+# pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
 USER jovyan
 RUN pip install octave_kernel &amp;&amp; \
     export OCTAVE_EXECUTABLE=$(which octave)
