@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/docker_octave/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
+    <loc>/post/dmm/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E6%97%A5%E8%A8%98/</loc>
+    <lastmod>2020-10-07T21:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/docker_octave/</loc>
     <lastmod>2020-09-15T20:59:19+09:00</lastmod>
   </url>
   
@@ -18,32 +53,7 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/r/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-09-15T20:59:19+09:00</lastmod>
   </url>
   
@@ -59,11 +69,6 @@
   
   <url>
     <loc>/post/compmodel/</loc>
-    <lastmod>2020-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/%E6%97%A5%E8%A8%98/</loc>
     <lastmod>2020-08-30T00:00:00+00:00</lastmod>
   </url>
   
