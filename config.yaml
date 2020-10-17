@@ -1,0 +1,22 @@
+baseurl: https://susishushi.github.io/my_blog/
+relativeurls: true 
+publishDir: docs
+hasCJKLanguage: true
+languageCode: en
+defaultContentLanguage: en
+title: とある心理学系研究者のブログ
+theme: hugo-theme-dream
+googleAnalytics: UA-131372772-3
+
+params:
+  author: なんばいきん
+  avatar: /img/avatar_bai.png
+  background: black
+  dark404: yes
+  darkLinkColor: darkseagreen
+  darkNav: yes
+  email: su@gmail.com
+  github: https://github.com/susiShushi
+  linkColor: seagreen
+  motto: 表情の研究してます.左上のアイコンで夜モードにできるけどそしたらRコードが全部見えなくなるブログ.それがここ
+  siteStartYear: 2020

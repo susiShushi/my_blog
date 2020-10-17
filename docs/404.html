@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja-jp">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,9 +9,9 @@
     
 
 
-  
-  <meta name="author" content="なんばいきん" />
-  <meta name="description" content="" />
+
+<meta name="author" content="なんばいきん" />
+<meta name="description" content="" />
 
 
 
@@ -33,80 +33,84 @@
 <meta name="twitter:description" content=""/>
 
 
-<link rel="stylesheet" href="./my_blog/css/github-markdown.css" />
 <link rel="stylesheet" href="./my_blog/css/semantic.min.css" />
+<link rel="stylesheet" href="./my_blog/css/icomoon.css" />
+<link rel="stylesheet" href="./my_blog/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="./my_blog/css/github-markdown.css" />
 <link rel="stylesheet" href="./my_blog/css/site.css" />
 
-
 <style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
   a {
     color: seagreen !important;
   }
-</style>
+  
 
-
-
-<style>
-  .inverted a {
+  
+  .inverted a,
+  .inverted a:hover {
      color: darkseagreen !important;
   }
+  
+
+  
+  body {
+    
+    background-color: black;
+    
+
+    
+  }
+  
 </style>
 
-
+     
   </head>
 
-  
-  <body style="background: black;">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body>
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
     <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = 'https://susishushi.github.io/my_blog/'"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/susishushi.github.io\/my_blog\/'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
 </nav>
 
-          
-<div class="ui container dream-404-container">
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="dream-404-container">
   <div class="ui basic center aligned segment">
     
-      <h1 class="ui header">
-        Oops...You are lost in dream.
+      <h1 class="ui inverted header">
+        Oops ... You are lost in dream.
         <div class="sub header">Don't worry though, click the button below to wake up.</div>
       </h1>
       <p>
-        <button class="ui button" onclick="window.location.href = '/'">Back to home</button>
+        <button class="ui inverted button" onclick="window.location.href = '/'">Back to home</button>
       </p>
     
   </div>
 </div>
 
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = 'https://susishushi.github.io/my_blog/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
   
   
@@ -116,12 +120,12 @@
       <div class="ui top attached segment">
         <h3 class="ui header">Social Links</h3>
       </div>
-      <div class="ui attached segment">
+      <div class="ui bottom attached segment">
         <nav class="ui secondary menu dream-menu dream-socials">
   
   
     <div class="item">
-      <a href="mailto:@gmail.com">
+      <a href="mailto:su@gmail.com">
         <i class="large mail icon" title="Email"></i>
       </a>
     </div>
@@ -135,6 +139,14 @@
 
   
 
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/https://github.com/susiShushi" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
   
 
   
@@ -155,20 +167,46 @@
   
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="./my_blog/js/jquery.min.js"></script>
+    <script>
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="./my_blog/js/jquery.min.js"></script>
 <script src="./my_blog/js/semantic.min.js"></script>
-<script src="./my_blog/js/imagesloaded.pkgd.min.js"></script>
-<script src="./my_blog/js/masonry.pkgd.min.js"></script>
-<script src="./my_blog/js/nav.js"></script>
+<script src="./my_blog/js/jquery.overlayScrollbars.min.js"></script>
 <script src="./my_blog/js/header.js"></script>
 <script src="./my_blog/js/main.js"></script>
 <script src="./my_blog/js/theme.js"></script>
 
      
+
+    
 
     
       

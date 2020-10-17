@@ -1,3 +1,8 @@
+$(document).ready(() => {
+  initTags()
+  initAccordion()
+})
+
 const SemanticUIColors = [
   'red',
   'orange',
@@ -9,7 +14,7 @@ const SemanticUIColors = [
   'violet',
   'purple',
   'pink',
-  'brown'
+  'brown',
 ]
 
 function randomInt(min, max) {
@@ -22,7 +27,7 @@ function randomInt(min, max) {
 function initTags() {
   $('.dream-tags')
     .children()
-    .map(function() {
+    .map(function () {
       $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
     })
 }
@@ -30,8 +35,7 @@ function initTags() {
 function initAccordion() {
   $('.dream-categories .ui.accordion').accordion({
     selector: {
-      trigger: '.title .icon'
+      trigger: '.title .icon',
     },
-    exclusive: false
   })
 }

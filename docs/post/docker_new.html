@@ -1,0 +1,98 @@
+---
+title: "[お役立ち]WindowsでDockerつこて心理学者用のR環境構築"
+date: 2020-07-28T20:59:19+09:00
+draft: true
+
+categories: ["お役立ち"]
+cover: "/img/docker_W.png"
+tags: ["お役立ち", "R", "Docker"]
+summary: "Windows Homeのあなたでもできる(多分)"
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="windows-homeでもdockerで心理学者用の解析執筆環境を構築したい" class="section level2">
+<h2>Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい</h2>
+<p>Dockerが今僕の中でアツいので心理系含む一般人への布教用に記事を書くこととしました。<br>
+Dockerとは、正確には「コンテナ仮想化を用いてアプリを開発云々プラットフォーム」ですが、ここでは「環境を簡単に構築するツール」と実用上考えましょう。いちいちいろんなアプリをインスコせずとも、仮想環境を作る⇒いらなくなったらポイ。で(ローカル)環境にも優しい！詳しくはググろう！<br><br>
+この記事の対象は以下の人達です。<br>
+<br></p>
+</div>
+<div id="対象" class="section level2">
+<h2>対象</h2>
+<ol style="list-style-type: decimal">
+<li>コマンドプロンプトの意味が分かる</li>
+<li>「cd」←これくらいの意味はわかる</li>
+<li>Rでcmdstanrとか使いたいけどよくわからん←私</li>
+<li>でも全然がんばりたくないWindows User←私</li>
+<li>Dockerは試したけどインスコの時になんかエラー出てやめた←私</li>
+</ol>
+<p><br></p>
+</div>
+<div id="この記事では何をする" class="section level2">
+<h2>この記事では何をする</h2>
+<p>上にも書きましたが、<strong>Docker</strong>とは「環境を簡単に構築するツール」です。<br>
+<br>
+専修大学の国里先生(神)が作成したDockerfileがあります：<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">https://hub.docker.com/r/ykunisato/paper-r-jp</a><br>
+Dockerfileは「仮想環境の設計図」と理解してください。<br>
+<br>
+とにかく、我々はこの国里先生が作りたもうたDockerfileのおかげで「パッケージが充実しまくったRstudioがブラウザ上で利用」できます。すごい。<br>
+この記事では「パッケージが充実しまくったRstudioがブラウザ上で利用できる」ことをとりあえず目指します。「詳しい使い方の前にまぁ慣れようや」がコンセプトです。<br><br>
+ゴールまでのプロセスは以下の通り。<br></p>
+<ol style="list-style-type: decimal">
+<li>なんとかしてDockerをインストール</li>
+<li>コマンドプロンプトで「docker…」のコマンド入力</li>
+<li>ブラウザにアドレス入力</li>
+<li><strong>おわり</strong></li>
+</ol>
+<p><br>
+は？簡単…。
+<br><br></p>
+</div>
+<div id="windowsにdockerをなんとかしてインストル" class="section level2">
+<h2>WindowsにDockerをなんとかしてインスト―ル</h2>
+<p>Windows10 proとかMacとかそういう人たちはとてもシンプルに普通にDockerをインスコできます。適当に調べてください。<br>
+さて、私含むWindows10 homeの人達には以下の二つのアプローチがあります(私の狭い知識レベルでは)。
+<br>
+<br></p>
+<ol style="list-style-type: decimal">
+<li>Docker desktop for windowsでいく(参照：<a href="https://note.com/tico0602/n/n02d53e4d5dec">ちこさんの記事</a>)</li>
+<li>Docker Toolboxでいく(参照：<a href="https://docs.docker.com/toolbox/toolbox_install_windows/">公式Doc</a>、 <a href="https://github.com/docker/toolbox/releases">exeファイル</a>)</li>
+</ol>
+<p>Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
+2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認<a href="http://www.dwapp.top/environment/virtualization/817">(仮想化確認の詳細はこちら)</a>⇒<a href="https://github.com/docker/toolbox/releases">https://github.com/docker/toolbox/releases</a>のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
+<strong>※Docker Toolboxの場合「localhost:」は使えず、代わりに「192.168.99.100」を入力することを絶対に忘れない!!</strong>
+<br>
+<br></p>
+</div>
+<div id="dockerで環境構築" class="section level2">
+<h2>Dockerで環境構築</h2>
+<p>ターミナル(ぼくはかっこいいからgit bashつこてます)で任意のフォルダに「cd」(移動)なり「ls」(内容確認)なり「mkdir」(ファイル・フォルダ作成)なり駆使して移動。<br>
+その後以下のように入力するともう勝手にいろいろ起きる。<br><br></p>
+<pre class="docker:run"><code>docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp</code></pre>
+<p><br>
+これをしてしばらく待つ。「-v ‘path’」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
+※僕のノートPCのWindows環境(Toolbox, Gitbash)では先頭に“/”がもう一つ必要になります。うまくいかないのは大体このパス関連が失敗してるのでいろいろ調べたりしてみてください
+<br>
+<br></p>
+</div>
+<div id="ブラウザでrstudioを開く" class="section level2">
+<h2>ブラウザでRstudioを開く</h2>
+<p>ブラウザ(Google chromeとか)を開いて、urlバーに「localhost:8787」とタイプする。Docker Toolboxの人は「192.168.99.100:8787」
+<br>
+Usernameに“rstudio”, passwordには“任意のパスワード”を入力する。<br>
+<br>
+多分これでブラウザ上でめちゃくちゃいい感じのパッケージが入ったRstudioがブラウザ上で操作できるはず！パッケージの詳細は<a href="https://hub.docker.com/r/ykunisato/paper-r-jp">こちら！</a>お疲れ様でした！Rの大海原を泳ぎまくろう！！<br>
+泳ぎつかれたら「docker stop コンテナID」で止めたり、「docker rm コンテナID」で消したりしよう！<br>
+<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/gorilla/">Gorilla.scでオンライン実験</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/firetv/">fire TV stickで大画面Youtube</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/kokoro/">なぜ心を読みすぎるのか</a></p>
+</div>
+</div>

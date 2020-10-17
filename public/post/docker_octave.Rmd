@@ -1,0 +1,129 @@
+---
+title: "[お役立ち]DockerでJupyter + Octave環境構築"
+date: 2020-09-15T20:59:19+09:00
+draft: true
+
+categories: ["お役立ち"]
+cover: "/img/docker_octave.png"
+tags: ["お役立ち", "R", "Docker"]
+summary: "DockerでOctaveとかしたい人用記事"
+---
+
+## 機械学習についての勉強をした
+  
+  
+突然だけど先日Cousera（オンライン講義を受けれる営利団体）の機械学習に関するオンライン講義を受講し終えた (修了証は[こちら](https://www.coursera.org/account/accomplishments/certificate/KYW45CANBU32))。<br>
+Neural Networkのアルゴリズムをプログラム言語で直書きしたり、「知ってるだけ」という手法の中身を一歩一歩丁寧に記述することも含めながら学習する機会ができてとてもよかった。
+<br>
+<br>
+Main topicとしては：教師あり学習 (回帰、NN、SVM)、教師なし学習(k平均法、PCA、異常検知)、その他実装例の紹介やシステム構築上のtipsを学べる。興味がある人はぜひ受講して「シリコンバレーの中でも限られた機械学習を理解し実装可能な人材」を目指そう。<br>
+<br>
+
+## Octaveの仮想環境
+  
+  
+さて本題。上述の講義では「Octave（or MATLAB）を用いた学習」が求められる。Dockerを習ったばかりだったのでせっかくなら「受講中はDockerでOctave環境を構築して、終わったらポイしよう！」というモチベーションのもと[ここ](https://thicolares.com/2018/11/11/creating-a-docker-image-for-jupyter-Octave.html)を参考にJupyter Notebook＋Octave環境をDockerで作ることにした。<br><br>
+
+Jupyter notebookとは：ブラウザで動作するインタラクティブなデータ分析用ツール<br>
+Octaveとは：無償のMATLAB（プログラミング言語）<br>
+  
+<br><br>
+
+## 作り方
+  
+  
+任意のフォルダ上で以下のDockerfileを作る (e.g., VScodeで立ち上げるならコマンドプロンプトで任意のフォルダ上で"code Dockerfile"と入力)。<br>
+
+
+```docker:file
+
+# Imageの作成
+FROM jupyter/base-notebook
+    
+# metadataの記述
+LABEL Description="Jupyter Octave"
+    
+# RUNさせるための権限付与 + 作図用のgnuplotとOctaveをインスコ
+USER root
+RUN apt-get update && \
+    apt-get install -y gnuplot octave && \
+    apt-get clean
+    
+# pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
+USER jovyan
+RUN pip install octave_kernel && \
+    export OCTAVE_EXECUTABLE=$(which octave)
+```  
+
+<br><br>
+このDockerfileができたら準備完了です。
+
+<br><br>
+
+## Docker imageの作成
+  
+  
+コマンドプロンプト上で以下のように入力<br><br>
+
+```docker:command
+docker build -t jupyter_octave:1.0 .
+```  
+
+<br>“-t”でお名前とVersion情報をつけてます。一番最後の” .”も「今いるフォルダ」を意味しているので忘れない！
+<br>
+<br>
+
+## RUNする
+  
+  
+コマンドプロンプト上で以下のように入力する必要があります<br><br>
+
+```docker:run
+docker container run --rm -p 8888:8888 --user root -e NB_GID=100 -v "$$PWD/work:/home/jovyan/work" -it --name jupyter_octave jupyter_octave:1.0
+```  
+
+<br>
+ぱっと見でわかるとおもうんですけどこれがくそ長い。<br>
+Octave環境を立ち上げるためにいちいちこんな長いの入力するのも嫌なので「Makefile」を活用します。<br>
+(e.g., VScodeなら「code Makefile」とか)<br><br>
+中身は以下のように作る<br>
+<br>
+
+```docker:makefile
+serve:
+	@docker container run --rm \
+		-p 8888:8888 \
+			--user root \
+			-e NB_GID=100 \
+			-v "$$PWD/work:/home/jovyan/work" \
+			-it --name jupyter_octave jupyter_octave:1.0 \
+
+```  
+
+
+<br>
+※なんか理由がわからないんですけどぼくの環境だと＠がうまく機能しなかったりするんでTabを消したりつけたりしてみてください
+<br>
+以下に簡単なメモを残しときます。<br>
+“--rm”＝コンテナ終了時に環境の自動消去 (fileは以下のマウントフォルダに残る)<br>
+“-p”＝コンテナport:host port<br>
+“-e”=環境変数のセット。詳細は[こちら](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html)<br>
+“-v”=ローカルで使うフォルダ:コンテナ上のフォルダ＋Windowsだと書き方がターミナルによって異なる（例：Docker Quickstart＝ -v ${PWD}:/app　GitBash＝ -v "/＄(PWD)"://app　PowerShell＝-v /c/Users/username/projectname:/app）。困ったら絶対パスで書くのだ。<br>
+あとはまぁいいでしょ。<br>
+<br>
+<br>
+Makefileができたら、毎回コマンドプロンプト上で<br><br>
+make serve <br><br>
+と入力してうまくいけば<br>
+<br>
+http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない<br><br>
+みたいなんが出てくる。これをブラウザにコピペしたらJupyter notebookでOctave環境の完成！これで毎週のCouseraでのプログラミング課題をJupyter notebook上のOctaveでできる。やったね！
+<br>うまくいかんかったら[Twitter](https://twitter.com/NSushi)で聞いて下せえ（解決できるとはいっていない）
+<br><br>
+
+##### 他にこんな記事があるよ
+ [Gorilla.scでオンライン実験](https://susishushi.github.io/my_blog/post/gorilla/)
+  <br>
+[WindowsでDockerつこて心理学者用のR環境構築](https://susishushi.github.io/my_blog/post/docker_new/)
+<br>
+[datadrivencvでオシャレなCVを作ろう](https://susishushi.github.io/my_blog/post/datacv/)

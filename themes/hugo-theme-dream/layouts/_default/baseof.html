@@ -7,30 +7,32 @@
     <title>{{ block "title" . }} {{- T "home" -}} {{ end }} | {{ .Site.Title }}</title>
 
     {{ partial "head.html" . }}
+    {{ block "css" . }} {{ end }}
   </head>
 
-  {{ if .Site.Params.background }}
-  <body style="background: {{ .Site.Params.background }};">
-  {{ else if .Site.Params.backgroundImage }}
-  <body style="background-image: url({{ .Site.Params.backgroundImage }});">
-  {{ else }}
   <body>
-  {{ end }}
+    {{ partial "nav.html" . }}
     <div class="flip-container">
       <div class="flipper">
         <section class="front">
-          {{ partial "nav.html" . }}
-          {{ block "main" . }} {{ end }}
+          <div class="dream-max-width">
+            {{ block "main" . }} {{ end }}
+          </div>
         </section>
         <section class="back">
-          {{ partial "nav.html" . }}
-          {{ partial "back.html" . }}
+          <div class="dream-max-width">
+            {{ partial "back.html" . }}
+          </div>
         </section>
       </div>
     </div>
 
     {{ partial "footer.html" . }}
-    {{ block "scripts" . }} {{ end }}
+    {{ block "js" . }} {{ end }}
+
+    {{ if .Site.Params.enableSearch }}
+      {{ partial "search.html" . }}
+    {{ end }}
 
     {{ if .Site.GoogleAnalytics }}
       {{ template "_internal/google_analytics_async.html" . }}

@@ -1,0 +1,101 @@
+---
+title: "[お役立ち]WindowsでDockerつこて心理学者用のR環境構築"
+date: 2020-07-28T20:59:19+09:00
+draft: true
+
+categories: ["お役立ち"]
+cover: "/img/docker_W.png"
+tags: ["お役立ち", "R", "Docker"]
+summary: "Windows Homeのあなたでもできる(多分)"
+---
+
+## Windows HomeでもDockerで心理学者用の解析・執筆環境を構築したい 
+  
+  
+Dockerが今僕の中でアツいので心理系含む一般人への布教用に記事を書くこととしました。<br>
+Dockerとは、正確には「コンテナ仮想化を用いてアプリを開発云々プラットフォーム」ですが、ここでは「環境を簡単に構築するツール」と実用上考えましょう。いちいちいろんなアプリをインスコせずとも、仮想環境を作る⇒いらなくなったらポイ。で(ローカル)環境にも優しい！詳しくはググろう！<br><br>
+この記事の対象は以下の人達です。<br>
+<br>
+
+## 対象
+  
+  
+1. コマンドプロンプトの意味が分かる
+2. 「cd」←これくらいの意味はわかる
+3. Rでcmdstanrとか使いたいけどよくわからん←私
+4. でも全然がんばりたくないWindows User←私
+5. Dockerは試したけどインスコの時になんかエラー出てやめた←私
+  
+<br>
+
+## この記事では何をする
+  
+  
+上にも書きましたが、**Docker**とは「環境を簡単に構築するツール」です。<br>
+<br>
+専修大学の国里先生(神)が作成したDockerfileがあります：[https://hub.docker.com/r/ykunisato/paper-r-jp](https://hub.docker.com/r/ykunisato/paper-r-jp)<br>
+Dockerfileは「仮想環境の設計図」と理解してください。<br>
+<br>
+とにかく、我々はこの国里先生が作りたもうたDockerfileのおかげで「パッケージが充実しまくったRstudioがブラウザ上で利用」できます。すごい。<br>
+この記事では「パッケージが充実しまくったRstudioがブラウザ上で利用できる」ことをとりあえず目指します。「詳しい使い方の前にまぁ慣れようや」がコンセプトです。<br><br>
+ゴールまでのプロセスは以下の通り。<br>
+  
+  
+1. なんとかしてDockerをインストール
+2. コマンドプロンプトで「docker...」のコマンド入力
+3. ブラウザにアドレス入力
+4. **おわり**
+  
+  <br>
+は？簡単…。
+<br><br>
+
+## WindowsにDockerをなんとかしてインスト―ル
+  
+  
+Windows10 proとかMacとかそういう人たちはとてもシンプルに普通にDockerをインスコできます。適当に調べてください。<br>
+さて、私含むWindows10 homeの人達には以下の二つのアプローチがあります(私の狭い知識レベルでは)。
+<br>
+<br>
+  
+1. Docker desktop for windowsでいく(参照：[ちこさんの記事](https://note.com/tico0602/n/n02d53e4d5dec))
+2. Docker Toolboxでいく(参照：[公式Doc](https://docs.docker.com/toolbox/toolbox_install_windows/)、 [exeファイル](https://github.com/docker/toolbox/releases))
+  
+  
+  Windowsのアップデートとかしないですむので2の方がおすすめです。<br><br>
+  2の場合のプロセスは以下の通り：タスクマネージャ⇒パフォーマンス⇒仮想化が有効か確認[(仮想化確認の詳細はこちら)](http://www.dwapp.top/environment/virtualization/817)⇒[https://github.com/docker/toolbox/releases](https://github.com/docker/toolbox/releases)のexeファイルをDLして起動⇒なすがまま⇒[Docker Quickstart terminal]をつける⇒待つ⇒くじらが出てくる＋[docker run hello-world]と入力して特にエラーがなければおｋ<br>
+**※Docker Toolboxの場合「localhost:」は使えず、代わりに「192.168.99.100」を入力することを絶対に忘れない!!**
+  <br>
+<br>
+
+## Dockerで環境構築
+  
+  
+ターミナル(ぼくはかっこいいからgit bashつこてます)で任意のフォルダに「cd」(移動)なり「ls」(内容確認)なり「mkdir」(ファイル・フォルダ作成)なり駆使して移動。<br>
+その後以下のように入力するともう勝手にいろいろ起きる。<br><br>
+
+```docker:run
+docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp
+```  
+<br>
+これをしてしばらく待つ。「-v 'path'」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>
+※僕のノートPCのWindows環境(Toolbox, Gitbash)では先頭に"/"がもう一つ必要になります。うまくいかないのは大体このパス関連が失敗してるのでいろいろ調べたりしてみてください
+<br>
+<br>
+
+## ブラウザでRstudioを開く
+
+ブラウザ(Google chromeとか)を開いて、urlバーに「localhost:8787」とタイプする。Docker Toolboxの人は「192.168.99.100:8787」
+<br>
+Usernameに"rstudio", passwordには"任意のパスワード"を入力する。<br>
+<br>
+多分これでブラウザ上でめちゃくちゃいい感じのパッケージが入ったRstudioがブラウザ上で操作できるはず！パッケージの詳細は[こちら！](https://hub.docker.com/r/ykunisato/paper-r-jp)お疲れ様でした！Rの大海原を泳ぎまくろう！！<br>
+泳ぎつかれたら「docker stop コンテナID」で止めたり、「docker rm コンテナID」で消したりしよう！<br>
+<br><br>
+
+##### 他にこんな記事があるよ
+ [Gorilla.scでオンライン実験](https://susishushi.github.io/my_blog/post/gorilla/)
+  <br>
+[fire TV stickで大画面Youtube](https://susishushi.github.io/my_blog/post/firetv/)
+<br>
+[なぜ心を読みすぎるのか](https://susishushi.github.io/my_blog/post/kokoro/)

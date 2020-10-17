@@ -1,0 +1,44 @@
+---
+title: "[お役立ち]DMMでオンライン英会話すべぇよ"
+date: 2020-10-07T21:59:19+09:00
+draft: true
+
+categories: ["お役立ち"]
+cover: "/img/image_Ebook.png"
+tags: ["お役立ち", "日記"]
+summary: "DMM英会話に助けられた話"
+---
+
+## DMM英会話はよかったぞ！ 
+  
+  
+「留学の時、英語ってどうしたの？」という質問をもらった。なんだかんだ言っていろんなとこで求められる英語力。ちなみに回答は「DMM英会話使ってなんとかしてごり押しした。」です。<br>
+留学前、英語力がゴミカスだったぼくはDMM英会話使って最低限のレベルで留学しますた。今日はそんなDMM英会話の紹介。<br>
+<br>
+
+### <a href="//af.moshimo.com/af/c/click?a_id=2179241&p_id=906&pc_id=1119&pl_id=11720&guid=ON" rel="nofollow">DMM英会話</a><img src="//i.moshimo.com/af/i/impression?a_id=2179241&p_id=906&pc_id=1119&pl_id=11720" width="1" height="1" style="border:none;">の魅力 
+  
+  
+・オンラインでできる。<br>
+・留学依頼とかの海外研究者へのメールとかお願いしたら添削してもらえた（←地味に助かった）<br>
+・毎日継続できれば格安でできる<br>
+・オリジナルの教材は毎日更新されてて色んな知識もついでにつく（potato patatoとかそういうスラングも教材で知った）<br>
+・色んな国の人と話せるし、話せたらなんかメダルが集まってうれしい（レアな国の講師がいると「おっ！」と思う）<br>
+・iKnow!という良質な英語学習アプリも無料で使えるようになる<br>
+・国際学会の発表練習もできる（全講師、大体褒めてくれるので自信がつく）<br>
+<br><br>
+
+お家で勉強がはやりの今、おすすめです。<br>
+<a href="//af.moshimo.com/af/c/click?a_id=2179241&p_id=906&pc_id=1119&pl_id=11778&guid=ON" rel="nofollow">こちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2179241&p_id=906&pc_id=1119&pl_id=11778" width="1" height="1" style="border:none;">から無料レッスンも二、三回ほどできるはずなんでそれで感覚つかんでみるのどうでしょう。<br>
+<br>
+休会も気軽にできるので、「来月厳しい…」「今月、全然やってねぇ…」とかいう人はガンガン気軽に休会しましょう。必要な時期が近付いたら再開しましょう。ぼくはこれから二回目の休会をしにいきます。ではでは。<br>
+<br>
+
+<a href="//af.moshimo.com/af/c/click?a_id=2179241&p_id=906&pc_id=1119&pl_id=11765&guid=ON" rel="nofollow"><img src="//image.moshimo.com/af-img/0270/000000011765.jpg" width="300" height="250" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2179241&p_id=906&pc_id=1119&pl_id=11765" width="1" height="1" style="border:none;">
+<br>
+
+##### 他の記事
+
+ [datadrivencvでオシャレなCVを作ろう](https://susishushi.github.io/my_blog/post/datacv/)<br>
+[おれはMonsterを応援するぞ](https://susishushi.github.io/my_blog/post/monster/)<br>
+[DockerでJupyter + Octave環境構築](https://susishushi.github.io/my_blog/post/docker_octave/)

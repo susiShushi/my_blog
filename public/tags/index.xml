@@ -1,42 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on NSブログ</title>
-    <link>/my_blog/tags/</link>
-    <description>Recent content in Tags on NSブログ</description>
+    <title>Tags on とある心理学系研究者のブログ</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
-    
-	<atom:link href="/my_blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>plot</title>
-      <link>/my_blog/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/my_blog/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/my_blog/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/my_blog/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>regression</title>
-      <link>/my_blog/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/my_blog/tags/regression/</guid>
-      <description></description>
-    </item>
-    
+    <language>jp</language><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

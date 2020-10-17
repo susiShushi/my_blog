@@ -1,0 +1,109 @@
+---
+title: "[お役立ち]DockerでJupyter + Octave環境構築"
+date: 2020-09-15T20:59:19+09:00
+draft: true
+
+categories: ["お役立ち"]
+cover: "/img/docker_octave.png"
+tags: ["お役立ち", "R", "Docker"]
+summary: "DockerでOctaveとかしたい人用記事"
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="機械学習についての勉強をした" class="section level2">
+<h2>機械学習についての勉強をした</h2>
+<p>突然だけど先日Cousera（オンライン講義を受けれる営利団体）の機械学習に関するオンライン講義を受講し終えた (修了証は<a href="https://www.coursera.org/account/accomplishments/certificate/KYW45CANBU32">こちら</a>)。<br>
+Neural Networkのアルゴリズムをプログラム言語で直書きしたり、「知ってるだけ」という手法の中身を一歩一歩丁寧に記述することも含めながら学習する機会ができてとてもよかった。
+<br>
+<br>
+Main topicとしては：教師あり学習 (回帰、NN、SVM)、教師なし学習(k平均法、PCA、異常検知)、その他実装例の紹介やシステム構築上のtipsを学べる。興味がある人はぜひ受講して「シリコンバレーの中でも限られた機械学習を理解し実装可能な人材」を目指そう。<br>
+<br></p>
+</div>
+<div id="octaveの仮想環境" class="section level2">
+<h2>Octaveの仮想環境</h2>
+<p>さて本題。上述の講義では「Octave（or MATLAB）を用いた学習」が求められる。Dockerを習ったばかりだったのでせっかくなら「受講中はDockerでOctave環境を構築して、終わったらポイしよう！」というモチベーションのもと<a href="https://thicolares.com/2018/11/11/creating-a-docker-image-for-jupyter-Octave.html">ここ</a>を参考にJupyter Notebook＋Octave環境をDockerで作ることにした。<br><br></p>
+<p>Jupyter notebookとは：ブラウザで動作するインタラクティブなデータ分析用ツール<br>
+Octaveとは：無償のMATLAB（プログラミング言語）<br></p>
+<p><br><br></p>
+</div>
+<div id="作り方" class="section level2">
+<h2>作り方</h2>
+<p>任意のフォルダ上で以下のDockerfileを作る (e.g., VScodeで立ち上げるならコマンドプロンプトで任意のフォルダ上で“code Dockerfile”と入力)。<br></p>
+<pre class="docker:file"><code>
+# Imageの作成
+FROM jupyter/base-notebook
+    
+# metadataの記述
+LABEL Description=&quot;Jupyter Octave&quot;
+    
+# RUNさせるための権限付与 + 作図用のgnuplotとOctaveをインスコ
+USER root
+RUN apt-get update &amp;&amp; \
+    apt-get install -y gnuplot octave &amp;&amp; \
+    apt-get clean
+    
+# pipでOctaveのカーネルとOctave用のJupyter kernelをインスコ
+USER jovyan
+RUN pip install octave_kernel &amp;&amp; \
+    export OCTAVE_EXECUTABLE=$(which octave)</code></pre>
+<p><br><br>
+このDockerfileができたら準備完了です。</p>
+<p><br><br></p>
+</div>
+<div id="docker-imageの作成" class="section level2">
+<h2>Docker imageの作成</h2>
+<p>コマンドプロンプト上で以下のように入力<br><br></p>
+<pre class="docker:command"><code>docker build -t jupyter_octave:1.0 .</code></pre>
+<p><br>“-t”でお名前とVersion情報をつけてます。一番最後の” .”も「今いるフォルダ」を意味しているので忘れない！
+<br>
+<br></p>
+</div>
+<div id="runする" class="section level2">
+<h2>RUNする</h2>
+<p>コマンドプロンプト上で以下のように入力する必要があります<br><br></p>
+<pre class="docker:run"><code>docker container run --rm -p 8888:8888 --user root -e NB_GID=100 -v &quot;$$PWD/work:/home/jovyan/work&quot; -it --name jupyter_octave jupyter_octave:1.0</code></pre>
+<p><br>
+ぱっと見でわかるとおもうんですけどこれがくそ長い。<br>
+Octave環境を立ち上げるためにいちいちこんな長いの入力するのも嫌なので「Makefile」を活用します。<br>
+(e.g., VScodeなら「code Makefile」とか)<br><br>
+中身は以下のように作る<br>
+<br></p>
+<pre class="docker:makefile"><code>serve:
+    @docker container run --rm \
+        -p 8888:8888 \
+            --user root \
+            -e NB_GID=100 \
+            -v &quot;$$PWD/work:/home/jovyan/work&quot; \
+            -it --name jupyter_octave jupyter_octave:1.0 \
+</code></pre>
+<p><br>
+※なんか理由がわからないんですけどぼくの環境だと＠がうまく機能しなかったりするんでTabを消したりつけたりしてみてください
+<br>
+以下に簡単なメモを残しときます。<br>
+“–rm”＝コンテナ終了時に環境の自動消去 (fileは以下のマウントフォルダに残る)<br>
+“-p”＝コンテナport:host port<br>
+“-e”=環境変数のセット。詳細は<a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html">こちら</a><br>
+“-v”=ローカルで使うフォルダ:コンテナ上のフォルダ＋Windowsだと書き方がターミナルによって異なる（例：Docker Quickstart＝ -v ${PWD}:/app　GitBash＝ -v “/＄(PWD)”://app　PowerShell＝-v /c/Users/username/projectname:/app）。困ったら絶対パスで書くのだ。<br>
+あとはまぁいいでしょ。<br>
+<br>
+<br>
+Makefileができたら、毎回コマンドプロンプト上で<br><br>
+make serve <br><br>
+と入力してうまくいけば<br>
+<br>
+<a href="http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない" class="uri">http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先にはなにもない</a><br><br>
+みたいなんが出てくる。これをブラウザにコピペしたらJupyter notebookでOctave環境の完成！これで毎週のCouseraでのプログラミング課題をJupyter notebook上のOctaveでできる。やったね！
+<br>うまくいかんかったら<a href="https://twitter.com/NSushi">Twitter</a>で聞いて下せえ（解決できるとはいっていない）
+<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/gorilla/">Gorilla.scでオンライン実験</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/docker_new/">WindowsでDockerつこて心理学者用のR環境構築</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/datacv/">datadrivencvでオシャレなCVを作ろう</a></p>
+</div>
+</div>

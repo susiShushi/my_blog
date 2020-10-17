@@ -1,0 +1,39 @@
+---
+title: "[日記]おれはMonsterを応援するぞ"
+date: 2020-08-22T20:59:19+09:00
+draft: True
+
+categories: ["日記"]
+cover: "/img/monster.png"
+tags: ["日記"]
+summary: "おれはモンスターを飲む。君たちはどうだ？"
+---
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
+msmaflink({"n":"アサヒ飲料 モンスター パイプラインパンチ 355ml ×24本","b":"モンスター","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/41LUc-Og2YL.jpg","\/51FYI57pbiL.jpg","\/41d0UtMPA0L.jpg","\/51rrSJvS7vL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B07NKJSDJ4","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"mfDQ8","s":"s"});
+</script>
+<div id="msmaflink-mfDQ8">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+
+
+## 最近はMonster（ピンク）を飲んでます 
+ 昔、ピンクのMonsterを飲んで「うっま」と思っててしばらくしたら、販売が中止した。<br>
+ このことに私は大きなショックを受けた。「”推し”を失うとはこういうことなのか…」と一人泣き濡らす夜が続いた。<br>
+ んだけど今年の3月に復活した。<br>
+ <br>
+ 4月以降、毎月このピンクのMonsterを箱買いするようになった。もうお前のことを手放さないぞ…。<br>
+ <br>
+ <br>
+ ちなみにこのMonsterの空き缶が研究室にめっちゃあるのを共同研究予定の先生に見つかって、「難波先生死にますよｗｗｗｗ」といわれた。不安になったのでYahoo知恵袋（この世界に存在する情報の中でもっともエビデンスレベルの低いサイト）でみたら、「モンスター飲んだら死にますか！？」という質問に「大丈夫ですよ」って書いてあったので大丈夫でした（[参考サイト](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10165795095)）。
+ <br><br><br>
+ あまりにもうますぎてあまりにもリピートし続けてるので最近モンスターの株も買った。<br>
+ 「無配株つかんでる情弱乙ｗｗｗｗｗｗ」という指摘もあるだろう。口を慎みたまえ。私はモンスターの株主だぞ。<br><br>
+ 私は応援したいものを全力で応援するタイプなのだ。あとモンスターの成長にも期待している。今後もどんどん進化してパイプラインを無限に作り続けてくれモンスター。最近出た緑のやつはNot fit for meでした。パイプラインだけを作り続けてくれモンスター。これからもよろしくモンスター。
+ 

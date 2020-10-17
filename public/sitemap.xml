@@ -3,48 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/my_blog/categories/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <loc>https://example.com/categories/</loc>
   </url>
   
   <url>
-    <loc>/my_blog/post/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <loc>https://example.com/tags/</loc>
   </url>
   
   <url>
-    <loc>/my_blog/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/post/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/my_blog/tags/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <loc>https://example.com/</loc>
   </url>
   
 </urlset>
