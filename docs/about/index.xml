@@ -6,18 +6,14 @@
     <description>Recent content in Abouts on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 20 Feb 2020 20:30:55 +0900</lastBuildDate>
-    
-	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 20 Feb 2020 20:30:55 +0900</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己紹介</title>
       <link>/about/desc/</link>
       <pubDate>Thu, 20 Feb 2020 20:30:55 +0900</pubDate>
       
       <guid>/about/desc/</guid>
-      <description>某大学で助教をやっています。私の業績とかはGoogle HPの方を見てください。このブログでは読書感想文とか落書きとか、自分が『面白い！』と思</description>
+      <description>某大学で助教をやっています。 私の業績とかはGoogle HPの方を見てください。 このブログでは読書感想文とか落書きとか、自分が『面白い！』と思</description>
     </item>
     
   </channel>

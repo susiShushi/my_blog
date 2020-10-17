@@ -3,7 +3,7 @@ relativeurls = true
 languageCode = "ja-jp"
 publishDir = "docs"
 hasCJKLanguage = true
-ignoreFiles = ["_files$", "_cache$"]
+ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$", "_cache$"]
 title = "とある心理学系研究者のブログ"
 theme = "hugo-theme-dream"
 # copyright = ""
@@ -38,3 +38,8 @@ googleAnalytics = "UA-131372772-3"
   darkLinkColor = "darkseagreen"
   darkNav = true 
   dark404Button = true
+  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
