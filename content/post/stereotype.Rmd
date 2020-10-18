@@ -4,7 +4,7 @@ date: "2020-07-31T00:00:00"
 draft: True
 
 categories: ["読書感想文"]
-cover: "/my_blog/img/image_book.png"
+cover: "/img/image_book.png"
 tags: ["日記", "読書感想文"]
 summary: "「ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか」を読みました"
 ---

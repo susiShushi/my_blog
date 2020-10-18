@@ -4,7 +4,7 @@ date: 2020-08-14T11:59:19+09:00
 draft: true
 
 categories: ["R"]
-cover: "/my_blog/img/image_baikinR_hs.jpg"
+cover: "/img/image_baikinR_hs.jpg"
 tags: ["R","日記"]
 summary: "par_ratio=p/Dでおわり"
 

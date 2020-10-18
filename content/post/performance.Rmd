@@ -4,7 +4,7 @@ date: 2020-08-19T20:59:19+09:00
 draft: true
 
 categories: ["R"]
-cover: "/my_blog/img/image_baikinR_pe.jpg"
+cover: "/img/image_baikinR_pe.jpg"
 tags: ["お役立ち","R"]
 summary: "モデルのVIFとか決定係数とか出すパッケージ"
 ---

@@ -4,10 +4,10 @@ date: 2020-06-29T23:05:47+09:00
 draft: True
 
 categories: ["日記"]
-cover: "/my_blog/img/image_fireTV.png"
+cover: "/img/image_fireTV.png"
 tags: ["日記", "お役立ち"]
 summary: "「fire TV stick」でマジで人生変わった"
-thumbnail: "/my_blog/img/image_fireTV.png"
+thumbnail: "/img/image_fireTV.png"
 ---
 <a href="//af.moshimo.com/af/c/click?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB079QRQTCR" rel="nofollow"><img src="https://images-fe.ssl-images-amazon.com/images/I/31gFK-y4+ZL._SL160_.jpg" alt="" style="border: none;" /></a><img src="//i.moshimo.com/af/i/impression?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" />
   

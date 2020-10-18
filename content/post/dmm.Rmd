@@ -4,7 +4,7 @@ date: 2020-10-07T21:59:19+09:00
 draft: true
 
 categories: ["お役立ち"]
-cover: "/my_blog/img/image_Ebook.png"
+cover: "/img/image_Ebook.png"
 tags: ["お役立ち", "日記"]
 summary: "DMM英会話に助けられた話"
 ---

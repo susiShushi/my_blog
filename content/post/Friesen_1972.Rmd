@@ -4,7 +4,7 @@ date: 2020-10-17T20:59:19+09:00
 draft: true
 
 categories: ["日記"]
-cover: "/my_blog/img/image_pikon.png"
+cover: "/img/image_pikon.png"
 tags: ["日記"]
 summary: "Friesen (1972)についての備忘録"
 ---
