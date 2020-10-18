@@ -4,31 +4,23 @@
 
 ```toml
 [params]
-  background = "black"
+  # background = "black"
   backgroundImage = "/me/background.jpg"
   linkColor = "seagreen"
-
-  images = [""]
 
   author = "g1eny0ung"
   description = "g1eny0ung 的生活记录～"
   avatar = "/me/yy.jpg"
   motto = "与其感慨路难行，不如马上出发。"
-  categoriesLimitInHeader = 6
-  # headerBottomText = ""
 
   rss = true
-  utterancesRepo = "g1eny0ung/g1eny0ung.github.io"
 
-  # valine = true
-  # LEANCLOUD_APP_ID = ""
-  # LEANCLOUD_APP_KEY = ""
+  utterancesRepo = "g1eny0ung/g1eny0ung.github.io"
 
   email = "g1enyy0ung@gmail.com"
   twitter = "g1eny0ung"
   facebook = "g1eny0ung"
   instagram = "g1enyy0ung"
-  # mastodon = ""
   linkedin = "钺杨g1eny0ung"
   github = "g1eny0ung"
   stackoverflow = "5676489/g1eny0ung"
@@ -38,18 +30,8 @@
 
   favicon = "/favicon.ico"
 
-  highlightjs = true
-  # highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
-  highlightjsExtraLanguages = ["ocaml"]
-  highlightjsTheme = "gruvbox-light"
-  highlightjsThemeDark = "gruvbox-dark"
-
-  # search
-  enableSearch = true
-
   # options
   showSummaryCoverInPost = true
-  # hasTwitterEmbed = true
 
   # dark mode
   darkLinkColor = "darkseagreen"
@@ -63,8 +45,6 @@
 
 The site's background.
 
-This param can be used with `backgroundImage`, when the image has not been loaded yet, it will serve as the background color.
-
 ### `backgroundImage = "/me/background.jpg"`
 
 The site's background image. Will cover the `background` param.
@@ -72,10 +52,6 @@ The site's background image. Will cover the `background` param.
 ### `linkColor = "seagreen"`
 
 The site's link color.
-
-### `images = [""]`
-
-See <https://gohugo.io/templates/internal/#open-graph>.
 
 ### `author = "g1eny0ung"`
 
@@ -99,14 +75,6 @@ Used in Header.
 
 Used in Header.
 
-### `categoriesLimitInHeader = 6`
-
-Limit the number of categories displayed in the header, the default is **6**.
-
-### `# headerBottomText = ""`
-
-Add text at the bottom of the header, support html. This is usually used as a description of the website information.
-
 ### `rss = true`
 
 Enable RSS.
@@ -117,27 +85,12 @@ Utterances is a lightweight comments widget built on GitHub Issues. By setting `
 
 View <https://utteranc.es> to get more details.
 
-### `valine = true`
-
-Valine is a fast, simple & efficient Leancloud based no back end comment system.
-
-In order to make it work, you still need to set two parameters:
-
-```toml
-[params]
-  LEANCLOUD_APP_ID = ""
-  LEANCLOUD_APP_KEY = ""
-```
-
-View <https://valine.js.org/en/quickstart> to get more details.
-
 ### Social Links
 
 `email = "g1enyy0ung@gmail.com"`<br />
 `twitter = "g1eny0ung"`<br />
 `facebook = "g1eny0ung"`<br />
 `instagram = "g1enyy0ung"`<br />
-`# mastodon = ""`<br />
 `linkedin = "钺杨g1eny0ung"`<br />
 `github = "g1eny0ung"`<br />
 `stackoverflow = "5676489/g1eny0ung"`<br />
@@ -157,23 +110,9 @@ Set your site's start year, then the header will show as **siteStartYear - curre
 
 Custom the [favicon](https://en.wikipedia.org/wiki/Favicon), place it in your `static` folder, same as `avatar`.
 
-### `highlightjs = true`
-
-View [Highlight.js](highlightjs.md) for more details.
-
-### `enableSearch = true`
-
-View [Search](search.md) for more details.
-
 ### `showSummaryCoverInPost = true`
 
 As the param said, show summary cover in the single post page.
-
-### `hasTwitterEmbed = true`
-
-If you have embedded twitter components generated from <https://publish.twitter.com/>, please set this param to `true` for better performance.
-
-After setting this, you can safely remove the async script in the generated code.
 
 ### `darkLinkColor = "darkseagreen"`
 
@@ -185,7 +124,7 @@ Set the dark top navbar, usually use with dark `background` or `backgroundImage`
 
 ### `dark404Button = true`
 
-> Note: after <https://github.com/g1eny0ung/hugo-theme-dream/commit/b07d6e22183bad58a8498429bc49fca77082533c>, this param is deprecated. If you are using the latest version of dream, you can safely ignore this param.
+> Note: after <https://github.com/g1eny0ung/hugo-theme-dream/commit/b07d6e22183bad58a8498429bc49fca77082533c>, this param is deprecated. If you are using the latest version of dream, you can ignore this note.
 
 Set the dark button in 404 page, usually use with dark `background` or `backgroundImage`.
 

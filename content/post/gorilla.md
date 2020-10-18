@@ -4,7 +4,7 @@ date: 2020-03-27T20:59:19+09:00
 draft: true
 
 categories: ["お役立ち"]
-cover: "/img/bai_gor.jpg"
+cover: "/my_blog/img/bai_gor.jpg"
 tags: ["お役立ち", "実験"]
 summary: "Gorilla.scでオンライン実験ができるよ"
 ---

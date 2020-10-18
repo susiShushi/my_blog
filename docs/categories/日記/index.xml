@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日記 on とある心理学系研究者のブログ</title>
+    <link>/my_blog/categories/%E6%97%A5%E8%A8%98/</link>
+    <description>Recent content in 日記 on とある心理学系研究者のブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 17 Oct 2020 20:59:19 +0900</lastBuildDate><atom:link href="/my_blog/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[日記]表情表出の日米比較研究について</title>
+      <link>/my_blog/post/friesen_1972/</link>
+      <pubDate>Sat, 17 Oct 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/my_blog/post/friesen_1972/</guid>
+      <description>Friesen (1972)についての目</description>
+    </item>
+    
+    <item>
+      <title>[日記]おれはMonsterを応援するぞ</title>
+      <link>/my_blog/post/monster/</link>
+      <pubDate>Sat, 22 Aug 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/my_blog/post/monster/</guid>
+      <description>おれはモンスターを飲む。君たちはどうだ？</description>
+    </item>
+    
+    <item>
+      <title>[日記]Apple pencilを買った</title>
+      <link>/my_blog/post/applepen/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/my_blog/post/applepen/</guid>
+      <description>Apple pencilを買ったんだけど…</description>
+    </item>
+    
+    <item>
+      <title>[日記]fire TV stickで大画面Youtube</title>
+      <link>/my_blog/post/firetv/</link>
+      <pubDate>Mon, 29 Jun 2020 23:05:47 +0900</pubDate>
+      
+      <guid>/my_blog/post/firetv/</guid>
+      <description>「fire TV stick」でマジで人生変わった</description>
+    </item>
+    
+    <item>
+      <title>スタート</title>
+      <link>/my_blog/post/start/</link>
+      <pubDate>Sun, 09 Feb 2020 20:12:57 +0900</pubDate>
+      
+      <guid>/my_blog/post/start/</guid>
+      <description>新しいblogはじめました</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,7 +4,7 @@ date: 2020-07-28T20:59:19+09:00
 draft: true
 
 categories: ["お役立ち"]
-cover: "/img/docker_W.png"
+cover: "/my_blog/img/docker_W.png"
 tags: ["お役立ち", "R", "Docker"]
 summary: "Windows Homeのあなたでもできる(多分)"
 ---
@@ -75,7 +75,7 @@ Windows10 proとかMacとかそういう人たちはとてもシンプルに普�
 その後以下のように入力するともう勝手にいろいろ起きる。<br><br>
 
 ```docker:run
-docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r-jp
+docker run -e PASSWORD=任意のぱすわーど -p 8787:8787 -v 絶対パス(例：/c/user/hoge/Documents/test):/home/rstudio -d --name 任意のコンテナ名 ykunisato/paper-r
 ```  
 <br>
 これをしてしばらく待つ。「-v 'path'」には仮想マシンとやりとりするためのファイルが入った(or入る予定の)フォルダを用意しておくと、ローカルの環境と仮想環境でやりとりできる。<br>

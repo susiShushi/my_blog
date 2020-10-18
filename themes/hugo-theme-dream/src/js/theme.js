@@ -1,18 +1,16 @@
 const dark = 'inverted'
 const localStore = window.localStorage
-let isDark = localStore.getItem('hugo-theme-dream-is-dark')
 
-const setThemeForUtterances = () => {
+const setThemeForUtterances = (isDark) => {
+  const message = {
+    type: 'set-theme',
+    theme: isDark ? 'github-dark' : 'github-light',
+  }
+
   const utterances = document.querySelector('iframe.utterances-frame')
 
   if (utterances) {
-    utterances.contentWindow.postMessage(
-      {
-        type: 'set-theme',
-        theme: isDark ? 'github-dark' : 'github-light',
-      },
-      'https://utteranc.es'
-    )
+    utterances.contentWindow.postMessage(message, 'https://utteranc.es')
   }
 }
 
@@ -25,7 +23,9 @@ const darkHeaderElements = () => {
     const iconList = $('.dream-header .ui.top.segment .ui.list')
     const accordion = $('.dream-header .ui.segment .ui.accordion')
 
-    segments.toggleClass(dark)
+    segments.map(function () {
+      $(this).toggleClass(dark)
+    })
 
     title.toggleClass(dark)
     iconList.toggleClass(dark)
@@ -37,7 +37,9 @@ const darkBack = () => {
   const segments = $('.dream-back .ui.segment')
 
   if (segments.length) {
-    segments.toggleClass(dark)
+    segments.map(function () {
+      $(this).toggleClass(dark)
+    })
   }
 }
 
@@ -69,15 +71,14 @@ const darkSingle = () => {
   const segments = $('.dream-single .ui.segment')
 
   if (segments.length) {
-    segments.toggleClass(dark)
+    segments.map(function () {
+      $(this).toggleClass(dark)
+    })
 
-    const title = $('.dream-single h1.ui.header')
+    const title = $('.dream-single .ui.top.segment .ui.header')
     title.toggleClass(dark)
 
-    setThemeForUtterances()
-    if (typeof setHighlightTheme === 'function') {
-      setHighlightTheme()
-    }
+    setThemeForUtterances(localStore.getItem('hugo-theme-dream-is-dark'))
   }
 }
 
@@ -85,7 +86,9 @@ const darkCards = () => {
   const cards = $('.dream-card')
 
   if (cards.length) {
-    cards.toggleClass(dark)
+    cards.map(function () {
+      $(this).toggleClass(dark)
+    })
   }
 }
 
@@ -114,14 +117,15 @@ function toggleDark() {
   darkBack()
 }
 
-const iconSwitchs = $('.theme-switch')
+let isDark = localStore.getItem('hugo-theme-dream-is-dark')
+const iconSwitchs = $('.theme-switch').toArray()
 
 // Apply theme when first entering
 if (isDark) {
-  iconSwitchs.addClass('moon')
+  iconSwitchs.forEach((s) => $(s).addClass('moon'))
   toggleDark()
 } else {
-  iconSwitchs.addClass('sun')
+  iconSwitchs.forEach((s) => $(s).addClass('sun'))
 }
 
 window.addEventListener('message', (e) => {
@@ -129,18 +133,18 @@ window.addEventListener('message', (e) => {
     return
   }
 
-  setThemeForUtterances()
+  setThemeForUtterances(isDark)
 })
 
 const themeSwitch = () => {
   if (isDark) {
-    iconSwitchs.removeClass('moon')
-    iconSwitchs.addClass('sun')
+    iconSwitchs.forEach((s) => $(s).removeClass('moon'))
+    iconSwitchs.forEach((s) => $(s).addClass('sun'))
     localStore.removeItem('hugo-theme-dream-is-dark')
     isDark = null
   } else {
-    iconSwitchs.removeClass('sun')
-    iconSwitchs.addClass('moon')
+    iconSwitchs.forEach((s) => $(s).removeClass('sun'))
+    iconSwitchs.forEach((s) => $(s).addClass('moon'))
     localStore.setItem('hugo-theme-dream-is-dark', 'y')
     isDark = 'y'
   }

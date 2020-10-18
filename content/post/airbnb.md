@@ -4,7 +4,7 @@ date: 2020-02-29T20:59:19+09:00
 draft: true
 
 categories: ["お役立ち"]
-cover: "/img/image_airbikin.png"
+cover: "/my_blog/img/image_airbikin.png"
 tags: ["お役立ち", "旅行", "出張"]
 summary: "国際学会・短期留学にはAirbnbがオヌヌメ"
 ---

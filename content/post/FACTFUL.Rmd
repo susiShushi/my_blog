@@ -4,7 +4,7 @@ date: "2020-05-26T00:00:00"
 draft: True
 
 categories: ["読書感想文"]
-cover: "/img/image_book.png"
+cover: "/my_blog/img/image_book.png"
 tags: ["日記", "読書感想文"]
 summary: "「ACTFULNESS(ファクトフルネス) 10の思い込みを乗り越え、データを基に世界を正しく見る習慣」を読みました"
 ---

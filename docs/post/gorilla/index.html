@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>[お役立ち]Gorilla.scでオンライン実験 | とある心理学系研究者のブログ</title>
+
+    
+
+
+  
+  <meta name="author" content="なんばいきん" />
+  <meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+<link rel="canonical" href="/my_blog/post/gorilla/" />
+
+
+<meta property="og:title" content="[お役立ち]Gorilla.scでオンライン実験" />
+<meta property="og:description" content="Gorilla.scでオンライン実験ができるよ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/my_blog/post/gorilla/" />
+<meta property="article:published_time" content="2020-03-27T20:59:19+09:00" />
+<meta property="article:modified_time" content="2020-03-27T20:59:19+09:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[お役立ち]Gorilla.scでオンライン実験"/>
+<meta name="twitter:description" content="Gorilla.scでオンライン実験ができるよ"/>
+
+
+<link rel="stylesheet" href="/my_blog/css/github-markdown.css" />
+<link rel="stylesheet" href="/my_blog/css/semantic.min.css" />
+<link rel="stylesheet" href="/my_blog/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+  </head>
+
+  
+  <body style="background: black;">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https://susishushi.github.io/my_blog/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h1 class="ui large header">
+          [お役立ち]Gorilla.scでオンライン実験
+          <div class="sub header">@ なんばいきん · Friday, Mar 27, 2020 · 5 minute read · Update at Mar 27, 2020</div>
+        </h1>
+      </header>
+
+      
+
+      <article style="margin-top: 2rem;"><h2 id="gorillascでオンライン実験ができるよって話">Gorilla.scでオンライン実験ができるよって話</h2>
+<p>オンライン実験、、、したくない？<br>
+最近は便利なもので<a href="https://www.jspsych.org/">jspsych</a>や<a href="https://www.psychopy.org/index.html">PsychoPy</a>あたりが、心理実験課題の作成によく使われる。しかしそれらを<strong>オンライン</strong>でやるとなると、サーバーだのなんだの色々と調べたりすることがあって大変である。</p>
+<p>特に、「やべぇ！今すぐ実験作って先生に見せないと！」とか「やべぇ！研究費の報告があるから急いで使い切るために残り3日でオンライン実験をしなきゃ！」って時にゼロからいきなり運用可能なレベルでのオンライン実験課題を作成するのは相当苦労するであろう。知らんけど。</p>
+<p>そういう時に提案したいのが、 <strong><a href="https://gorilla.sc/">Gorilla</a></strong> である。</p>
+<p><a href="https://gorilla.sc/"><img src="/img/gorilla.jpg" alt="Gorilla.sc"></a><br></p>
+<h2 id="どういう人におすすめか">どういう人におすすめか</h2>
+<p>Gorilla.scは以下のような感じの人におすすめ。</p>
+<ol>
+<li>プログラム言語とかサーバーとか難しいことわからん</li>
+<li>でもオンラインで心理実験をやりたい</li>
+<li>課題作成も出来る限り楽なやつがいい</li>
+<li>共同研究者と一緒に作業可能だと嬉しい</li>
+<li>行った実験課題をOpenにしたい</li>
+</ol>
+<p>基本は『オンライン実験課題作成に必要となるであろうコストをカットしたい』というのがモチベであろう。<br></p>
+<p>Gorilla.scの欠点と言えば以下の通りだ。</p>
+<ol>
+<li>オンライン実験につきものの問題（timing issue)</li>
+<li><strong>有料</strong>(一人分のデータ保存にアカデミックで約1ドル)</li>
+</ol>
+<p>後でちゃんと参考文献を紹介するが、Gorillaは参加者ごとの回線やブラウザの問題をわたしにはわからない&quot;ECMAScript&quot;だの&quot;QRTEngine&quot;だので、できる限りTiming issue (反応時間のずれ) を回避しようとしている。えらい。なので実質問題は有料であること、のみである (個人の感想です)。</p>
+<h2 id="どういうシステム">どういうシステム？</h2>
+<p>公式HPにもある通り、アカウント作成および実験課題の作成は<strong>無料</strong>でできる。</p>
+<p>ではいつお金が必要なのか？それは実験課題で測定したデータを保存するときである。実験で測定されたデータをオンライン上で保存するときにTokenと呼ばれるものが必要になる。このTokenは2020年3月現在はアカデミック価格一人1.08ドル（約120円）である。ちなみにPsychopyで作成したものなどをオンラインで使用するための<a href="https://pavlovia.org/">Pavlovia</a>も似たようなシステムを採用しており、こちらは一人0.2£ (約30円)である。</p>
+<p>いやいやわかる。「Gorillaの方が高いやんけ！」とゴリラのごとく石を投げたくなる気持ちもわかる。一応以下でGorillaがいかに優れているかを簡単に書いておこう。</p>
+<h3 id="信頼と実績の実験hostingを提供">信頼と実績の実験Hostingを提供</h3>
+<p>実験心理学者がオンライン実験をするとき、気になるのが『反応時間を測定する際に、環境によってどの程度ノイズが入っちゃうんだろう…』ということであろう。安心してほしい。その疑問には<a href="https://link.springer.com/article/10.3758%2Fs13428-019-01237-x">Anwyl-Irvine et al. (2020)</a>で調査済みである。</p>
+<p>この論文では、『Gorilla最高ウホ』ということを示すために、ケータイレベルのネット回線を含むいろんな環境の子供たちやProfilic (欧州のMturkみたいなやつ) でフランカー課題 (反応時間を測定する課題) を適用し、環境による反応時間に差がないことや分散が想定よりも小さい (ある程度信頼できる反応時間を測定できる) ことを明らかにしたのである。イントロダクションにはそれを実現する技術的なバックグラウンドも紹介しているので興味のある方はしっかり目を通すとよい。<del>Gorillaとそれ以外の環境との違い？知らん。</del>
+　
+　</p>
+<h3 id="充実のサポートコンテンツ">充実のサポートコンテンツ</h3>
+<p>まずは<a href="https://gorilla.sc/support/samples">コチラ</a>を見てほしい。Dot probe課題、IAT、確率学習課題 (2WFC)、N-back課題などよく名だたる心理学実験課題のデモが体験できる。</p>
+<p>どういうことか？「やべぇ！いますぐIAT作らなきゃ！！」とかいうとき、このデモをそのままコピーすればよいのだ。ズボラな研究者にはたまらないね。あとは画像を入れ替えて条件を増やしたりするだけでよい。すごくない？</p>
+<p>そもそも実験課題は以下のようなGUI（ボタンぽちぽち）で作られる。
+　</p>
+<p><img src="/img/Gor_ex.png" alt="Example_Gorilla"><br></p>
+<p>課題の作成方法の詳細は公式に勝るガイドラインなし、ということで<a href="https://gorilla.sc/support">公式サポート</a>を確認するとよい。動画も組み合わせつつ多種多様な例が紹介されてるので、あなたの「したい」がきっと見つかる（適当）</p>
+<p>その他の利点として、作成した実験課題を使いまわすことができたり、アカウントを持つ共同研究者と共同で実験課題を確認出来たり、実際に行った実験課題をGorilla上でオープンにすることができる（例：<a href="https://gorilla.sc/openmaterials/36172">Gorilla最高ウホ論文で用いたフランカー課題の詳細</a>）
+　</p>
+<h3 id="まとめ">まとめ</h3>
+<p>お金に余裕があり、オンライン実験課題の作成コスト (サーバーの管理、ネット環境ごとの信頼性検証など) をできるだけ下げたい場合にはGorilla.scが選択肢の一つに挙げられるだろう。</p>
+<p>ちなみに<a href="https://gorilla.sc/signup?referral_token=E249F017-4B19-4737-A61D-729C93C2C7AC">ここ</a>から登録すると、20Token分までは半額 (約60円) で買えるゾ！それでもPavloviaよりも二倍高いじゃねーか？そうだね！ゴメン！！
+　</p>
+<p>ゴリラ使ってお手軽にオンライン実験を試してみようじゃないか、って記事でした！<br>
+ほな。</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/my_blog/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+        
+          <a class="ui label" href="/my_blog/tags/%E5%AE%9F%E9%A8%93" title="実験">実験</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+    
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/my_blog/img/avatar_bai.png">
+      
+    </div>
+
+    
+    <h1 class="ui medium header">なんばいきん&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">表情の研究してます。左上のアイコンで夜モードにできるけどそしたらRコードが全部見えなくなるクソみたいなブログ。それがここ。</div>
+    </h1>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/my_blog/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/my_blog/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/my_blog/tags/docker" title="docker">docker</a>
+    
+      <a class="ui label" href="/my_blog/tags/r" title="r">r</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E5%87%BA%E5%BC%B5" title="出張">出張</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E5%AE%9F%E9%A8%93" title="実験">実験</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E6%97%85%E8%A1%8C" title="旅行">旅行</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E9%9B%91%E8%AB%87" title="雑談">雑談</a>
+    
+      <a class="ui label" href="/my_blog/tags/%E9%9F%B3%E6%A5%BD" title="音楽">音楽</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/my_blog/categories/r" class="item">r</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/datacv/" class="item">[R]datadrivencvでオシャレなCVを作ろう</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/performance/" class="item">[R]performance packageでモデル評価</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/horseshoe/" class="item">[R]brmsでhorseshoeによるスパース回帰</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/crqa1/" class="item">[R]交差再帰定量化解析について</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/my_blog/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" class="item">お役立ち</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/dmm/" class="item">[お役立ち]DMMでオンライン英会話すべぇよ</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/docker_octave/" class="item">[お役立ち]DockerでJupyter &#43; Octave環境構築</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/docker_new/" class="item">[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/am_music1/" class="item">[お役立ち]Amazon musicでオシャレな音楽</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/gorilla/" class="item">[お役立ち]Gorilla.scでオンライン実験</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/airbnb/" class="item">[お役立ち]Airbnbを利用しないか？</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/my_blog/categories/%E6%97%A5%E8%A8%98" class="item">日記</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/friesen_1972/" class="item">[日記]表情表出の日米比較研究について</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/monster/" class="item">[日記]おれはMonsterを応援するぞ</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/applepen/" class="item">[日記]Apple pencilを買った</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/firetv/" class="item">[日記]fire TV stickで大画面Youtube</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/start/" class="item">スタート</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/my_blog/categories/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" class="item">読書感想文</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/compmodel/" class="item">[読書感想文]データ分析のための数理モデル入門</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/mmeasure/" class="item">[読書感想文]測りすぎ――なぜパフォーマンス評価は失敗するのか？</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/stereotype/" class="item">[読書感想文]ステレオタイプの科学</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/kokoro/" class="item">[読書感想文]なぜ心を読みすぎるのか</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/buildingemp/" class="item">[読書感想文]The War for Kindness (洋書)</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/factful/" class="item">[読書感想文]FACTFULNESS</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/visual_revo/" class="item">[読書感想文]ヒトの目、驚異の進化</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/cul_evo/" class="item">[読書感想文]文化がヒトを進化させた</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/my_blog/post/rt/" class="item">[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 とある心理学系研究者のブログ</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https://susishushi.github.io/my_blog/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+    
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/my_blog/js/jquery.min.js"></script>
+<script src="/my_blog/js/semantic.min.js"></script>
+<script src="/my_blog/js/imagesloaded.pkgd.min.js"></script>
+<script src="/my_blog/js/masonry.pkgd.min.js"></script>
+<script src="/my_blog/js/nav.js"></script>
+<script src="/my_blog/js/header.js"></script>
+<script src="/my_blog/js/main.js"></script>
+<script src="/my_blog/js/theme.js"></script>
+
+    
+<script src="/my_blog/js/html2canvas.min.js"></script>
+
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131372772-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </body>
+</html>

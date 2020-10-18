@@ -4,7 +4,7 @@ date: "2020-04-15T00:00:00"
 draft: True
 
 categories: ["読書感想文"]
-cover: "/img/image_book.png"
+cover: "/my_blog/img/image_book.png"
 tags: ["日記", "読書感想文"]
 summary: "「ヒトの目、驚異の進化（視覚革命が文明を生んだ）」を読みました"
 ---

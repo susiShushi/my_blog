@@ -4,7 +4,7 @@ date: "2020-08-16T00:00:00"
 draft: True
 
 categories: ["読書感想文"]
-cover: "/img/image_book.png"
+cover: "/my_blog/img/image_book.png"
 tags: ["日記", "読書感想文"]
 summary: "「測りすぎ――なぜパフォーマンス評価は失敗するのか？」を読みました"
 ---
