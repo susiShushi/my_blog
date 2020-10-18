@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on とある心理学系研究者のブログ</title>
-    <link>/my_blog/tags/docker/</link>
+    <link>/tags/docker/</link>
     <description>Recent content in Docker on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 15 Sep 2020 20:59:19 +0900</lastBuildDate><atom:link href="/my_blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 20:59:19 +0900</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[お役立ち]DockerでJupyter &#43; Octave環境構築</title>
-      <link>/my_blog/post/docker_octave/</link>
+      <link>/post/docker_octave/</link>
       <pubDate>Tue, 15 Sep 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/docker_octave/</guid>
+      <guid>/post/docker_octave/</guid>
       <description>DockerでOctaveとかしたい人用記事</description>
     </item>
     
     <item>
       <title>[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</title>
-      <link>/my_blog/post/docker_new/</link>
+      <link>/post/docker_new/</link>
       <pubDate>Tue, 28 Jul 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/docker_new/</guid>
+      <guid>/post/docker_new/</guid>
       <description>Windows Homeのあなたでもできる(多分)</description>
     </item>
     

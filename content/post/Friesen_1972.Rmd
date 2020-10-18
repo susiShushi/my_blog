@@ -6,7 +6,7 @@ draft: true
 categories: ["日記"]
 cover: "/my_blog/img/image_pikon.png"
 tags: ["日記"]
-summary: "Friesen (1972)についての目"
+summary: "Friesen (1972)についての備忘録"
 ---
 
 ## Friesen (1972)の日米比較研究

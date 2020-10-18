@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>雑談 on とある心理学系研究者のブログ</title>
-    <link>/my_blog/tags/%E9%9B%91%E8%AB%87/</link>
+    <link>/tags/%E9%9B%91%E8%AB%87/</link>
     <description>Recent content in 雑談 on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 09 Feb 2020 20:12:57 +0900</lastBuildDate><atom:link href="/my_blog/tags/%E9%9B%91%E8%AB%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2020 20:12:57 +0900</lastBuildDate><atom:link href="/tags/%E9%9B%91%E8%AB%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>スタート</title>
-      <link>/my_blog/post/start/</link>
+      <link>/post/start/</link>
       <pubDate>Sun, 09 Feb 2020 20:12:57 +0900</pubDate>
       
-      <guid>/my_blog/post/start/</guid>
+      <guid>/post/start/</guid>
       <description>新しいblogはじめました</description>
     </item>
     

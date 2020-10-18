@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on とある心理学系研究者のブログ</title>
-    <link>/my_blog/tags/r/</link>
+    <link>/tags/r/</link>
     <description>Recent content in R on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 15 Sep 2020 20:59:19 +0900</lastBuildDate><atom:link href="/my_blog/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 20:59:19 +0900</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[お役立ち]DockerでJupyter &#43; Octave環境構築</title>
-      <link>/my_blog/post/docker_octave/</link>
+      <link>/post/docker_octave/</link>
       <pubDate>Tue, 15 Sep 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/docker_octave/</guid>
+      <guid>/post/docker_octave/</guid>
       <description>DockerでOctaveとかしたい人用記事</description>
     </item>
     
     <item>
       <title>[R]datadrivencvでオシャレなCVを作ろう</title>
-      <link>/my_blog/post/datacv/</link>
+      <link>/post/datacv/</link>
       <pubDate>Sun, 06 Sep 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/datacv/</guid>
+      <guid>/post/datacv/</guid>
       <description>Google spreadsheetで保存した内容からCVを作るゾ</description>
     </item>
     
     <item>
       <title>[R]performance packageでモデル評価</title>
-      <link>/my_blog/post/performance/</link>
+      <link>/post/performance/</link>
       <pubDate>Wed, 19 Aug 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/performance/</guid>
+      <guid>/post/performance/</guid>
       <description>モデルのVIFとか決定係数とか出すパッケージ</description>
     </item>
     
     <item>
       <title>[R]brmsでhorseshoeによるスパース回帰</title>
-      <link>/my_blog/post/horseshoe/</link>
+      <link>/post/horseshoe/</link>
       <pubDate>Fri, 14 Aug 2020 11:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/horseshoe/</guid>
+      <guid>/post/horseshoe/</guid>
       <description>par_ratio=p/Dでおわり</description>
     </item>
     
     <item>
       <title>[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</title>
-      <link>/my_blog/post/docker_new/</link>
+      <link>/post/docker_new/</link>
       <pubDate>Tue, 28 Jul 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/docker_new/</guid>
+      <guid>/post/docker_new/</guid>
       <description>Windows Homeのあなたでもできる(多分)</description>
     </item>
     
     <item>
       <title>[R]交差再帰定量化解析について</title>
-      <link>/my_blog/post/crqa1/</link>
+      <link>/post/crqa1/</link>
       <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
       
-      <guid>/my_blog/post/crqa1/</guid>
+      <guid>/post/crqa1/</guid>
       <description>RQA (再帰定量化解析) で時系列データ解析！</description>
     </item>
     

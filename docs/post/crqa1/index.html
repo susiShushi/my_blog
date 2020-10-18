@@ -17,13 +17,13 @@
 
 <meta name="generator" content="Hugo 0.76.5" />
 
-<link rel="canonical" href="/my_blog/post/crqa1/" />
+<link rel="canonical" href="../../post/crqa1/" />
 
 
 <meta property="og:title" content="[R]交差再帰定量化解析について" />
 <meta property="og:description" content="RQA (再帰定量化解析) で時系列データ解析！" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/my_blog/post/crqa1/" />
+<meta property="og:url" content="/post/crqa1/" />
 <meta property="article:published_time" content="2018-12-08T00:00:00+09:00" />
 <meta property="article:modified_time" content="2018-12-08T00:00:00+09:00" />
 
@@ -34,9 +34,9 @@
 <meta name="twitter:description" content="RQA (再帰定量化解析) で時系列データ解析！"/>
 
 
-<link rel="stylesheet" href="/my_blog/css/github-markdown.css" />
-<link rel="stylesheet" href="/my_blog/css/semantic.min.css" />
-<link rel="stylesheet" href="/my_blog/css/site.css" />
+<link rel="stylesheet" href="../../css/github-markdown.css" />
+<link rel="stylesheet" href="../../css/semantic.min.css" />
+<link rel="stylesheet" href="../../css/site.css" />
 
 
 <style>
@@ -134,7 +134,7 @@ ggplot(data = both) +
      geom_line(aes(y = both[,2], x = 1:nrow(both)), color = &quot;red&quot;, size = 1) + 
      xlab(&quot;Observations&quot;) + ylab(&quot;TV&quot;) + ggtitle(&quot;Two Time Series&quot;) + ylim(1,6) + theme_classic(base_size=16)
 
-</code></pre><p><img src="/img/CRQA1Rplot.jpeg" alt="ggplot1"></p>
+</code></pre><p><img src="../../img/CRQA1Rplot.jpeg" alt="ggplot1"></p>
 <p>うーむ。いまいちなにがなにやらわかんないですね←<br>
 さて、ではこのデータをもとにcrqaを用いていろいろな情報を取り出してみましょう。</p>
 <h2 id="diagonal-wise-recurrence-profile">Diagonal-wise recurrence profile</h2>
@@ -171,7 +171,7 @@ mtext(paste(&quot;Max Lag:&quot;, timecourse[res$maxlag], &quot;seconds&quot;),
       at = res$maxlag + 22, side = 3, col = &quot;red&quot;, line = -1.2,
       cex = 1.2)
 
-</code></pre><p><img src="/img/CRQA2Rplot.jpeg" alt="plot1"></p>
+</code></pre><p><img src="../../img/CRQA2Rplot.jpeg" alt="plot1"></p>
 <p>　この結果から話し手の視線を聞き手は0.8秒間隔で追従する、ということがわかりましたね！<br>
 　まぁそんなもんか、という感じはしますよねーわかるわかる(適当)。</p>
 <h2 id="windowed-diagonal-wise-recurrence">Windowed diagonal-wise recurrence</h2>
@@ -211,7 +211,7 @@ mtext(paste(&quot;Max Recurrence:&quot;, timecourse[res$maxlag], &quot;seconds&q
       cex = 1.2)
 
 
-</code></pre><p><img src="/img/WindRplot1.jpeg" alt="plot2"></p>
+</code></pre><p><img src="../../img/WindRplot1.jpeg" alt="plot2"></p>
 <p>　この結果から対話時の二者間の視線における再帰現象は30秒以降段々と頻繁に生じてきて58秒などの対話の後半で話し手の視線と聞き手の視線の同期率が高まる、ということがわかりましたね！まぁそりゃそうだろうなそんなもんよな、という感じしません？しますします(適当)。</p>
 <h2 id="cross-recurrence-quantification-analysis-1">Cross recurrence quantification analysis</h2>
 <p>　いよいよ本題、Cross recurrence quantification analysisをするための関数crqa()ですが、この解析はとってもたくさんのパラメータが必要となります。重要なのは、delay, embed, radiusの3つです。
@@ -283,7 +283,7 @@ binary &lt;- ggplot(mRP, aes(x=TimeV1, y=TimeV2, fill=Recurrence)) +
   theme(legend.position=&quot;none&quot;, plot.title = element_text(size = 16, face = &quot;bold&quot;))
 binary
 
-</code></pre><p><img src="/img/crqaRplot.jpeg" alt="crqaplot"></p>
+</code></pre><p><img src="../../img/crqaRplot.jpeg" alt="crqaplot"></p>
 <p>　いかがでしたでしょうか。眠ったままのデータをこうした解析で遊んでみると新しいなにかがわかるかもしれませんよ！流行れ！CRQA！今回はCRQA自体の解説で労力割き過ぎて使えなかったデータがあるのでどこかでそれを使った実践例を紹介できればうれしいですね。</p>
 <p>今日はここまで。ではまた。</p>
 <h2 id="参考文献">参考文献</h2>
@@ -302,7 +302,7 @@ binary
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/my_blog/tags/r" title="R">R</a>
+          <a class="ui label" href="../../tags/r" title="R">R</a>
         
       
       <div
@@ -325,7 +325,7 @@ binary
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       
-        <img src="/my_blog/img/avatar_bai.png">
+        <img src="../../img/avatar_bai.png">
       
     </div>
 
@@ -336,10 +336,10 @@ binary
 
     <div class="ui horizontal list">
       
-      <a class="item" href="/my_blog/tags">
+      <a class="item" href="../../tags">
         <i class="tags icon" title="All Tags"></i>
       </a>
-      <a class="item" href="/my_blog/categories">
+      <a class="item" href="../../categories">
         <i class="th list icon" title="All Categories"></i>
       </a>
     </div>
@@ -348,25 +348,25 @@ binary
   
   <section class="ui attached center aligned segment dream-tags">
     
-      <a class="ui label" href="/my_blog/tags/docker" title="docker">docker</a>
+      <a class="ui label" href="../../tags/docker" title="docker">docker</a>
     
-      <a class="ui label" href="/my_blog/tags/r" title="r">r</a>
+      <a class="ui label" href="../../tags/r" title="r">r</a>
     
-      <a class="ui label" href="/my_blog/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+      <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
     
-      <a class="ui label" href="/my_blog/tags/%E5%87%BA%E5%BC%B5" title="出張">出張</a>
+      <a class="ui label" href="../../tags/%E5%87%BA%E5%BC%B5" title="出張">出張</a>
     
-      <a class="ui label" href="/my_blog/tags/%E5%AE%9F%E9%A8%93" title="実験">実験</a>
+      <a class="ui label" href="../../tags/%E5%AE%9F%E9%A8%93" title="実験">実験</a>
     
-      <a class="ui label" href="/my_blog/tags/%E6%97%85%E8%A1%8C" title="旅行">旅行</a>
+      <a class="ui label" href="../../tags/%E6%97%85%E8%A1%8C" title="旅行">旅行</a>
     
-      <a class="ui label" href="/my_blog/tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+      <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
     
-      <a class="ui label" href="/my_blog/tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
+      <a class="ui label" href="../../tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
     
-      <a class="ui label" href="/my_blog/tags/%E9%9B%91%E8%AB%87" title="雑談">雑談</a>
+      <a class="ui label" href="../../tags/%E9%9B%91%E8%AB%87" title="雑談">雑談</a>
     
-      <a class="ui label" href="/my_blog/tags/%E9%9F%B3%E6%A5%BD" title="音楽">音楽</a>
+      <a class="ui label" href="../../tags/%E9%9F%B3%E6%A5%BD" title="音楽">音楽</a>
     
   </section>
   
@@ -377,32 +377,32 @@ binary
       
         <div class="title">
           <i class="dropdown icon"></i>
-          <a href="/my_blog/categories/r" class="item">r</a>
+          <a href="../../categories/r" class="item">r</a>
         </div>
         <div class="content">
           <div class="ui list">
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/datacv/" class="item">[R]datadrivencvでオシャレなCVを作ろう</a>
+                <a href="../../post/datacv/" class="item">[R]datadrivencvでオシャレなCVを作ろう</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/performance/" class="item">[R]performance packageでモデル評価</a>
+                <a href="../../post/performance/" class="item">[R]performance packageでモデル評価</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/horseshoe/" class="item">[R]brmsでhorseshoeによるスパース回帰</a>
+                <a href="../../post/horseshoe/" class="item">[R]brmsでhorseshoeによるスパース回帰</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/crqa1/" class="item">[R]交差再帰定量化解析について</a>
+                <a href="../../post/crqa1/" class="item">[R]交差再帰定量化解析について</a>
               </div>
             </div>
           
@@ -411,44 +411,44 @@ binary
       
         <div class="title">
           <i class="dropdown icon"></i>
-          <a href="/my_blog/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" class="item">お役立ち</a>
+          <a href="../../categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" class="item">お役立ち</a>
         </div>
         <div class="content">
           <div class="ui list">
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/dmm/" class="item">[お役立ち]DMMでオンライン英会話すべぇよ</a>
+                <a href="../../post/dmm/" class="item">[お役立ち]DMMでオンライン英会話すべぇよ</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/docker_octave/" class="item">[お役立ち]DockerでJupyter &#43; Octave環境構築</a>
+                <a href="../../post/docker_octave/" class="item">[お役立ち]DockerでJupyter &#43; Octave環境構築</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/docker_new/" class="item">[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</a>
+                <a href="../../post/docker_new/" class="item">[お役立ち]WindowsでDockerつこて心理学者用のR環境構築</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/am_music1/" class="item">[お役立ち]Amazon musicでオシャレな音楽</a>
+                <a href="../../post/am_music1/" class="item">[お役立ち]Amazon musicでオシャレな音楽</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/gorilla/" class="item">[お役立ち]Gorilla.scでオンライン実験</a>
+                <a href="../../post/gorilla/" class="item">[お役立ち]Gorilla.scでオンライン実験</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/airbnb/" class="item">[お役立ち]Airbnbを利用しないか？</a>
+                <a href="../../post/airbnb/" class="item">[お役立ち]Airbnbを利用しないか？</a>
               </div>
             </div>
           
@@ -457,38 +457,38 @@ binary
       
         <div class="title">
           <i class="dropdown icon"></i>
-          <a href="/my_blog/categories/%E6%97%A5%E8%A8%98" class="item">日記</a>
+          <a href="../../categories/%E6%97%A5%E8%A8%98" class="item">日記</a>
         </div>
         <div class="content">
           <div class="ui list">
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/friesen_1972/" class="item">[日記]表情表出の日米比較研究について</a>
+                <a href="../../post/friesen_1972/" class="item">[日記]表情表出の日米比較研究について</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/monster/" class="item">[日記]おれはMonsterを応援するぞ</a>
+                <a href="../../post/monster/" class="item">[日記]おれはMonsterを応援するぞ</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/applepen/" class="item">[日記]Apple pencilを買った</a>
+                <a href="../../post/applepen/" class="item">[日記]Apple pencilを買った</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/firetv/" class="item">[日記]fire TV stickで大画面Youtube</a>
+                <a href="../../post/firetv/" class="item">[日記]fire TV stickで大画面Youtube</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/start/" class="item">スタート</a>
+                <a href="../../post/start/" class="item">スタート</a>
               </div>
             </div>
           
@@ -497,62 +497,62 @@ binary
       
         <div class="title">
           <i class="dropdown icon"></i>
-          <a href="/my_blog/categories/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" class="item">読書感想文</a>
+          <a href="../../categories/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" class="item">読書感想文</a>
         </div>
         <div class="content">
           <div class="ui list">
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/compmodel/" class="item">[読書感想文]データ分析のための数理モデル入門</a>
+                <a href="../../post/compmodel/" class="item">[読書感想文]データ分析のための数理モデル入門</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/mmeasure/" class="item">[読書感想文]測りすぎ――なぜパフォーマンス評価は失敗するのか？</a>
+                <a href="../../post/mmeasure/" class="item">[読書感想文]測りすぎ――なぜパフォーマンス評価は失敗するのか？</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/stereotype/" class="item">[読書感想文]ステレオタイプの科学</a>
+                <a href="../../post/stereotype/" class="item">[読書感想文]ステレオタイプの科学</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/kokoro/" class="item">[読書感想文]なぜ心を読みすぎるのか</a>
+                <a href="../../post/kokoro/" class="item">[読書感想文]なぜ心を読みすぎるのか</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/buildingemp/" class="item">[読書感想文]The War for Kindness (洋書)</a>
+                <a href="../../post/buildingemp/" class="item">[読書感想文]The War for Kindness (洋書)</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/factful/" class="item">[読書感想文]FACTFULNESS</a>
+                <a href="../../post/factful/" class="item">[読書感想文]FACTFULNESS</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/visual_revo/" class="item">[読書感想文]ヒトの目、驚異の進化</a>
+                <a href="../../post/visual_revo/" class="item">[読書感想文]ヒトの目、驚異の進化</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/cul_evo/" class="item">[読書感想文]文化がヒトを進化させた</a>
+                <a href="../../post/cul_evo/" class="item">[読書感想文]文化がヒトを進化させた</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="/my_blog/post/rt/" class="item">[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック</a>
+                <a href="../../post/rt/" class="item">[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック</a>
               </div>
             </div>
           
@@ -672,17 +672,17 @@ binary
       </div>
     </div>
 
-    <script src="/my_blog/js/jquery.min.js"></script>
-<script src="/my_blog/js/semantic.min.js"></script>
-<script src="/my_blog/js/imagesloaded.pkgd.min.js"></script>
-<script src="/my_blog/js/masonry.pkgd.min.js"></script>
-<script src="/my_blog/js/nav.js"></script>
-<script src="/my_blog/js/header.js"></script>
-<script src="/my_blog/js/main.js"></script>
-<script src="/my_blog/js/theme.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/imagesloaded.pkgd.min.js"></script>
+<script src="../../js/masonry.pkgd.min.js"></script>
+<script src="../../js/nav.js"></script>
+<script src="../../js/header.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
 
     
-<script src="/my_blog/js/html2canvas.min.js"></script>
+<script src="../../js/html2canvas.min.js"></script>
 
 
     

@@ -2,161 +2,161 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>日記 on とある心理学系研究者のブログ</title>
-    <link>/my_blog/tags/%E6%97%A5%E8%A8%98/</link>
+    <link>/tags/%E6%97%A5%E8%A8%98/</link>
     <description>Recent content in 日記 on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 17 Oct 2020 20:59:19 +0900</lastBuildDate><atom:link href="/my_blog/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 20:59:19 +0900</lastBuildDate><atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[日記]表情表出の日米比較研究について</title>
-      <link>/my_blog/post/friesen_1972/</link>
+      <link>/post/friesen_1972/</link>
       <pubDate>Sat, 17 Oct 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/friesen_1972/</guid>
-      <description>Friesen (1972)についての目</description>
+      <guid>/post/friesen_1972/</guid>
+      <description>Friesen (1972)についての備忘録</description>
     </item>
     
     <item>
       <title>[お役立ち]DMMでオンライン英会話すべぇよ</title>
-      <link>/my_blog/post/dmm/</link>
+      <link>/post/dmm/</link>
       <pubDate>Wed, 07 Oct 2020 21:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/dmm/</guid>
+      <guid>/post/dmm/</guid>
       <description>DMM英会話に助けられた話</description>
     </item>
     
     <item>
       <title>[読書感想文]データ分析のための数理モデル入門</title>
-      <link>/my_blog/post/compmodel/</link>
+      <link>/post/compmodel/</link>
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/compmodel/</guid>
+      <guid>/post/compmodel/</guid>
       <description>「データ分析のための数理モデル入門 本質をとらえた分析のために」を読みました</description>
     </item>
     
     <item>
       <title>[日記]おれはMonsterを応援するぞ</title>
-      <link>/my_blog/post/monster/</link>
+      <link>/post/monster/</link>
       <pubDate>Sat, 22 Aug 2020 20:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/monster/</guid>
+      <guid>/post/monster/</guid>
       <description>おれはモンスターを飲む。君たちはどうだ？</description>
     </item>
     
     <item>
       <title>[読書感想文]測りすぎ――なぜパフォーマンス評価は失敗するのか？</title>
-      <link>/my_blog/post/mmeasure/</link>
+      <link>/post/mmeasure/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/mmeasure/</guid>
+      <guid>/post/mmeasure/</guid>
       <description>「測りすぎ――なぜパフォーマンス評価は失敗するのか？」を読みました</description>
     </item>
     
     <item>
       <title>[R]brmsでhorseshoeによるスパース回帰</title>
-      <link>/my_blog/post/horseshoe/</link>
+      <link>/post/horseshoe/</link>
       <pubDate>Fri, 14 Aug 2020 11:59:19 +0900</pubDate>
       
-      <guid>/my_blog/post/horseshoe/</guid>
+      <guid>/post/horseshoe/</guid>
       <description>par_ratio=p/Dでおわり</description>
     </item>
     
     <item>
       <title>[日記]Apple pencilを買った</title>
-      <link>/my_blog/post/applepen/</link>
+      <link>/post/applepen/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/applepen/</guid>
+      <guid>/post/applepen/</guid>
       <description>Apple pencilを買ったんだけど…</description>
     </item>
     
     <item>
       <title>[読書感想文]ステレオタイプの科学</title>
-      <link>/my_blog/post/stereotype/</link>
+      <link>/post/stereotype/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/stereotype/</guid>
+      <guid>/post/stereotype/</guid>
       <description>「ステレオタイプの科学――「社会の刷り込み」は成果にどう影響し、わたしたちは何ができるのか」を読みました</description>
     </item>
     
     <item>
       <title>[読書感想文]なぜ心を読みすぎるのか</title>
-      <link>/my_blog/post/kokoro/</link>
+      <link>/post/kokoro/</link>
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/kokoro/</guid>
+      <guid>/post/kokoro/</guid>
       <description>「なぜ心を読みすぎるのか: みきわめと対人関係の心理学」を読みました</description>
     </item>
     
     <item>
       <title>[日記]fire TV stickで大画面Youtube</title>
-      <link>/my_blog/post/firetv/</link>
+      <link>/post/firetv/</link>
       <pubDate>Mon, 29 Jun 2020 23:05:47 +0900</pubDate>
       
-      <guid>/my_blog/post/firetv/</guid>
+      <guid>/post/firetv/</guid>
       <description>「fire TV stick」でマジで人生変わった</description>
     </item>
     
     <item>
       <title>[読書感想文]The War for Kindness (洋書)</title>
-      <link>/my_blog/post/buildingemp/</link>
+      <link>/post/buildingemp/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/buildingemp/</guid>
+      <guid>/post/buildingemp/</guid>
       <description>「The War for Kindness: Building Empathy in a Fractured World」を読みました</description>
     </item>
     
     <item>
       <title>[読書感想文]FACTFULNESS</title>
-      <link>/my_blog/post/factful/</link>
+      <link>/post/factful/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/factful/</guid>
+      <guid>/post/factful/</guid>
       <description>「ACTFULNESS(ファクトフルネス) 10の思い込みを乗り越え、データを基に世界を正しく見る習慣」を読みました</description>
     </item>
     
     <item>
       <title>[お役立ち]Amazon musicでオシャレな音楽</title>
-      <link>/my_blog/post/am_music1/</link>
+      <link>/post/am_music1/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/am_music1/</guid>
+      <guid>/post/am_music1/</guid>
       <description>自分の好きなオシャレアーティスト3選紹介</description>
     </item>
     
     <item>
       <title>[読書感想文]ヒトの目、驚異の進化</title>
-      <link>/my_blog/post/visual_revo/</link>
+      <link>/post/visual_revo/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/visual_revo/</guid>
+      <guid>/post/visual_revo/</guid>
       <description>「ヒトの目、驚異の進化（視覚革命が文明を生んだ）」を読みました</description>
     </item>
     
     <item>
       <title>[読書感想文]文化がヒトを進化させた</title>
-      <link>/my_blog/post/cul_evo/</link>
+      <link>/post/cul_evo/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/cul_evo/</guid>
+      <guid>/post/cul_evo/</guid>
       <description>「文化がヒトを進化させた―人類の繁栄と〈文化-遺伝子革命〉」を読みました</description>
     </item>
     
     <item>
       <title>[読書感想文]心理学, 認知・行動科学のための反応時間ハンドブック</title>
-      <link>/my_blog/post/rt/</link>
+      <link>/post/rt/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/my_blog/post/rt/</guid>
+      <guid>/post/rt/</guid>
       <description>「心理学, 認知・行動科学のための反応時間ハンドブック」を読みました</description>
     </item>
     
     <item>
       <title>スタート</title>
-      <link>/my_blog/post/start/</link>
+      <link>/post/start/</link>
       <pubDate>Sun, 09 Feb 2020 20:12:57 +0900</pubDate>
       
-      <guid>/my_blog/post/start/</guid>
+      <guid>/post/start/</guid>
       <description>新しいblogはじめました</description>
     </item>
     
