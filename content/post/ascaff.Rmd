@@ -1,0 +1,57 @@
+---
+title: "[読書感想文]The Ascent of Affect (洋書)"
+date: "2020-10-27T00:00:00"
+draft: True
+
+categories: ["読書感想文"]
+cover: "/img/image_Ebook.png"
+tags: ["日記", "読書感想文"]
+summary: "「The Ascent of Affect: Genealogy and Critique」を読みました"
+---
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
+msmaflink({"n":"The Ascent of Affect: Genealogy and Critique (English Edition)","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/510vg0F8WBL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B075R6WHCC","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"eZ3kM","s":"s"});
+</script>
+<div id="msmaflink-eZ3kM">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+  
+## The Ascent of Affect
+  『<a href="//af.moshimo.com/af/c/click?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB075R6WHCC" rel="nofollow">The Ascent of Affect: Genealogy and Critique</a><img src="//i.moshimo.com/af/i/impression?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" />』を読んでみた。<br><br>
+  
+  系譜学（Genealogy）という副題通り、“感情”という概念を定義づけようと試みた研究者の取り組みとその系図を事細かに、哲学者の議論も引用しながら解説している。<br>
+  <br>
+  Tomkinsの感情理論 (Chapter 1)に始まり、Ekmanの感情の神経文化理論（Neuro-cultural Theory: Chapter 2）、Lazarusの評価理論 (Chapter 3-4)、Fridlundの行動生態学的観点(Chapter 5)、Russell/Barrettの構成理論を含む近年の感情に関する議論（Chapter 6-7）、という構成になっている。<br>
+  <br>
+  著者はかなり感情研究に関して悲観的であり、エピローグの一部では<br>
+  <br>
+  <i>My argument in this book, however, is that in the field of emotion research there is no intellectually viable alternative to Fridlund’s position, whatever the cost may turn out to be to many of the existing “scientific” studies of emotion.</i><br>
+  訳：感情研究の分野では、既存の“科学的”研究に多くのコストがかかるとしてもFridlundの立場（＝行動生態学的観点）に代わる知的に実行可能な代替手段はない。<br>
+  <br>
+  と述べている。<br>
+  <br>
+  この書籍全体で展開されている重要な議論は、自然/意図、システム1/システム2、といったような感情と理性を二項対立させる仮定は妥当かどうか、ということである。<br>
+  <br>
+  著者が現状だとほかよりもまだましだとするFridlundの立場は、“そういう定義困難な想定からは距離をとって（肯定も否定もせず）観察可能な状況から表情の機能を議論することのほうがPracticalだ”、というものである（僕の理解では）。<br>
+  <br>
+  Fridlundの批判において重要な概念に「最小限の社会性 (implicit audience)」というものがある。これは一人で映像を見ていたとしてもなんらかの意味で社会的な側面が存在するであろう、というものであり、もしこの概念が真であるのであれば社会性が全く介在しない反応などありえない。EkmanはFridlundによる一連の批判に対応するべく「最小限の社会性」を安易に認めた結果、えらいことになった（彼の理論は社会的な要素が介在しない状況で感情が喚起すると“普遍的な”表情が出てくる、というもの。この概念を援用すると“普遍的な”表情の存在およびそれのデータに基づく証明が論理的に不可能になる）。<br>
+  <br>
+  最終的なLazarusの評価理論もRussell/Barrettの構成理論も「Pureな内的状態の存在」と「それを調整するなんらかの意図的操作の存在」という形で二項対立を保持しており、それに基づく“感情”研究はろくなことにならない、というのがこの書籍の結論（のはず）。理由としては、emotionにせよaffectにせよ実在性を保証できるレベルで各概念を定義できていないことに起因する（だと僕が理解した）。<br>
+  ちなみにぼくはこの二項対立を卒論研究でバッチバチに採用していたんだけれども、最近では“表情の喚起手法・条件”に着目した方がよい（表出者にとっての内的な表出プロセスは保留にするほかない）とかなり日和見的な考え方になってきている。
+  <br><br>
+“感情”の研究をするのであれば、どこかのタイミングで目を通しておくべき書籍だと思う。ただ、中身は難しく完全に理解できた気がしないので、どこかのタイミングでぼくも目を通しなおそうと思う。<br>
+<br>
+<br>
+<br>
+
+##### 他にこんな記事があるよ
+ [表情表出の日米比較研究について](https://susishushi.github.io/my_blog/post/friesen_1972/)
+  <br>
+[DMMでオンライン英会話すべぇよ](https://susishushi.github.io/my_blog/post/dmm/)<br>
+[FACTFULNESS](https://susishushi.github.io/my_blog/post/factful/)<br>
+[なぜ心を読みすぎるのか](https://susishushi.github.io/my_blog/post/kokoro/)
