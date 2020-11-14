@@ -14,7 +14,7 @@ summary: "OpenFaceで表情分析しよう"
 <br>
 
 ## OpenFaceとは
-<br>
+
 Tadas Baltrušaitis氏らによって開発された表情分析用のツール。機能は以下のとおりである。<br>
 ・表情トラッキング (facial landmark detection)<br>
 ・頭の位置推定 (head pose estimation)<br>
@@ -25,7 +25,7 @@ Tadas Baltrušaitis氏らによって開発された表情分析用のツール�
 <br><br>
 
 ## Dockerを用いた使い方
-<br>
+
 ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使ったOpenFaceの使用方法を紹介する。
 <br>
 以下の「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダが入る。いわゆるDockerでのマウントである。コマンドラインでは以下のように入力する：
@@ -38,7 +38,7 @@ docker run -it --rm -v /c/user/name/ImageFolder:/home/openface-build/data alegbr
 しばらく経つとOpenFaceが使えるコンテナが立ち上がる。<br><br>
 
 ## For文使った自動解析
-<br>
+
 
 今回はフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。「build/bin/FearureExtraction -fdir フォルダパス」は各フォルダ内の複数画像を動画として処理する。静止画として解析する際には「FaceLandmarkImg」を使う。詳しくは[本家](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments)を確認。<br>
 <br>
@@ -55,7 +55,7 @@ docker cp [contaier ID]:home/openface-build/processed /users/???
 ```  
 <br>
 これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが出てくる。ヤッタネ！！<br>
-<br><br>
+<br>
 
 
 ##### 他にこんな記事があるよ
