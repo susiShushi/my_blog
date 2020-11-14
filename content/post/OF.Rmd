@@ -1,0 +1,65 @@
+---
+title: "[お役立ち]OpenFaceで表情分析"
+date: "2020-11-15T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/of1.png"
+tags: ["お役立ち"]
+summary: "OpenFaceで表情分析しよう"
+---
+
+表情の分析をお手軽にやっちゃおう！<br>
+[Openface](https://github.com/TadasBaltrusaitis/OpenFace)の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br>
+<br>
+
+## OpenFaceとは
+<br>
+Tadas Baltrušaitis氏らによって開発された表情分析用のツール。機能は以下のとおりである。<br>
+・表情トラッキング (facial landmark detection)<br>
+・頭の位置推定 (head pose estimation)<br>
+・Action Unit推定 (facial action unit recognition)<br>
+・視線推定 (eye-gaze estimation)<br>
+<br>
+などができる。便利～。各OSでの使い方は[Wiki](https://github.com/TadasBaltrusaitis/OpenFace/wiki)に書いてあるので、ご確認くだせぇ。ちなみにWindowsだとボタンぽちぽちで解決できるのでよい。<br>
+<br><br>
+
+## Dockerを用いた使い方
+<br>
+ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使ったOpenFaceの使用方法を紹介する。
+<br>
+以下の「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダが入る。いわゆるDockerでのマウントである。コマンドラインでは以下のように入力する：
+<br>
+<br>
+```docker:run
+docker run -it --rm -v /c/user/name/ImageFolder:/home/openface-build/data alegbr/openface:latest
+```  
+<br>
+しばらく経つとOpenFaceが使えるコンテナが立ち上がる。<br><br>
+
+## For文使った自動解析
+<br>
+
+今回はフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。「build/bin/FearureExtraction -fdir フォルダパス」は各フォルダ内の複数画像を動画として処理する。静止画として解析する際には「FaceLandmarkImg」を使う。詳しくは[本家](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments)を確認。<br>
+<br>
+```docker:for_do
+for i in ./data/Images/Images/*/*; do build/bin/FeatureExtraction -fdir $i; done
+```  
+<br>
+<br>解析後はコンテナ内にprocessedというフォルダができあがるので、それをローカルにコピーする。コンテナIDは別途コマンドラインを立ち上げて「docker ps」で確認する。<br>
+以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
+最後の部分には保存用のローカルPATHを記述する。<br>
+<br>
+```docker:copy
+docker cp [contaier ID]:home/openface-build/processed /users/???
+```  
+<br>
+これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが出てくる。ヤッタネ！！<br>
+<br><br>
+
+
+##### 他にこんな記事があるよ
+ [Crowdworksでオンライン実験](https://susishushi.github.io/my_blog/post/cw/)<br>
+[WindowsでDockerつこてR環境構築](https://susishushi.github.io/my_blog/post/docker_new/)
+<br>
+[datadrivencvでオシャレなCV](https://susishushi.github.io/my_blog/post/datacv/)

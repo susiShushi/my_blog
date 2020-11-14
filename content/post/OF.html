@@ -1,0 +1,65 @@
+---
+title: "[お役立ち]OpenFaceで表情分析"
+date: "2020-11-15T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/of1.png"
+tags: ["お役立ち"]
+summary: "OpenFaceで表情分析しよう"
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<p>表情の分析をお手軽にやっちゃおう！<br>
+<a href="https://github.com/TadasBaltrusaitis/OpenFace">Openface</a>の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br>
+<br></p>
+<div id="openfaceとは" class="section level2">
+<h2>OpenFaceとは</h2>
+<p><br>
+Tadas Baltrušaitis氏らによって開発された表情分析用のツール。機能は以下のとおりである。<br>
+・表情トラッキング (facial landmark detection)<br>
+・頭の位置推定 (head pose estimation)<br>
+・Action Unit推定 (facial action unit recognition)<br>
+・視線推定 (eye-gaze estimation)<br>
+<br>
+などができる。便利～。各OSでの使い方は<a href="https://github.com/TadasBaltrusaitis/OpenFace/wiki">Wiki</a>に書いてあるので、ご確認くだせぇ。ちなみにWindowsだとボタンぽちぽちで解決できるのでよい。<br>
+<br><br></p>
+</div>
+<div id="dockerを用いた使い方" class="section level2">
+<h2>Dockerを用いた使い方</h2>
+<p><br>
+ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使ったOpenFaceの使用方法を紹介する。
+<br>
+以下の「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダが入る。いわゆるDockerでのマウントである。コマンドラインでは以下のように入力する：
+<br>
+<br></p>
+<pre class="docker:run"><code>docker run -it --rm -v /c/user/name/ImageFolder:/home/openface-build/data alegbr/openface:latest</code></pre>
+<p><br>
+しばらく経つとOpenFaceが使えるコンテナが立ち上がる。<br><br></p>
+</div>
+<div id="for文使った自動解析" class="section level2">
+<h2>For文使った自動解析</h2>
+<p><br></p>
+<p>今回はフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。「build/bin/FearureExtraction -fdir フォルダパス」は各フォルダ内の複数画像を動画として処理する。静止画として解析する際には「FaceLandmarkImg」を使う。詳しくは<a href="https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments">本家</a>を確認。<br>
+<br></p>
+<pre class="docker:for_do"><code>for i in ./data/Images/Images/*/*; do build/bin/FeatureExtraction -fdir $i; done</code></pre>
+<p><br>
+<br>解析後はコンテナ内にprocessedというフォルダができあがるので、それをローカルにコピーする。コンテナIDは別途コマンドラインを立ち上げて「docker ps」で確認する。<br>
+以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
+最後の部分には保存用のローカルPATHを記述する。<br>
+<br></p>
+<pre class="docker:copy"><code>docker cp [contaier ID]:home/openface-build/processed /users/???</code></pre>
+<p><br>
+これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが出てくる。ヤッタネ！！<br>
+<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/cw/">Crowdworksでオンライン実験</a><br>
+<a href="https://susishushi.github.io/my_blog/post/docker_new/">WindowsでDockerつこてR環境構築</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/datacv/">datadrivencvでオシャレなCV</a></p>
+</div>
+</div>
