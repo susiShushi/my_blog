@@ -86,16 +86,17 @@ git clone https://github.com/nhtran93/DDM_priors.git
 ## 明日へ…
 
 おまえはいま、銃をてにいれた。このままかえってメキシコ中のGithubのリポジトリをクローンしてもいい、つまり真の男の叡智を手にしてもいい、ということだ。おまえじしんがGithubにとうろくして真の男として叡智を作成してもいい。<br>
-Github上でローカルに保存してもいい（下画像）。こうすればコマンドプロンプトなんて開かずとも真の男の叡智をzipファイルで手にできる。おまえが銃をもたずコロサズを緋村剣心のように貫こうというのならそれもいいだろう。<br><br>
+実はGithubのリポジトリ上で「Download ZIP」を押して保存する方法もある（下画像）。
+こうすればコマンドプロンプトなんて開かずとも真の男の叡智をzipファイルで手にできる。おまえが銃をもたずコロサズを緋村剣心のように貫こうというのならそれもいいだろう。<br><br>
 
   <img src="/img/GH3.png" width=50%>
 
 
 
 あとは自分でしこうをさくごし、メキシコを知れ。ドリトスをたべろ。<br>
-ここでは扱ってないが、OSFやAsPredictedもおまえのなかのメキシコを養っていく。<br>
+ここでは扱ってないが、OSFやAsPredictedもおまえのなかのメキシコを養っていく。[Open and Reproducible Science Advent Calender](https://adventar.org/calendars/5106)をみろ。そしてドリトスをたべろ。<br>
 <br>
-[Open and Reproducible Science Advent Calender](https://adventar.org/calendars/5106)にとうろくし、おまえじしんが真の男としてブロゴの投稿に参加する……それもまた、タフな選択なのではないかとおれは思う。<br>
+あるいは[Open and Reproducible Science Advent Calender](https://adventar.org/calendars/5106)にとうろくし、おまえじしんが真の男としてオープンな科学に関係する情報をブロゴの投稿を通して発信する……それもまた、タフな選択なのではないかとおれは思う。<br>
 <br>
 
 ##### 参考文献
