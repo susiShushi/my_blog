@@ -48,42 +48,54 @@ Gitとはおまえと世界をつなぐGUNだ。「世界と自分がつなが�
 <br>
 とにかくつぎは銃に弾が込められているかを確認しろ。コマンドプロンプト上で<br>
 
+```cmd:git
 git --version
+``` 
+
 
 と入力しろ。git versionほにゃらら、と出力されたらおまえはすでにGUNとともにある。銃をもっていないやつは[ここ](https://git-scm.com/downloads)で任意のOSと対応するGit、すなわちGUNを手にいれろ。<br>
 つぎにコマンドプロンプト上で任意のフォルダを創造し、<br>
 
+```cmd:folder
 mkdir Test
+```  
+
 
 その場所に移動する。<br>
 
+```cmd:move
 cd Test
+```  
 
-あとは[真の男のリポジトリ](https://github.com/nhtran93/DDM_priors)から緑の「Code」ぼたんをおして必要な情報を下画像のようにとりだし（クリックするだけでコピーされる）、<br>
-  <img src="/img/GH1.png" width=100%>
+あとは[真の男のリポジトリ](https://github.com/nhtran93/DDM_priors)から緑の「Code」ぼたんをおして必要な情報を下画像のようにとりだし（クリックするだけでコピーされる）、<br><br><br>
+  <img src="/img/GH1.png" width=80%>
 
 
 以下のように必要な箇所 (git cloneのあと) にペースト (貼り付け：Ctrl + V) してEnterをおすことで、対象となるGithubのリポジトリをクローンする。つまり、おまえの作成したTestフォルダの中に真の男のたましいがやどる、ということだ。<br>
 
+```cmd:clone
 git clone https://github.com/nhtran93/DDM_priors.git
+```  
 
-それだけだ。あとはおまえの作成したフォルダ（ここではTestフォルダ）を開いて、Rprojファイル（RとRstudioが必須だ）を開けば、おまえはGithubという戦場をいきぬいた真の男たちの軌跡をたどれる。<br>
 
-  <img src="/img/GH2.png" width=100%>
+それだけだ。あとはおまえの作成したフォルダ（ここではTestフォルダ）を開いて、Rprojファイル（RとRstudioが必須だ）を開けば、おまえはGithubという戦場をいきぬいた真の男たちの軌跡をたどれる。<br><br>
+
+  <img src="/img/GH2.png" width=80%>
 
 
 ## 明日へ…
 
 おまえはいま、銃をてにいれた。このままかえってメキシコ中のGithubのリポジトリをクローンしてもいい、つまり真の男の叡智を手にしてもいい、ということだ。おまえじしんがGithubにとうろくして真の男として叡智を作成してもいい。<br>
-Github上でローカルに保存してもいい（下画像）。こうすればコマンドプロンプトなんて開かずとも真の男の叡智をzipファイルで手にできる。おまえが銃をもたずコロサズを緋村剣心のように貫こうというのならそれもいいだろう。<br>
-  <img src="/img/GH3.png" width=100%>
+Github上でローカルに保存してもいい（下画像）。こうすればコマンドプロンプトなんて開かずとも真の男の叡智をzipファイルで手にできる。おまえが銃をもたずコロサズを緋村剣心のように貫こうというのならそれもいいだろう。<br><br>
+
+  <img src="/img/GH3.png" width=50%>
 
 
 
 あとは自分でしこうをさくごし、メキシコを知れ。ドリトスをたべろ。<br>
 ここでは扱ってないが、OSFやAsPredictedもおまえのなかのメキシコを養っていく。<br>
 <br>
-[Open and Reproducible Science Advent Calender]にとうろくし、おまえじしんが真の男としてブロゴの投稿に参加する……それもまた、タフな選択なのではないかとおれは思う。<br>
+[Open and Reproducible Science Advent Calender](https://adventar.org/calendars/5106)にとうろくし、おまえじしんが真の男としてブロゴの投稿に参加する……それもまた、タフな選択なのではないかとおれは思う。<br>
 <br>
 
 ##### 参考文献
