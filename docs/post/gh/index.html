@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[お役立ち]Crowdworksでオンライン実験 | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]おまえはGithubで先人の知恵を獲得する | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,21 +17,21 @@
 
 <meta name="generator" content="Hugo 0.76.5" />
 
-<link rel="canonical" href="../../post/cw/" />
+<link rel="canonical" href="../../post/gh/" />
 
 
-<meta property="og:title" content="[お役立ち]Crowdworksでオンライン実験" />
-<meta property="og:description" content="Crowdworksでオンライン実験参加者を募集しよう" />
+<meta property="og:title" content="[お役立ち]おまえはGithubで先人の知恵を獲得する" />
+<meta property="og:description" content="ミスター・逆噴射総一郎リスペクトの文章" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/cw/" />
-<meta property="article:published_time" content="2020-11-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-11-07T00:00:00+00:00" />
+<meta property="og:url" content="/post/gh/" />
+<meta property="article:published_time" content="2020-12-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-03T00:00:00+00:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[お役立ち]Crowdworksでオンライン実験"/>
-<meta name="twitter:description" content="Crowdworksでオンライン実験参加者を募集しよう"/>
+<meta name="twitter:title" content="[お役立ち]おまえはGithubで先人の知恵を獲得する"/>
+<meta name="twitter:description" content="ミスター・逆噴射総一郎リスペクトの文章"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -83,8 +83,8 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [お役立ち]Crowdworksでオンライン実験
-          <div class="sub header">@ なんばいきん · Saturday, Nov 7, 2020 · 4 minute read · Update at Nov 7, 2020</div>
+          [お役立ち]おまえはGithubで先人の知恵を獲得する
+          <div class="sub header">@ なんばいきん · Thursday, Dec 3, 2020 · 7 minute read · Update at Dec 3, 2020</div>
         </h1>
       </header>
 
@@ -95,90 +95,71 @@
 <script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
-<p>せっかくせっせと手を動かして作成したオンライン実験、学内のリソースで閉じてませんか。<br>
-あなたの研究活動、<a href="https://px.a8.net/svt/ejp?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" rel="nofollow">クラウドワークス</a>
-<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" alt="">で促進しちゃいましょう。<br>
+<p>よく来たな、おれは<a href="https://twitter.com/NSushi">Nsushi</a>だ。おまえはGithubを知っているか？その文字を見たことはあるはずだ。だが誰も教えてくれず、おまえはインターネットでそれについて調べていくうちにYOUTUBEにたどりつき、全然関係ない動画を見始めた。気が付くと酒やベイブに溺れ、真の男としての本来の生き方を何もかも忘れて・・・・・自分の頭で考えることすらも・・・・・やめてしまった。<br>
 <br>
-ここでのお話<br>
-・Crowdworksを用いた実験の行い方を割と丁寧に（2020年11月現在の）<br>
+いつからおまえはそんなになってしまったのか？スマッホンの予測変換のせいで、お前の中の真の男は死んでしまったのか？仮にそうだとしても．．．よみがえる。Githubの使い方を教えるこの記事でだ。<br>
 <br>
-ここでしないお話<br>
-・オンライン実験の作り方<br>
-(<a href="https://susishushi.github.io/my_blog/post/gorilla/">Gorillaの記事</a>は過去に書いてる。ほかにも需要あれば…)<br>
-<br>
-<a href="https://lab.js.org/">lab.js</a>、<a href="https://gorilla.sc/">Gorilla</a>、<a href="https://pavlovia.org/">Pavlovia</a>用いる<a href="https://www.psychopy.org/">Psychopy</a>などなど様々なオンライン心理実験を行うためのツールが現在では提供されていてとっても便利である。これらのツールについてはいろいろなところで情報が提供されてるので、そういうとこを参照しましょう。<br>
-<br>
-しかし、オンライン実験用のプログラム（データ保存のサーバー含む）ができたとしても、その実験をやってくれる人がいないと意味がない。これが俗にいう「準備はできたけど参加者どうしよう問題」である。<br>
-<br>
-そこでこの記事では、そうしたニーズを解消するために<a href="https://px.a8.net/svt/ejp?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" rel="nofollow">クラウドワークス</a>
-<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" alt="">と呼ばれる在宅ワーカーと仕事発注者のマッチングを行えるサービスを紹介するゾ。<br>
-※オンライン実験を行う際にはいうまでもなく、所属機関での倫理審査をしっかり受けたうえで行うこと。お兄さんとの約束だゾ☆<br>
 <br></p>
-<div id="crowdworksとは" class="section level2">
-<h2>CrowdWorksとは</h2>
-<p><br>
-ようは「お仕事をインターネット上で受注・発注」できるサービスです。<br>
-本記事で想定しているニーズからいえば「オンライン実験を依頼したいあなた（クライアント）」が「心理実験に参加して報酬を得たいクラウドワーカーさん」に対して、実験用のリンクを送ったり質問紙を送ったりしてオンライン実験に協力してもらって、その対価としての報酬をCrowdWorksを介してお支払いするシステム、になってます。<br>
-他にも（倫理的に問題なければ）データ入力の依頼ができたり、簡単なアンケート回答で逆にお小遣い稼ぎをすることもできるはず。活用の幅はいろいろあるのでまぁ以下からとりあえず登録すればよい。<br>
+<div id="真の男のためのマストアイテムgithub" class="section level2">
+<h2>真の男のためのマストアイテムGithub</h2>
+<p>Githubがなんなのかについて、おれは落ちついて説明しておくべきだと思った。Githubはソースコード管理サービスだ。Git (バージョン管理ツール) のhub (中心地)、真の男たちが集まる約束の大地だ。すなわち、いいところだ。おまえはこう思うだろう．．．「ふーん、ギットハブ？よくわからないけどソースコードだのバージョン管理だの、プログラマーが使うものでしょ？」と。おまえはこの時点で百個くらい間違いを犯している。<br>
+メキシコにおいて大切なのは情報の取捨選択だが、よくわからないからといって有益な情報をしらないまま生産性のない研究生活をつづけ、そのうちに酒とベイブにおぼれ、刹那的な幸福に包まれ死ぬ…おまえがそれでいいと言うのならおれはとめないが、ここまで導入を呼んでくれたおまえを見捨てるのは忍びないので、できるかぎりのGithubの使いかたをかいておく。<br><br></p>
+</div>
+<div id="gitを手にしろ" class="section level2">
+<h2>Gitを手にしろ</h2>
+<p>改めて、そもそもGitとはなんなのか？それはメキシコにおいて銃とはなにか聞くようなものだ。そんな不用意なことをバーできけば、よぱらいにうたれて死ぬ。しかし、さいわいここはGithubについての記事なので、そのようなことはない。おれがこれから伝えようとしているのは、過酷なメキシコを生きるうえでは欠かせない道具の知識だ。<br>
 <br>
-<a href="https://px.a8.net/svt/ejp?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" rel="nofollow">ここ</a>
-<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" alt="">から登録できます。<br>
+Gitとはおまえと世界をつなぐGUNだ。「世界と自分がつながる？どこで？」そう。Githubでだ。Githubで世界とつながることは、それすなわちメキシコにおける真の男たちの叡智を獲得できるということを意味する。勘のいいおまえは気づいているはずだ。それは、砂漠でみつけたきよいオアシスのように幸福であると。<br>
+そのことを知ったおまえはもう銃を持たないこしぬけではいられない。<br>
+<a href="https://git-scm.com/downloads">ここ</a>で任意のOSと対応するGitをまずはインスコして真の男になれ。サボテンがとげを光らせるメキシコでサッバイブするにはそうするほかない。<br>
 <br></p>
 </div>
-<div id="具体的なやり方" class="section level2">
-<h2>具体的なやり方</h2>
-<p><br>
-Crowdworksになんやかんやで登録すると以下の画像のように「クライアント（発注者）メニュー」が出てくる。<br>
+<div id="とある真の男" class="section level2">
+<h2>とある真の男</h2>
+<p>おまえはGitを知り、真の男に一歩近づいた。だが、それは同時に高濃度のメキシコに放り出されたことと同じだ。何もわからないままふらふらとさまよっているとGitの引き金をPullするまえに、おまえは干からびて死ぬ。<br>
+過酷なメキシコをいきぬくには、先人の知恵が必要だ。おれはその一部をおまえに紹介する。<br>
 <br>
-<img src="../../img/cw1.png" width=90%>
-<br><br>
-「新しい仕事を依頼」をクリックすると、実験依頼の作成スタートです。<br>
-<br>
-ほしたら下のような画像が出てくる。大体の心理実験は質問・アンケートでそれにチェック入れよう<br>
-<img src="../../img/cw2.png" width=90%>
-<br><br>
-次はプロジェクト形式かタスク形式かの選択だ。画像にも書いてあるが「プロジェクト形式」は一人一人と契約をして仕事をするタイプで、「タスク形式」はリンクなどを置いておいて放置しとくだけで短時間に多数の仕事を依頼する形式だ。<br></p>
-<p><img src="../../img/cw3.png" width=90%>
-<br><br>
-ちなみにクラウドワークスの人に直接伺ったんやけど、「データの質を意識するならプロジェクト形式です」との助言をいただいたので、質が気になる人は仕事をする相手とのやり取りがその都度ある分若干手間だけど、プロジェクト形式がおすすめである（何か問題があったときにもプロジェクト形式のがリカバリーしやすい）<br>
-<br>
-<br>
-ここで依頼詳細を書くところで実験についての内容などを書いていこう。トラブル回避のためになるべく読みやすく、丁寧に書かないと、えらいことになります。丁寧に書こう！！<br>
-<img src="../../img/cw4.png" width=90%>
-<br>
-<br>
-<br>
-赤字とか太字とかを使って、いい感じに書こう。以下に一例を載せておく。(値段や内容はフィクションです)<br>
-<img src="../../img/cw6.png" width=100%>
-<br>
-<br>
-予算と支払方法については、①固定報酬を選んで、②募集人数（予定）を入れて、③予算（ここでは実験参加に対する謝金）を記入<br>
-<img src="../../img/cw5.png" width=90%>
-<br><br>
-以降はStep5に期限（日程）を記入して、Step6は有料オプションなので無視しましょう（必要な人は必要なものをチェックしましょう）<br>
-<br>
-その後「確認画面に進む」を押せば、これまで入力した情報を確認する画面が出ます。<br>
-そんで「この内容で登録する」を押せば、おめでとうございます！あなたの実験募集がスタートです！！<br>
-<img src="../../img/cw7.png" width=90%>
-<br><br>
-その後の流れとしては、『プロジェクト形式』の場合はワーカー（参加者）が応募してくる⇒承認する⇒実験リンクを送って回答したら連絡もらう⇒回答終了の連絡が来たらデータを確認後、検収を確認して支払いをする、みたいな感じです！<br>
-「タスク形式」の場合は、ほっておけば参加者が募集上限まで勝手に集まってます。らくぅ～。<br>
-<br>
+2020年9月、真の男N-Han Tran氏の研究チームが「<a href="https://psyarxiv.com/6jyf3/">Systematic Parameter Reviews in Cognitive Modeling: Towards a Robust and Cumulative Characterization of Psychological Processes</a>」というタフなペッパーをPreprintとして公開した。Preprint、すなわちそれはむきだしのKnifeだ。そしてN-Han Tran氏は多分性別的には女だが、そんなことは関係ない。真の男は性別などというカテゴリーを超える。<br><br>
+このペッパーの内容は以下の通りだ：「人の心理プロセスを記述したモデル (Drift diffusion model：DDM) のパラメータ推定についての論文。DDMを適用した多数の先行研究から経験的に導き出したパラメータを事前分布として設定することで、よりロバストな計算論モデルを実現するためのモデル設計方法を実践的に紹介している」。すなわち「心理学実験でイイ感じの解析をするやりかたの紹介」だ。<br>
+メキシコでの研究活動においては先行研究を概観し、その知見をレンガのように積み重ねていくことが不可欠だ。そして正しく積み重ねることはそのまま研究の再現性にもつながる。その実践的な取り組みの一部がこの論文で紹介されている。この実践をあたまでなくからだにおぼえさせることもまた、おまえのなかのメキシコを養っていくうえでは重要なことだ。<br>
+めざといおまえはきづいているはずだ。この実践的な手法をおまえのＰＣ上で再現する方法を。彼女たちは<a href="https://github.com/nhtran93/DDM_priors">約束の地</a>でおまえの狼煙があがるのをいまかいまかとまっている。引き金をひくときがきた。<br>
 <br></p>
 </div>
-<div id="ワーカーさんによる回答の質" class="section level2">
-<h2>ワーカーさんによる回答の質</h2>
-<p>「オンライン実験をするうえでデータの質が気になる」という方もいるだろうけど一応<a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00378/full">サンプルの質を調べた研究</a>も存在する。「だから大丈夫！」ってわけでもないので「プロジェクト形式」とか「ちゃんと読まないやつを検出する項目」とかを含めると良いだろう。<br>
+<div id="gitの使い方" class="section level2">
+<h2>Gitの使い方</h2>
+<p>コマンドプロンプト（Macはターミナル）を開け。Windowsなら「Windows key + R」を押してpowershellと入力すれば出てくる。真の男はショートカットキーをつかいこなす。<br>
+左下のWindowsマークを押して、Wの頭文字のファイル覧から「Windows システムツール」をやっとこさ見つけだしてボタンを押し、その中から命からがら「コマンドプロンプト」という文字を見つけたころにはEND OF MEXICO・・・路地裏から出てきたダニートレホの投げナイフが刺さり、おまえの旅は終わりをむかえる。なぜか。ショートカットキーをつかいこなせていないからだ。<br>
 <br>
-経験的には結構年配の方にもご協力いただけるので年齢のレンジは広くなりそう。研究目的によっては注意するんじゃぞい！<br>
+とにかくつぎは銃に弾が込められているかを確認しろ。コマンドプロンプト上で<br></p>
+<p>git –version</p>
+<p>と入力しろ。git versionほにゃらら、と出力されたらおまえはすでにGUNとともにある。銃をもっていないやつは<a href="https://git-scm.com/downloads">ここ</a>で任意のOSと対応するGit、すなわちGUNを手にいれろ。<br>
+つぎにコマンドプロンプト上で任意のフォルダを創造し、<br></p>
+<p>mkdir Test</p>
+<p>その場所に移動する。<br></p>
+<p>cd Test</p>
+<p>あとは<a href="https://github.com/nhtran93/DDM_priors">真の男のリポジトリ</a>から緑の「Code」ぼたんをおして必要な情報を下画像のようにとりだし（クリックするだけでコピーされる）、<br>
+<img src="../../img/GH1.png" width=100%></p>
+<p>以下のように必要な箇所 (git cloneのあと) にペースト (貼り付け：Ctrl + V) してEnterをおすことで、対象となるGithubのリポジトリをクローンする。つまり、おまえの作成したTestフォルダの中に真の男のたましいがやどる、ということだ。<br></p>
+<p>git clone <a href="https://github.com/nhtran93/DDM_priors.git" class="uri">https://github.com/nhtran93/DDM_priors.git</a></p>
+<p>それだけだ。あとはおまえの作成したフォルダ（ここではTestフォルダ）を開いて、Rprojファイル（RとRstudioが必須だ）を開けば、おまえはGithubという戦場をいきぬいた真の男たちの軌跡をたどれる。<br></p>
+<p><img src="../../img/GH2.png" width=100%></p>
+</div>
+<div id="明日へ" class="section level2">
+<h2>明日へ…</h2>
+<p>おまえはいま、銃をてにいれた。このままかえってメキシコ中のGithubのリポジトリをクローンしてもいい、つまり真の男の叡智を手にしてもいい、ということだ。おまえじしんがGithubにとうろくして真の男として叡智を作成してもいい。<br>
+Github上でローカルに保存してもいい（下画像）。こうすればコマンドプロンプトなんて開かずとも真の男の叡智をzipファイルで手にできる。おまえが銃をもたずコロサズを緋村剣心のように貫こうというのならそれもいいだろう。<br>
+<img src="../../img/GH3.png" width=100%></p>
+<p>あとは自分でしこうをさくごし、メキシコを知れ。ドリトスをたべろ。<br>
+ここでは扱ってないが、OSFやAsPredictedもおまえのなかのメキシコを養っていく。<br>
 <br>
+[Open and Reproducible Science Advent Calender]にとうろくし、おまえじしんが真の男としてブロゴの投稿に参加する……それもまた、タフな選択なのではないかとおれは思う。<br>
 <br></p>
-<div id="他にこんな記事があるよ" class="section level5">
-<h5>他にこんな記事があるよ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/ascaff/">The Ascent of Affect</a><br>
-<a href="https://susishushi.github.io/my_blog/post/dmm/">DMMでオンライン英会話すべぇよ</a>
-<br>
-<a href="https://susishushi.github.io/my_blog/post/docker_octave/">DockerでJupyter + Octave環境構築</a></p>
+<div id="参考文献" class="section level5">
+<h5>参考文献</h5>
+<p><a href="https://diehardtales.com/n/n73ec21c8457b">ダイハードテイルズ所属作家紹介：逆噴射聡一郎とは？</a><br>
+<a href="https://note.com/a01_naut/n/nb2f2b3fc39cb">蛮英の入り口にたつための逆噴射文体講座(逆噴射同時通訳付き)</a><br>
+<a href="https://kantake.hatenablog.com/entry/2017/05/29/190508">お前は万物を逆噴射できる</a><br>
+<a href="https://note.com/wineet_the_pooh/n/n1367e27bc463">おまえはもう真の男のための映画プリキュアドリームスターズをみたか？</a><br></p>
 </div>
 </div>
 </article>

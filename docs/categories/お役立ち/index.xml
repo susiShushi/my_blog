@@ -6,7 +6,16 @@
     <description>Recent content in お役立ち on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[お役立ち]おまえはGithubで先人の知恵を獲得する</title>
+      <link>/post/gh/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/gh/</guid>
+      <description>ミスター・逆噴射総一郎リスペクトの文章</description>
+    </item>
+    
     <item>
       <title>[お役立ち]OpenFaceで表情分析</title>
       <link>/post/of/</link>
