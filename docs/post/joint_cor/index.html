@@ -84,7 +84,7 @@
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
           [R]質問紙と行動指標の相関分析
-          <div class="sub header">@ なんばいきん · Thursday, Dec 17, 2020 · 7 minute read · Update at Dec 17, 2020</div>
+          <div class="sub header">@ なんばいきん · Thursday, Dec 17, 2020 · 8 minute read · Update at Dec 17, 2020</div>
         </h1>
       </header>
 
@@ -125,16 +125,16 @@
 <br></p>
 <div id="質問紙a" class="section level2">
 <h2>質問紙A</h2>
-<p>質問紙についてはベルヌーイ試行として各アイテムに対する反応にベルヌーイ分布を適用する。ベルヌーイモデルは以下の通りシンプルなものだ。<br></p>
+<p>質問紙についてはベルヌーイ試行として各アイテム<span class="math inline">\(t\)</span>に対する反応にベルヌーイ分布を適用する。ベルヌーイモデルは以下の通りシンプルなものだ。<br></p>
 <p><span class="math display">\[
 Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
 \]</span></p>
-<p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率、<span class="math inline">\(p_i\)</span>とは以下のようなもの<br></p>
+<p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率である。簡単！<br>
+ここでは<span class="math inline">\(p_i\)</span>を以下のように定義する。<br></p>
 <p><span class="math display">\[
 p_i = \cfrac{1}{1+exp(-\theta_i)} 
 \]</span></p>
 <p><span class="math inline">\(\theta_i\)</span>は個人<span class="math inline">\(i\)</span>の回答確率と対応する能力と解釈でき(-∞～∞)、<span class="math inline">\(\theta_i\)</span>にロジスティック関数かました<span class="math inline">\(p_i\)</span>は0～1の値をとる。<br>
-<br>
 知りたいのは、観測された確率<span class="math inline">\(p_i\)</span>の背後に存在する<span class="math inline">\(\theta_i\)</span>である。<br>
 <br>
 ここからは個人レベルの生成プロセスについて見ていく。これは以下のように階層的なパラメータを設定すればよい。階層モデルの説明は<a href="https://das-kino.hatenablog.com/entry/2020/12/09/125218">Stanアドカレ9日目の資料</a>なりなんなり、たくさんあるのでそれを見ること。<br>
@@ -163,7 +163,9 @@ log(\sigma_{\theta}) ～ normal(0,1)
 \]</span>
 <span class="math display">\[
 Y_i = \cfrac{1}{1+exp(-\theta_i)}
-\]</span></p>
+\]</span>
+以上が質問紙に対する反応の生成プロセスを記述したものだ。次は行動課題、ここでは反応時間課題のものを考えてみよう。<br>
+<br></p>
 </div>
 <div id="反応時間" class="section level2">
 <h2>反応時間！！！</h2>
@@ -171,7 +173,7 @@ Y_i = \cfrac{1}{1+exp(-\theta_i)}
 <p><span class="math display">\[
 RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 \]</span></p>
-<p>質問紙と同様に各パラメータに事前分布を階層的に置くと</p>
+<p>質問紙(での<span class="math inline">\(\theta_i\)</span>)と同様に各パラメータに事前分布を階層的に置くと</p>
 <p><span class="math display">\[
 \delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
@@ -191,8 +193,9 @@ log(\sigma_{\delta}) ～ Normal(0, 0.5)
 <span class="math display">\[
 log(\sigma_{\sigma}) ～ Normal(0,0.5)
 \]</span></p>
-<p>反応時間は正規分布に従わないし、非負だし、200ms以上が典型的。だが、ここではそこらへんの要素は単純化のため省く。<br></p>
-<p>まとめると<br></p>
+<p>反応時間は正規分布に従わないし、非負だし、200ms以上が典型的。だが、ここではそこらへんの要素は単純化のため省く。<br>
+標準偏差の仮定に半コーシー分布を置いたり、ドメイン知識をいかした拡張をするのも興味深いだろう。</p>
+<p>とりあえず行動指標についての生成プロセスをまとめると<br></p>
 <p><span class="math display">\[
 \delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
@@ -213,7 +216,8 @@ log(sigma_sigma) ～ Normal(0,0.5)
 \]</span>
 <span class="math display">\[
 RT_{i,t} ～ Normal(\delta_i, \sigma_i)
-\]</span></p>
+\]</span>
+このようになる。ながいな。コードはもっとながいぞ、各位覚悟するべし。<br></p>
 </div>
 <div id="質問紙と反応時間データの混合生成モデル" class="section level2">
 <h2>質問紙と反応時間データの混合生成モデル</h2>
@@ -317,7 +321,8 @@ generated quantities {
     // L*L&#39; で正定値対称相関行列が作れる
   R = R_chol * R_chol&#39;;
 } </code></pre>
-<p>それでは回してみよう。<br>
+<p>上記のStanコードは相関行列の計算にコレスキー分解を用いること、階層モデルに使われがちなNon-centered parameterizationが活用されていることによって計算が効率化されているのだが、基本的にはこの記事で記述してきたモデルと等価のものとなっている。安心してほしい。もっと読みやすい等価のはずのStanコードは違う結果が出たのでボツとした。すまない。<br>
+それでは回してみよう。<br>
 以下は100人の参加者に、10のアイテム、50試行の反応時間課題でのシミュレーションデータを0-1までを20回ずつで刻んだ相関係数で試す。<br>
 <br></p>
 <pre class="r:analysis"><code>library(mvtnorm)
@@ -446,7 +451,7 @@ qplot() +
 ここで紹介されてるコードはいろいろと改造がききやすそうなので、自分の知りたい現象にフィットする確率分布をあてはめたり、事前分布の設定をいろいろと試したりして同様の検証を行うとよい。<br><br></p>
 <div id="他にこんな記事があるよ" class="section level5">
 <h5>他にこんな記事があるよ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/bjuku/">部屋とYシャツとわたしベイズ塾</a><br>
+<p><a href="https://susishushi.github.io/my_blog/post/bjuku/">部屋とYシャツとわたしとベイズ塾</a><br>
 <a href="https://susishushi.github.io/my_blog/post/gh/">おまえはGithubで先人の知恵を獲得する</a>
 <br>
 <a href="https://susishushi.github.io/my_blog/post/cw/">Crowdworksでオンライン実験</a><br>
