@@ -8,6 +8,16 @@ cover: "/img/image_baikinR_pe.jpg"
 tags: ["お役立ち","R"]
 summary: "生成モデルを用いて行動指標と主観報告指標の相関を見る。"
 ---
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [["\\(","\\)"] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
 
 こちらは[Stanアドベントカレンダー](https://qiita.com/advent-calendar/2020/stan)17日目の記事です。<br>
 この記事はHainesの記事を参考に作成してます。より詳細な内容を知りたい人は[こっち](http://haines-lab.com/post/2020-06-13-on-curbing-your-measurement-error/)<br>
@@ -33,15 +43,12 @@ summary: "生成モデルを用いて行動指標と主観報告指標の相関�
 
 質問紙についてはベルヌーイ試行として各アイテムに対する反応にベルヌーイ分布を適用する。ベルヌーイモデルは以下の通りシンプルなものだ。<br>
 
-```math
+
 $$
 Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
 $$
-```
-```math
-$p_i$
-```
-＝個人$i$の成功確率、$q_i$＝個人$i$の失敗確率、$p_i$じゃ以下のようなもの<br>
+
+$p_i$＝個人$i$の成功確率、$q_i$＝個人$i$の失敗確率、$p_i$じゃ以下のようなもの<br>
 
 $$
 p_i = \cfrac{1}{1+exp(-\theta_i)} 

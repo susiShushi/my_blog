@@ -13,6 +13,15 @@ summary: "生成モデルを用いて行動指標と主観報告指標の相関�
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [["\\(","\\)"] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
 <p>こちらは<a href="https://qiita.com/advent-calendar/2020/stan">Stanアドベントカレンダー</a>17日目の記事です。<br>
 この記事はHainesの記事を参考に作成してます。より詳細な内容を知りたい人は<a href="http://haines-lab.com/post/2020-06-13-on-curbing-your-measurement-error/">こっち</a><br>
 <br>
@@ -35,11 +44,10 @@ summary: "生成モデルを用いて行動指標と主観報告指標の相関�
 <div id="質問紙a" class="section level2">
 <h2>質問紙A</h2>
 <p>質問紙についてはベルヌーイ試行として各アイテムに対する反応にベルヌーイ分布を適用する。ベルヌーイモデルは以下の通りシンプルなものだ。<br></p>
-<pre class="math"><code>$$
+<p><span class="math display">\[
 Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
-$$</code></pre>
-<pre class="math"><code>$p_i$</code></pre>
-<p>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率、<span class="math inline">\(p_i\)</span>じゃ以下のようなもの<br></p>
+\]</span></p>
+<p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率、<span class="math inline">\(p_i\)</span>じゃ以下のようなもの<br></p>
 <p><span class="math display">\[
 p_i = \cfrac{1}{1+exp(-\theta_i)} 
 \]</span></p>
