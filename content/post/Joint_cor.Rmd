@@ -4,7 +4,7 @@ date: "2020-12-17T00:00:00"
 draft: True
 
 categories: ["R"]
-cover: "/img/image_baikinR_pe.jpg"
+cover: "/img/image_PC.png"
 tags: ["お役立ち","R"]
 summary: "生成モデルを用いて行動指標と主観報告指標の相関を見る。"
 ---
@@ -48,29 +48,29 @@ $$
 Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
 $$
 
-$p_i$＝個人$i$の成功確率、$q_i$＝個人$i$の失敗確率、$p_i$じゃ以下のようなもの<br>
+$p_i$＝個人$i$の成功確率、$q_i$＝個人$i$の失敗確率、$p_i$とは以下のようなもの<br>
 
 $$
 p_i = \cfrac{1}{1+exp(-\theta_i)} 
 $$
 
-$ \theta_i $は制限なしで、$ \theta_i $にロジスティック関数かました$ p_i $は0～1の値をとる。<br>
+$\theta_i$は個人$i$の回答確率と対応する能力と解釈でき(-∞～∞)、$\theta_i$にロジスティック関数かました$p_i$は0～1の値をとる。<br>
 <br>
-知りたいのは、$ p_i $にロジスティック関数かました$ \theta_i $<br>
+知りたいのは、観測された確率$p_i$の背後に存在する$\theta_i$である。<br>
 <br>
-ここからは個人レベルの生成プロセスについて見ていく。これは以下のように階層的なパラメータを設定すればよい。階層モデルの説明はknsdさんの資料なりなんなり、たくさんあるのでそれを見ること。<br>
+ここからは個人レベルの生成プロセスについて見ていく。これは以下のように階層的なパラメータを設定すればよい。階層モデルの説明は[Stanアドカレ9日目の資料](https://das-kino.hatenablog.com/entry/2020/12/09/125218)なりなんなり、たくさんあるのでそれを見ること。<br>
 <br>
 $$
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
 $$
 
-集団平均と標準偏差パラメータに関する生成プロセスを設定する必要があり、ここでは<br>
+さらに集団平均と標準偏差パラメータに関する生成プロセス（$theta_i$のハイパーパラメータということもある）を設定する必要があり、ここでは<br>
 $$
-\mu_{\theta} ~ Normal(0, 1)
+\mu_{\theta} ～ Normal(0, 1)
 $$
 
 $$
-log(\sigma_{\theta}) ~ Normal(0, 1)
+log(\sigma_{\theta}) ～ Normal(0, 1)
 $$
 
 とする。<br>
@@ -78,11 +78,15 @@ $$
 まとめると<br>
 
 $$
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
 $$
 $$
-\mu_{\theta} ~ normal(0,1)
-log(\sigma_{\theta}) ~ normal(0,1)
+\mu_{\theta} ～ normal(0,1)
+$$
+$$
+log(\sigma_{\theta}) ～ normal(0,1)
+$$
+$$
 Y_i = \cfrac{1}{1+exp(-\theta_i)}
 $$
 
@@ -91,25 +95,31 @@ $$
 各個人$i$の試行$t$における反応時間は以下の正規分布に従う<br>
 
 $$
-RT_{i,t} ~ Normal(\delta_i, \sigma_i)
+RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 $$
 
-質問紙と同様に、各パラメータに事前分布を階層的に置くと
+質問紙と同様に各パラメータに事前分布を階層的に置くと
 
 $$
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
-log(\sigma_i) ~ Normal(\mu_{\sigma}, \sigma_{\sigma})
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
+$$
+$$
+log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
 $$
 
-さらに質問紙のように各生成プロセスを設定する必要がある。ここでは以下のようにする。
+さらに各生成プロセスを設定する必要がある。ここでは以下のようにする。
 
 $$
-\mu_{\delta} ~ Normal(1, 1)
-log(\sigma_{\delta}) ~ Normal(0, 0.5)
+\mu_{\delta} ～ Normal(1, 1)
 $$
 $$
-\mu_{\sigma} ~ Normal(-1, 0.2)
-log(\sigma_{\sigma}) ~ Normal(0,0.5)
+log(\sigma_{\delta}) ～ Normal(0, 0.5)
+$$
+$$
+\mu_{\sigma} ～ Normal(-1, 0.2)
+$$
+$$
+log(\sigma_{\sigma}) ～ Normal(0,0.5)
 $$
 
 反応時間は正規分布に従わないし、非負だし、200ms以上が典型的。だが、ここではそこらへんの要素は単純化のため省く。<br>
@@ -117,32 +127,44 @@ $$
 まとめると<br>
 
 $$
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
-\mu_{\delta} ~ Normal(1, 1) 
-log(\sigma_{\delta}) ~ Normal(0, 0.5)
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 $$
 $$
-log(\sigma_i) ~ Normal(\mu_{\sigma}, \sigma_{\sigma})
-\mu_{\sigma} ~ Normal(-1, 0.2) 
-log(sigma_sigma) ~ Normal(0,0.5)
-RT_{i,t} ~ Normal(\delta_i, \sigma_i)
+\mu_{\delta} ～ Normal(1, 1) 
+$$
+$$
+log(\sigma_{\delta}) ～ Normal(0, 0.5)
+$$
+$$
+log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
+$$
+$$
+\mu_{\sigma} ～ Normal(-1, 0.2) 
+$$
+$$
+log(sigma_sigma) ～ Normal(0,0.5)
+$$
+$$
+RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 $$
 
 ## 質問紙と反応時間データの混合生成モデル
 
-知りたいのは観測されたアイテムの平均値×反応時間の平均値、ではなくその背後にある$ \theta_i $と$ \delta_i $の相関である。<br>
+知りたいのは観測されたアイテムの平均値×反応時間の平均値、ではなくその背後にある$\theta_i$と$\delta_i$の相関である。<br>
 <br>
 二つのパラメータが多変量正規分布から生成されたという仮定を置く<br>
 
 $$
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
+$$
+$$
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 $$
 
 から
 
 $$
-\begin{bmatrix} \theta_i \\ \delta_i \end{bmatrix} ~ MVNormal(\begin{bmatrix} \mu_{\theta} \\ \mu_{\delta} \end{bmatrix}, S)
+\begin{bmatrix} \theta_i \\ \delta_i \end{bmatrix} ～ MVNormal(\begin{bmatrix} \mu_{\theta} \\ \mu_{\delta} \end{bmatrix}, S)
 $$
 
 とする。<br>
@@ -372,7 +394,8 @@ qplot() +
 
 
 ##### 他にこんな記事があるよ
- [Crowdworksでオンライン実験](https://susishushi.github.io/my_blog/post/cw/)<br>
-[WindowsでDockerつこてR環境構築](https://susishushi.github.io/my_blog/post/docker_new/)
+ [部屋とYシャツとわたしベイズ塾](https://susishushi.github.io/my_blog/post/bjuku/)<br>
+[おまえはGithubで先人の知恵を獲得する](https://susishushi.github.io/my_blog/post/gh/)
 <br>
-[datadrivencvでオシャレなCV](https://susishushi.github.io/my_blog/post/datacv/)
+[Crowdworksでオンライン実験](https://susishushi.github.io/my_blog/post/cw/)<br>
+[表情表出の日米比較研究について](https://susishushi.github.io/my_blog/post/friesen_1972/)

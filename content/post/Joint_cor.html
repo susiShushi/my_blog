@@ -4,7 +4,7 @@ date: "2020-12-17T00:00:00"
 draft: True
 
 categories: ["R"]
-cover: "/img/image_baikinR_pe.jpg"
+cover: "/img/image_PC.png"
 tags: ["お役立ち","R"]
 summary: "生成モデルを用いて行動指標と主観報告指標の相関を見る。"
 ---
@@ -47,33 +47,39 @@ summary: "生成モデルを用いて行動指標と主観報告指標の相関�
 <p><span class="math display">\[
 Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
 \]</span></p>
-<p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率、<span class="math inline">\(p_i\)</span>じゃ以下のようなもの<br></p>
+<p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率、<span class="math inline">\(p_i\)</span>とは以下のようなもの<br></p>
 <p><span class="math display">\[
 p_i = \cfrac{1}{1+exp(-\theta_i)} 
 \]</span></p>
-<p>$ _i <span class="math inline">\(は制限なしで、\)</span> _i <span class="math inline">\(にロジスティック関数かました\)</span> p_i <span class="math inline">\(は0～1の値をとる。&lt;br&gt; &lt;br&gt; 知りたいのは、\)</span> p_i <span class="math inline">\(にロジスティック関数かました\)</span> _i $<br>
+<p><span class="math inline">\(\theta_i\)</span>は個人<span class="math inline">\(i\)</span>の回答確率と対応する能力と解釈でき(-∞～∞)、<span class="math inline">\(\theta_i\)</span>にロジスティック関数かました<span class="math inline">\(p_i\)</span>は0～1の値をとる。<br>
 <br>
-ここからは個人レベルの生成プロセスについて見ていく。これは以下のように階層的なパラメータを設定すればよい。階層モデルの説明はknsdさんの資料なりなんなり、たくさんあるのでそれを見ること。<br>
+知りたいのは、観測された確率<span class="math inline">\(p_i\)</span>の背後に存在する<span class="math inline">\(\theta_i\)</span>である。<br>
+<br>
+ここからは個人レベルの生成プロセスについて見ていく。これは以下のように階層的なパラメータを設定すればよい。階層モデルの説明は<a href="https://das-kino.hatenablog.com/entry/2020/12/09/125218">Stanアドカレ9日目の資料</a>なりなんなり、たくさんあるのでそれを見ること。<br>
 <br>
 <span class="math display">\[
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
 \]</span></p>
-<p>集団平均と標準偏差パラメータに関する生成プロセスを設定する必要があり、ここでは<br>
+<p>さらに集団平均と標準偏差パラメータに関する生成プロセス（<span class="math inline">\(theta_i\)</span>のハイパーパラメータということもある）を設定する必要があり、ここでは<br>
 <span class="math display">\[
-\mu_{\theta} ~ Normal(0, 1)
+\mu_{\theta} ～ Normal(0, 1)
 \]</span></p>
 <p><span class="math display">\[
-log(\sigma_{\theta}) ~ Normal(0, 1)
+log(\sigma_{\theta}) ～ Normal(0, 1)
 \]</span></p>
 <p>とする。<br>
 <br>
 まとめると<br></p>
 <p><span class="math display">\[
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
 \]</span>
 <span class="math display">\[
-\mu_{\theta} ~ normal(0,1)
-log(\sigma_{\theta}) ~ normal(0,1)
+\mu_{\theta} ～ normal(0,1)
+\]</span>
+<span class="math display">\[
+log(\sigma_{\theta}) ～ normal(0,1)
+\]</span>
+<span class="math display">\[
 Y_i = \cfrac{1}{1+exp(-\theta_i)}
 \]</span></p>
 </div>
@@ -81,48 +87,66 @@ Y_i = \cfrac{1}{1+exp(-\theta_i)}
 <h2>反応時間！！！</h2>
 <p>各個人<span class="math inline">\(i\)</span>の試行<span class="math inline">\(t\)</span>における反応時間は以下の正規分布に従う<br></p>
 <p><span class="math display">\[
-RT_{i,t} ~ Normal(\delta_i, \sigma_i)
+RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 \]</span></p>
-<p>質問紙と同様に、各パラメータに事前分布を階層的に置くと</p>
+<p>質問紙と同様に各パラメータに事前分布を階層的に置くと</p>
 <p><span class="math display">\[
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
-log(\sigma_i) ~ Normal(\mu_{\sigma}, \sigma_{\sigma})
-\]</span></p>
-<p>さらに質問紙のように各生成プロセスを設定する必要がある。ここでは以下のようにする。</p>
-<p><span class="math display">\[
-\mu_{\delta} ~ Normal(1, 1)
-log(\sigma_{\delta}) ~ Normal(0, 0.5)
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
 <span class="math display">\[
-\mu_{\sigma} ~ Normal(-1, 0.2)
-log(\sigma_{\sigma}) ~ Normal(0,0.5)
+log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
+\]</span></p>
+<p>さらに各生成プロセスを設定する必要がある。ここでは以下のようにする。</p>
+<p><span class="math display">\[
+\mu_{\delta} ～ Normal(1, 1)
+\]</span>
+<span class="math display">\[
+log(\sigma_{\delta}) ～ Normal(0, 0.5)
+\]</span>
+<span class="math display">\[
+\mu_{\sigma} ～ Normal(-1, 0.2)
+\]</span>
+<span class="math display">\[
+log(\sigma_{\sigma}) ～ Normal(0,0.5)
 \]</span></p>
 <p>反応時間は正規分布に従わないし、非負だし、200ms以上が典型的。だが、ここではそこらへんの要素は単純化のため省く。<br></p>
 <p>まとめると<br></p>
 <p><span class="math display">\[
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
-\mu_{\delta} ~ Normal(1, 1) 
-log(\sigma_{\delta}) ~ Normal(0, 0.5)
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
 <span class="math display">\[
-log(\sigma_i) ~ Normal(\mu_{\sigma}, \sigma_{\sigma})
-\mu_{\sigma} ~ Normal(-1, 0.2) 
-log(sigma_sigma) ~ Normal(0,0.5)
-RT_{i,t} ~ Normal(\delta_i, \sigma_i)
+\mu_{\delta} ～ Normal(1, 1) 
+\]</span>
+<span class="math display">\[
+log(\sigma_{\delta}) ～ Normal(0, 0.5)
+\]</span>
+<span class="math display">\[
+log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
+\]</span>
+<span class="math display">\[
+\mu_{\sigma} ～ Normal(-1, 0.2) 
+\]</span>
+<span class="math display">\[
+log(sigma_sigma) ～ Normal(0,0.5)
+\]</span>
+<span class="math display">\[
+RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 \]</span></p>
 </div>
 <div id="質問紙と反応時間データの混合生成モデル" class="section level2">
 <h2>質問紙と反応時間データの混合生成モデル</h2>
-<p>知りたいのは観測されたアイテムの平均値×反応時間の平均値、ではなくその背後にある$ _i <span class="math inline">\(と\)</span> _i $の相関である。<br>
+<p>知りたいのは観測されたアイテムの平均値×反応時間の平均値、ではなくその背後にある<span class="math inline">\(\theta_i\)</span>と<span class="math inline">\(\delta_i\)</span>の相関である。<br>
 <br>
 二つのパラメータが多変量正規分布から生成されたという仮定を置く<br></p>
 <p><span class="math display">\[
-\theta_i ~ Normal(\mu_{\theta}, \sigma_{\theta})
-\delta_i ~ Normal(\mu_{\delta}, \sigma_{\delta})
+\theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
+\]</span>
+<span class="math display">\[
+\delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span></p>
 <p>から</p>
 <p><span class="math display">\[
-\begin{bmatrix} \theta_i \\ \delta_i \end{bmatrix} ~ MVNormal(\begin{bmatrix} \mu_{\theta} \\ \mu_{\delta} \end{bmatrix}, S)
+\begin{bmatrix} \theta_i \\ \delta_i \end{bmatrix} ～ MVNormal(\begin{bmatrix} \mu_{\theta} \\ \mu_{\delta} \end{bmatrix}, S)
 \]</span></p>
 <p>とする。<br>
 ここでのSは、集団レベルの標準偏差と2×2の相関行列Rに分解可能な共分散行列である。<br></p>
@@ -340,9 +364,10 @@ qplot() +
 ここで紹介されてるコードはいろいろと改造がききやすそうなので、自分の知りたい現象にフィットする確率分布をあてはめたり、事前分布の設定をいろいろと試したりして同様の検証を行うとよい。<br><br></p>
 <div id="他にこんな記事があるよ" class="section level5">
 <h5>他にこんな記事があるよ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/cw/">Crowdworksでオンライン実験</a><br>
-<a href="https://susishushi.github.io/my_blog/post/docker_new/">WindowsでDockerつこてR環境構築</a>
+<p><a href="https://susishushi.github.io/my_blog/post/bjuku/">部屋とYシャツとわたしベイズ塾</a><br>
+<a href="https://susishushi.github.io/my_blog/post/gh/">おまえはGithubで先人の知恵を獲得する</a>
 <br>
-<a href="https://susishushi.github.io/my_blog/post/datacv/">datadrivencvでオシャレなCV</a></p>
+<a href="https://susishushi.github.io/my_blog/post/cw/">Crowdworksでオンライン実験</a><br>
+<a href="https://susishushi.github.io/my_blog/post/friesen_1972/">表情表出の日米比較研究について</a></p>
 </div>
 </div>
