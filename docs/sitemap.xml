@@ -3,27 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/bjuku/</loc>
-    <lastmod>2020-12-15T00:59:19+09:00</lastmod>
+    <loc>/post/joint_cor/</loc>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-12-15T00:59:19+09:00</lastmod>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-12-15T00:59:19+09:00</lastmod>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-12-15T00:59:19+09:00</lastmod>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/bjuku/</loc>
     <lastmod>2020-12-15T00:59:19+09:00</lastmod>
   </url>
   
@@ -44,11 +64,6 @@
   
   <url>
     <loc>/post/gh/</loc>
-    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
     <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,17 +118,7 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-09-15T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/datacv/</loc>
-    <lastmod>2020-09-06T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
     <lastmod>2020-09-06T20:59:19+09:00</lastmod>
   </url>
   
