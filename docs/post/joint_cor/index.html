@@ -153,6 +153,9 @@ log(\sigma_{\theta}) ～ Normal(0, 1)
 <br>
 まとめると<br></p>
 <p><span class="math display">\[
+Y_i = \cfrac{1}{1+exp(-\theta_i)}
+\]</span></p>
+<p><span class="math display">\[
 \theta_i ～ Normal(\mu_{\theta}, \sigma_{\theta})
 \]</span>
 <span class="math display">\[
@@ -160,11 +163,8 @@ log(\sigma_{\theta}) ～ Normal(0, 1)
 \]</span>
 <span class="math display">\[
 log(\sigma_{\theta}) ～ normal(0,1)
-\]</span>
-<span class="math display">\[
-Y_i = \cfrac{1}{1+exp(-\theta_i)}
-\]</span>
-以上が質問紙に対する反応の生成プロセスを記述したものだ。次は行動課題、ここでは反応時間課題のものを考えてみよう。<br>
+\]</span></p>
+<p>以上が質問紙に対する反応の生成プロセスを記述したものだ。次は行動課題、ここでは反応時間課題のものを考えてみよう。<br>
 <br></p>
 </div>
 <div id="反応時間" class="section level2">
@@ -197,6 +197,9 @@ log(\sigma_{\sigma}) ～ Normal(0,0.5)
 標準偏差の仮定に半コーシー分布を置いたり、ドメイン知識をいかした拡張をするのも興味深いだろう。</p>
 <p>とりあえず行動指標についての生成プロセスをまとめると<br></p>
 <p><span class="math display">\[
+RT_{i,t} ～ Normal(\delta_i, \sigma_i)
+\]</span></p>
+<p><span class="math display">\[
 \delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
 <span class="math display">\[
@@ -212,12 +215,9 @@ log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
 \mu_{\sigma} ～ Normal(-1, 0.2) 
 \]</span>
 <span class="math display">\[
-log(sigma_sigma) ～ Normal(0,0.5)
-\]</span>
-<span class="math display">\[
-RT_{i,t} ～ Normal(\delta_i, \sigma_i)
-\]</span>
-このようになる。ながいな。コードはもっとながいぞ、各位覚悟するべし。<br><br></p>
+log(\sigma_\sigma) ～ Normal(0,0.5)
+\]</span></p>
+<p>このようになる。ながいな。コードはもっとながいぞ、各位覚悟するべし。<br><br></p>
 </div>
 <div id="質問紙と反応時間データの混合生成モデル" class="section level2">
 <h2>質問紙と反応時間データの混合生成モデル</h2>
@@ -321,7 +321,7 @@ generated quantities {
     // L*L&#39; で正定値対称相関行列が作れる
   R = R_chol * R_chol&#39;;
 } </code></pre>
-<p>上記のStanコードは相関行列の計算にコレスキー分解を用いること、階層モデルに使われがちなNon-centered parameterizationが活用されていることによって計算が効率化されているのだが、基本的にはこの記事で記述してきたモデルと等価のものとなっている。安心してほしい。もっと読みやすい等価のはずのStanコードは違う結果が出たのでボツとした。すまない。<br>
+<p>上記のStanコードは相関行列の計算にコレスキー分解を用いること、階層モデルに使われがちなNon-centered parameterizationが活用されていることによって計算が効率化されているのだが、基本的にはこの記事で記述してきたモデルと等価のものとなっている。安心してほしい。もっと読みやすい等価のはずのStanコードはうまくいかなかったのでボツとした。すまない。<br>
 それでは回してみよう。<br>
 以下は100人の参加者に、10のアイテム、50試行の反応時間課題でのシミュレーションデータを0-1までを20回ずつで刻んだ相関係数で試す。<br>
 <br></p>
