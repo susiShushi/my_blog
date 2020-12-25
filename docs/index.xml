@@ -6,7 +6,16 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[読書感想文]ここ最近読んでた本一挙に紹介</title>
+      <link>/post/2020book/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020book/</guid>
+      <description>ここ3か月くらいで読んでた本一挙に紹介</description>
+    </item>
+    
     <item>
       <title>[R]質問紙と行動指標の相関分析</title>
       <link>/post/joint_cor/</link>
