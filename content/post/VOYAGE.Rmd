@@ -1,0 +1,42 @@
+---
+title: "[読書感想文]Engineers in VOYAGE 事業をエンジニアリングする技術者たち"
+date: "2021-01-06T00:00:00"
+draft: True
+
+categories: ["読書感想文"]
+cover: "/img/image_book.png"
+tags: ["日記", "読書感想文"]
+summary: "そして株を買った"
+---
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
+msmaflink({"n":"Engineers in VOYAGE ― 事業をエンジニアリングする技術者たち","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/517YxDGm7EL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B08GSQ4BL3","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"CDfWE","s":"s"});
+</script>
+<div id="msmaflink-CDfWE">リンク</div>
+
+
+<a target="_blank" href="https://www.amazon.co.jp/gp/product/B08GSQ4BL3/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08GSQ4BL3&linkCode=as2&tag=susishushi2-22&linkId=33eee34a90d912af1af63d721f597ee4">Engineers in VOYAGE ― 事業をエンジニアリングする技術者たち</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=susishushi2-22&l=am2&o=9&a=B08GSQ4BL3" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を読んだ。[Kindle Unlimited](https://www.amazon.co.jp/kindle-dbs/hz/bookshelf?shoppingPortalEnabled=true&tag=susishushi2-22)で読めたのでねフフフ。<br>
+<br>
+この本は株式会社VOYAGE GROUPのエンジニアたちが種々の問題に対してどのようなアプローチで挑んできたかについてのインタビューをまとめたものだ。<br>
+<br>
+ちなみに、対象読者は<br>
+・企業に属しているエンジニアの方々<br>
+・受託開発を行っているエンジニアの方々<br>
+・ビジネスを営んでいる方々<br>
+<br>
+らしい。自分（心理学を専門とする研究員）の属性はアウトオブ眼中なのだが、まぁよしとして読み始めた。「ビジネス」と「エンジニアリング」を両輪にして活躍する技術者の生の声とか聞きたくない？[読むインターンシップ](https://www.facebook.com/hirokidaichi/posts/10217896457386338)らしいのでそのつもりで読んだ。<br>
+<br>
+各章で積み上げてきた技術的負債とどのように格闘してきたか（1章、3章、5章）、どのように文化資産を共有していってるのか（2章）、どのように事業を拡張していったのか（4章、6章）など様々な問題や話題について扱っていて、（正直それまであまり存じ上げなかった）VOYAGE GROUPの「カッコイイオトナ」たちの肉声を聞くことができて、とても興味深かった。<br>
+<br>
+<br>
+「新しいものを覚えるのが億劫になってしまうよりは、それが当たり前になっているチームのほうがいい…新しいものを取り入れるのを1回止めてしまうと重い腰が上がらなくなってしまい、新しいものに対して悲観的になってしまう」<br>
+「「自分たちの意思決定が間違っていること」を常に想定しながら進めている…」<br>
+などなど、自戒を込めて復唱したい名言も出てくるのでおすすめです。<br>
+<br>
+この本を読んで、当エンジニアが支えるこの会社のファンにすっかりなってしまったぼくはCARTA HOLDING（グループ会社がVOYAGE GROUP）の株を買いました。がんばえー！VOYAGE GROUPー！！
