@@ -5,7 +5,7 @@ draft: true
 
 categories: ["お役立ち"]
 cover: "/img/bai_gor.jpg"
-tags: ["お役立ち", "実験"]
+tags: ["お役立ち", "研究"]
 summary: "Gorilla.scでオンライン実験ができるよ"
 ---
 

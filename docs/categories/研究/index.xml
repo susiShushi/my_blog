@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>研究 on とある心理学系研究者のブログ</title>
+    <link>/categories/%E7%A0%94%E7%A9%B6/</link>
+    <description>Recent content in 研究 on とある心理学系研究者のブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 26 Jan 2021 20:59:19 +0900</lastBuildDate><atom:link href="/categories/%E7%A0%94%E7%A9%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[日記]表情表出の日米比較研究について</title>
+      <link>/post/ged/</link>
+      <pubDate>Tue, 26 Jan 2021 20:59:19 +0900</pubDate>
+      
+      <guid>/post/ged/</guid>
+      <description>The great expression discussionについての備忘録</description>
+    </item>
+    
+    <item>
+      <title>[日記]表情表出の日米比較研究について</title>
+      <link>/post/friesen_1972/</link>
+      <pubDate>Sat, 17 Oct 2020 20:59:19 +0900</pubDate>
+      
+      <guid>/post/friesen_1972/</guid>
+      <description>Friesen (1972)についての備忘録</description>
+    </item>
+    
+  </channel>
+</rss>

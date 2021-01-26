@@ -3,32 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/voyage/</loc>
-    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <loc>/post/ged/</loc>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/%E6%97%A5%E8%A8%98/</loc>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/voyage/</loc>
     <lastmod>2021-01-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -209,11 +224,6 @@
   
   <url>
     <loc>/post/gorilla/</loc>
-    <lastmod>2020-03-27T20:59:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/%E5%AE%9F%E9%A8%93/</loc>
     <lastmod>2020-03-27T20:59:19+09:00</lastmod>
   </url>
   

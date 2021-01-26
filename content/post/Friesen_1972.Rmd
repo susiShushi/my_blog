@@ -3,9 +3,9 @@ title: "[日記]表情表出の日米比較研究について"
 date: 2020-10-17T20:59:19+09:00
 draft: true
 
-categories: ["日記"]
+categories: ["研究"]
 cover: "/img/image_pikon.png"
-tags: ["日記"]
+tags: ["研究","日記"]
 summary: "Friesen (1972)についての備忘録"
 ---
 
