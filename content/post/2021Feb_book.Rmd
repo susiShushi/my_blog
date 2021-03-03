@@ -1,0 +1,164 @@
+---
+title: "[読書感想文]2021年2月に読んでた本"
+date: "2021-03-03T00:00:00"
+draft: True
+
+categories: ["読書感想文"]
+cover: "/img/image_book.png"
+tags: ["日記", "読書感想文"]
+summary: "2021年2月に読んでた本一挙に紹介"
+---
+
+ここ最近読んだものを唐突にどばっと紹介するコーナー。2月はいろいろあってあっという間に過ぎたのでもう2021年2月編。<br><br>
+
+## 研究関係
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"感情の哲学入門講義","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/41L6baQvowL.jpg","\/31JgiBjZfoL.jpg","\/31Dp1NIBJwL.jpg","\/31Q0Rw6F3SL.jpg","\/31nRZm5vLxL.jpg","\/31hreSs8S4L.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/476642719X","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/476642719X","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E6%84%9F%E6%83%85%E3%81%AE%E5%93%B2%E5%AD%A6%E5%85%A5%E9%96%80%E8%AC%9B%E7%BE%A9\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E6%84%9F%E6%83%85%E3%81%AE%E5%93%B2%E5%AD%A6%E5%85%A5%E9%96%80%E8%AC%9B%E7%BE%A9","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"2vXUX","s":"s"});
+</script>
+<div id="msmaflink-2vXUX">リンク</div>
+
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/476642719X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=476642719X&linkCode=as2&tag=susishushi2-22&linkId=dccd70d66b5a1a058b91d7663956ab27">感情の哲学入門講義</a>」<br>
+感情というテーマに興味を持ってる人になら誰にでもおすすめできる素晴らしい本。この本を一言でいうとそんな感じ。こんな講義を受けれる学生はいいなぁ、と思いながら読んだ。多分、感情のテーマで講義を依頼されたらこの本をめっちゃ参考にすると思う、ってくらいいい本だった。「哲学入門講義」とあるのでもちろん哲学の考え方を案内してくれるのだが、その一方で感情に関する基礎的な理論・実験の内容を幅広く紹介してくれる。同著者が翻訳したプリンツの「<a target="_blank" href="https://www.amazon.co.jp/gp/product/432615439X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=432615439X&linkCode=as2&tag=susishushi2-22&linkId=770589685e56512cebfeb2d047459d26">はらわたが煮えくりかえる: 情動の身体知覚説</a>」もポップなタイトル（？）に反してとても深い議論がなされているのでおすすめ。<br>
+<br>
+
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"言語行為―言語哲学への試論 (双書プロブレーマタ)","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/419rMxNGLkL.jpg","\/316E5tuR5YL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4326198753","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4326198753","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E8%A8%80%E8%AA%9E%E8%A1%8C%E7%82%BA%E2%80%95%E8%A8%80%E8%AA%9E%E5%93%B2%E5%AD%A6%E3%81%B8%E3%81%AE%E8%A9%A6%E8%AB%96%20(%E5%8F%8C%E6%9B%B8%E3%83%97%E3%83%AD%E3%83%96%E3%83%AC%E3%83%BC%E3%83%9E%E3%82%BF)\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E8%A8%80%E8%AA%9E%E8%A1%8C%E7%82%BA%E2%80%95%E8%A8%80%E8%AA%9E%E5%93%B2%E5%AD%A6%E3%81%B8%E3%81%AE%E8%A9%A6%E8%AB%96%20(%E5%8F%8C%E6%9B%B8%E3%83%97%E3%83%AD%E3%83%96%E3%83%AC%E3%83%BC%E3%83%9E%E3%82%BF)","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"SyH4h","s":"s"});
+</script>
+<div id="msmaflink-SyH4h">リンク</div>
+
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/4326198753/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4326198753&linkCode=as2&tag=susishushi2-22&linkId=8f5d31a91df27e921dd838cf184ed010">言語行為―言語哲学への試論</a>」<br>
+サールによる言語行為論について勉強するために読んだ。この本に限らないが、哲学に関する本を読むとラッセルだのウィトゲンシュタインなどが唐突に引用されて議論が展開されるので広範な知識が必要になるな、と思った。何かを発話することそれ自体が行為になる、というオースティンの言語行為論の条件をより明快な形で記述した…のか？言語行為論の（自分にとって重要なポイントは）慣習を強調している点だと思う。人に解説できるほど理解しきれていないので、もう一度再読する必要がありそうだ。<br>
+<br>
+
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"アンドロイドは人間になれるか (文春新書)","b":"文藝春秋","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/41ntcrwEFEL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4166610570","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4166610570","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AD%E3%82%A4%E3%83%89%E3%81%AF%E4%BA%BA%E9%96%93%E3%81%AB%E3%81%AA%E3%82%8C%E3%82%8B%E3%81%8B%20(%E6%96%87%E6%98%A5%E6%96%B0%E6%9B%B8)\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AD%E3%82%A4%E3%83%89%E3%81%AF%E4%BA%BA%E9%96%93%E3%81%AB%E3%81%AA%E3%82%8C%E3%82%8B%E3%81%8B%20(%E6%96%87%E6%98%A5%E6%96%B0%E6%9B%B8)","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"Of8ZF","s":"s"});
+</script>
+<div id="msmaflink-Of8ZF">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/4166610570/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4166610570&linkCode=as2&tag=susishushi2-22&linkId=6d416615d0e9609e1dce84f0d1035d70">アンドロイドは人間になれるか</a>」
+娘の絵本を借りに来た図書館でたまたま目に入ったので、「アンドロイドの勉強もしとくかぁ」と目を通してみた本。基本的には著者である石黒先生の研究について紹介されていて、彼の「ロボットに人が心を帰属することができれば、それはもうアンドロイドが人間の心を手にした、と解釈してさしつかえなかろう」的な発想が押し出されていた。この本や最近の環境から、アンドロイドに関わる工学研究者には「（実在するかわからん）内的な心のモデル」よりも「そう見えるシステム」を重視することが多いなぁ、という印象をいまのところ持っている。もっといろいろと思考を深めていきたい。<br>
+<br>
+
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"プラグマティズムを学ぶ人のために","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/51ITXram3HL.jpg","\/51SlSJH0xvL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4790716988","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4790716988","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%83%97%E3%83%A9%E3%82%B0%E3%83%9E%E3%83%86%E3%82%A3%E3%82%BA%E3%83%A0%E3%82%92%E5%AD%A6%E3%81%B6%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E3%83%97%E3%83%A9%E3%82%B0%E3%83%9E%E3%83%86%E3%82%A3%E3%82%BA%E3%83%A0%E3%82%92%E5%AD%A6%E3%81%B6%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"ovv2g","s":"s"});
+</script>
+<div id="msmaflink-ovv2g">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/4790716988/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4790716988&linkCode=as2&tag=susishushi2-22&linkId=b4597299e7c21d6761cdb3db674cc7eb">プラグマティズムを学ぶ人のために</a>」
+つよつよ同期と会話してて勧めてもらった「プラグマティズム」の入門書。結論から言うとめちゃくちゃよかった。プラグマティズムの格率を提唱したパースにはじまり、ジェイムズ、デューイからクワイン、ローティまで各章ごとに異なる哲学の専門家（多分）が丁寧に思想の解説を行ってくれるマジモンの良書だった。ここから旅立つ人に向けた各プラグマティズムの専門書も最後に付してあるので「おれたちのプラグマティズムに関する旅はこれからだ！」エンドになった。<br>
+<br>
+
+
+## その他
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"Docker Desktop for Windows\/Macでつくるクリーンな開発環境構築入門(Python版)","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/51NPBPcuDFL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B08D8TXXHD","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B08D8TXXHD","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/Docker%20Desktop%20for%20Windows%2FMac%E3%81%A7%E3%81%A4%E3%81%8F%E3%82%8B%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AA%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E5%85%A5%E9%96%80(Python%E7%89%88)\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=Docker%20Desktop%20for%20Windows%2FMac%E3%81%A7%E3%81%A4%E3%81%8F%E3%82%8B%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AA%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E5%85%A5%E9%96%80(Python%E7%89%88)","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"nVugR","s":"s"});
+</script>
+<div id="msmaflink-nVugR">リンク</div>
+
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/B08D8TXXHD/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08D8TXXHD&linkCode=as2&tag=susishushi2-22&linkId=638ddf668236f35ba5097c82378e8d61">Docker Desktop for Windows/Macでつくるクリーンな開発環境構築入門(Python版)</a>」
+いつものKindle Unlimitedで（実質）無料で読めたので読んだ本。<br>
+Docker（とVSCode）を使って、Jupyter notebookや機械学習環境、Djangoなどの仮想環境を構築するための情報が紹介されている書籍。Gitの環境構築で鍵の作り方も丁寧にやっていて「この本に従えばWindowsもMacも同じようにDocker使えるのか！」と感心した。みんなこれ読んでクリーンな開発環境を目指そう。<br>
+<br>
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"モヤモヤそうだんクリニック","b":"NHK出版","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/51cTmCrq8XL.jpg","\/41+TUyVLUoL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4140818220","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4140818220","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%83%A2%E3%83%A4%E3%83%A2%E3%83%A4%E3%81%9D%E3%81%86%E3%81%A0%E3%82%93%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E3%83%A2%E3%83%A4%E3%83%A2%E3%83%A4%E3%81%9D%E3%81%86%E3%81%A0%E3%82%93%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"DHVNj","s":"s"});
+</script>
+<div id="msmaflink-DHVNj">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/4140818220/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4140818220&linkCode=as2&tag=susishushi2-22&linkId=ebec840cf18a39c6001b28166d5c0705">モヤモヤそうだんクリニック</a>」
+研究をバリバリやりながら一般向け書籍をがりがり執筆するつよつよ研究者池谷先生の本。小学生から寄せられた「なぜ？」「どうして？」に科学でむきあう内容。小学生らしいぴっちぴちの疑問がかわいらしく、それに対する池谷先生の丁寧かつわかりやすく、ときにユーモアもちりばめられた回答はとても勉強になった。子育ての参考になる、気がする。<br>
+<br>
+
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"RANGE（レンジ）　知識の「幅」が最強の武器になる","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/41X3WChUZFL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0868DR365","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0868DR365","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/RANGE%EF%BC%88%E3%83%AC%E3%83%B3%E3%82%B8%EF%BC%89%E3%80%80%E7%9F%A5%E8%AD%98%E3%81%AE%E3%80%8C%E5%B9%85%E3%80%8D%E3%81%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E6%AD%A6%E5%99%A8%E3%81%AB%E3%81%AA%E3%82%8B\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=RANGE%EF%BC%88%E3%83%AC%E3%83%B3%E3%82%B8%EF%BC%89%E3%80%80%E7%9F%A5%E8%AD%98%E3%81%AE%E3%80%8C%E5%B9%85%E3%80%8D%E3%81%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E6%AD%A6%E5%99%A8%E3%81%AB%E3%81%AA%E3%82%8B","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"we1DH","s":"s"});
+</script>
+<div id="msmaflink-we1DH">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/B0868DR365/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B0868DR365&linkCode=as2&tag=susishushi2-22&linkId=a9a58a93becb05365ff44436b6f0db2b">RANGE（レンジ）　知識の「幅」が最強の武器になる</a>」
+マジでよかった。いや「よかったなぁ～」と思った本しか基本的にはこのブログでは紹介しないんだけどね。「複雑で不確実な人間社会で生きていくすべを磨くには、一つの道でなくていろんなルートを試したほうがいい（RANGEを広くするのがよい）」ということを最初から終わりまで調査研究や過去にあった実際の出来事などから豊富な知識をもってしてごり押しし続ける内容だった。寄り道しかしない自分にとっては励みになった (多分そういうことじゃないけど)。「おれもRANGEを広くしなければ！」と思いたって、Kindle Unlimitedでいろんなジャンルを読むことになった。<br>
+<br>
+
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"すごい実験 ―高校生にもわかる素粒子物理の最前線","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/514yMhQs1TL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B00PQDJKXO","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B00PQDJKXO","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%81%99%E3%81%94%E3%81%84%E5%AE%9F%E9%A8%93%20%E2%80%95%E9%AB%98%E6%A0%A1%E7%94%9F%E3%81%AB%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8B%E7%B4%A0%E7%B2%92%E5%AD%90%E7%89%A9%E7%90%86%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E3%81%99%E3%81%94%E3%81%84%E5%AE%9F%E9%A8%93%20%E2%80%95%E9%AB%98%E6%A0%A1%E7%94%9F%E3%81%AB%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8B%E7%B4%A0%E7%B2%92%E5%AD%90%E7%89%A9%E7%90%86%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"Vq4D5","s":"s"});
+</script>
+<div id="msmaflink-Vq4D5">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/B00PQDJKXO/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B00PQDJKXO&linkCode=as2&tag=susishushi2-22&linkId=678901e6bd71dc31169e9da2a9c83dc5">すごい実験 ―高校生にもわかる素粒子物理の最前線</a>」
+
+「自分の幅を広げなければ！」という人間が最初に学ぼうとするもの。そりゃもう素粒子物理学でしょ。最高にクールな実験を素粒子物理の研究者が高校生にもわかるレベルで解説してくれるナイスな書籍。Kindle Unlimitedで読んだ。ピューっと吹くジャガーで見た「あ～今も私の体をニュートリノは通り抜けているのよね」の意味を齢三十にして学ぶことになるとは…。湯川秀樹ってすごいんだなぁ。日本ってすごいんだなぁと思った。<br>
+<br>
+
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20210203","msmaflink");
+msmaflink({"n":"化物語（１２） (週刊少年マガジンコミックス)","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/51CDJOrDBEL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B08W4YRC4X","t":"amazon","r_v":""},"b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B08W4YRC4X","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E5%8C%96%E7%89%A9%E8%AA%9E%EF%BC%88%EF%BC%91%EF%BC%92%EF%BC%89%20(%E9%80%B1%E5%88%8A%E5%B0%91%E5%B9%B4%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9)\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E5%8C%96%E7%89%A9%E8%AA%9E%EF%BC%88%EF%BC%91%EF%BC%92%EF%BC%89%20(%E9%80%B1%E5%88%8A%E5%B0%91%E5%B9%B4%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9)","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"NAixa","s":"s"});
+</script>
+<div id="msmaflink-NAixa">リンク</div>
+「<a target="_blank" href="https://www.amazon.co.jp/gp/product/B08W4YRC4X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08W4YRC4X&linkCode=as2&tag=susishushi2-22&linkId=c4d0109533d033c4cb7ca01c5ec9c1a3">化物語（１２）</a>」
+新刊が出てたので1巻から読み直した (記憶力がないので都度読み直して楽しめてる)。絵がうま過ぎる。なにかいてるかわけわからん。嘘。わけわかる。西尾維新チョー面白い。<br>
+<br><br>
+
+2月には逃げられてしまったけど、3月はがんばる。
+
+
+
+
+##### 他にこんな記事があるよ
+[2020年10-12月に読んだ本一挙紹介](https://susishushi.github.io/my_blog/post/2020book/)
+<br>
+[2021年1月に読んだ本一挙紹介](https://susishushi.github.io/my_blog/post/2021jan_book/)
+<br>
