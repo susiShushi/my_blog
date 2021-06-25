@@ -24,42 +24,119 @@ Tadas Baltrušaitis氏らによって開発された表情分析用のツール�
 などができる。便利～。各OSでの使い方は[Wiki](https://github.com/TadasBaltrusaitis/OpenFace/wiki)に書いてあるので、ご確認くだせぇ。ちなみにWindowsだとボタンぽちぽちで解決できるのでよい。<br>
 <br><br>
 
-## Dockerを用いた使い方
+## 仮想環境を用いた使い方 (2021/6/25更新)
 
 ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使ったOpenFaceの使用方法を紹介する。
 <br>
-以下の「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダが入る。いわゆるDockerでのマウントである。コマンドラインでは以下のように入力する：
+Dockerというのはアプリケーションの依存関係を解消するための技術で、「環境をコンパクトに提供する」ところに利点がある。各OSでのインストール方法は公式ドキュメントを確認すること。<br>
+[Docker for Mac](https://docs.docker.jp/docker-for-mac/index.html)
+<br>
+[Docker for Windows](https://docs.docker.jp/docker-for-windows/install.html)<br>
+<br><br>
+以下のコードは「OpenFaceを利用可能な仮想環境を起動する」コマンドだ。「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダがコンテナ内で作成される。コマンドラインでは以下のように入力する：
 <br>
 <br>
 ```docker:run
-docker run -it --rm -v /c/user/name/ImageFolder:/home/openface-build/data alegbr/openface:latest
+docker run -it --rm -v [ここにローカルPATHを入力する]:/home/openface-build/data alegbr/openface:latest
 ```  
 <br>
-しばらく経つとOpenFaceが使えるコンテナが立ち上がる。<br><br>
+<br>
+Powershellなどのコマンドラインで以下のように入力してEnterをおす。<br>
+  <img src="/img/OF1_1.png" width=80%>
+<br>
+しばらく経つとOpenFaceが使えるコンテナ(上の画像で言うと、root@わけわからん英数字)が立ち上がる。これで、「OpenFaceを利用可能な仮想環境が準備できた状態」なのだ。<br><br>
+
+## 動画を解析する
+
+
+まずはlsでフォルダの中身を確認しよう。
+  
+```docker:ls
+ls
+```  
+  
+lsはLinuxの基本的コマンドで、ファイルやディレクトリの情報を一覧で表示する。<br>
+
+/dataフォルダは上記コマンドの[コンテナPATH]と対応している。中身は[ローカルPATH]内のファイルが入っている。<br>
+ls data でdataフォルダ内の中身を確認しよう。<br>
+<br>
+
+
+早速、dataフォルダ内のmp4を対象として表情分析を行おう。<br>
+コンテナ上で解析を行うときには build/bin/FeatureExtractionで解析を開始する。<br>
+対象がファイルの場合には引数に「-f “[動画 or 静止画ファイル]”」 を設定する。<br>
+<br>
+  
+```docker:d_feature
+build/bin/FeatureExtraction -f "data/AU12.mp4"
+```  
+
+ここまでのコマンドは以下の画像の通りである。<br>
+  <img src="/img/OF2.png" width=80%>
+
+
+「Closed successfully」という出力を確認したら改めてlsコマンドでディレクトリ内を一覧表示してみよう。<br>
+すると以下の通り、processedができている。この中に解析出力のファイルがあることを確認できる。<br>
+<br>
+  <img src="/img/OF3.png" width=80%>
+
+<br>
+ファイルの保存には仮想環境内のファイルをローカル（今君が使っているPCだゾ☆）にコピーする必要がある。<br>
+別のコマンドラインを新たに立ち上げて「docker ps」で確認する。<br>
+以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
+最後の部分には保存用のPATHを記述する。<br>
+<br>
+```docker:copy
+docker ps
+docker cp [contaier ID]:home/openface-build/processed [保存したいPATH]
+```  
+<br>
+画像的には以下のような感じです。<br>
+  <img src="/img/OF4.png" width=80%>
+<br>
+
+これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが保存PATHに書いたところから出てくる。ヤッタネ！！<br>
+FeatureExtractionで特に指定をしなければ視線・Landmark・AUなどの出力が出てくる。<br>
+<br><br>
+
+
+
+## 複数の静止画像を解析する
+
+
+今回はフォルダ内に複数のフォルダが入っている場合には以下の通りだ。<br>
+まずは中身の確認をlsコマンドで確認。<br>
+<br>  
+<img src="/img/OF5.png" width=80%>
+<br>
+
+このフォルダを解析すべく、コンテナ内では以下のコマンドを回す。<br>
+
+```docker:for_do
+build/bin/FeatureExtraction -fdir "data/Images"
+```  
+
+
+基本的には、「-fdir [コンテナ内の複数画像があるフォルダ]」以外はほぼ同じ。<br>
+この解析をするとフォルダ内の画像すべてが同一人物によるシーケンスと仮定して、一つにまとめる。フォルダ内の画像が全て異なる人物である場合には、「FeatureExtraction」の代わりに「FaceLandmarkImg」を使う。<br>
+解析後は動画解析で説明した通りのことをすればよし。<br><br><br>
 
 ## For文使った自動解析
 
 
-今回はフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。「build/bin/FearureExtraction -fdir フォルダパス」は各フォルダ内の複数画像を動画として処理する。静止画として解析する際には「FaceLandmarkImg」を使う。詳しくは[本家](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments)を確認。<br>
+最後にフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。<br>
 <br>
 ```docker:for_do
 for i in ./data/Images/Images/*/*; do build/bin/FeatureExtraction -fdir $i; done
 ```  
 <br>
-<br>解析後はコンテナ内にprocessedというフォルダができあがるので、それをローカルにコピーする。コンテナIDは別途コマンドラインを立ち上げて「docker ps」で確認する。<br>
-以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
-最後の部分には保存用のローカルPATHを記述する。<br>
-<br>
-```docker:copy
-docker cp [contaier ID]:home/openface-build/processed /users/???
-```  
-<br>
-これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが出てくる。ヤッタネ！！<br>
-<br>
-
+さらに「AUのみの出力を見たいとき」、「Landmark検出に異なる学習済みモデルを適用したいとき」などは[本家のWiki](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments#featureextraction-and-facelandmarkvidmulti)を確認してください。<br>
+ではでは！<br><br>
 
 ##### 他にこんな記事があるよ
  [Crowdworksでオンライン実験](https://susishushi.github.io/my_blog/post/cw/)<br>
 [WindowsでDockerつこてR環境構築](https://susishushi.github.io/my_blog/post/docker_new/)
 <br>
 [datadrivencvでオシャレなCV](https://susishushi.github.io/my_blog/post/datacv/)
+
+

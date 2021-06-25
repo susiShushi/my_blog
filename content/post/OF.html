@@ -9,8 +9,7 @@ tags: ["お役立ち", "研究"]
 summary: "OpenFaceで表情分析しよう"
 ---
 
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>表情の分析をお手軽にやっちゃおう！<br>
@@ -27,31 +26,82 @@ summary: "OpenFaceで表情分析しよう"
 などができる。便利～。各OSでの使い方は<a href="https://github.com/TadasBaltrusaitis/OpenFace/wiki">Wiki</a>に書いてあるので、ご確認くだせぇ。ちなみにWindowsだとボタンぽちぽちで解決できるのでよい。<br>
 <br><br></p>
 </div>
-<div id="dockerを用いた使い方" class="section level2">
-<h2>Dockerを用いた使い方</h2>
+<div id="仮想環境を用いた使い方-2021625更新" class="section level2">
+<h2>仮想環境を用いた使い方 (2021/6/25更新)</h2>
 <p>ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使ったOpenFaceの使用方法を紹介する。
 <br>
-以下の「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダが入る。いわゆるDockerでのマウントである。コマンドラインでは以下のように入力する：
+Dockerというのはアプリケーションの依存関係を解消するための技術で、「環境をコンパクトに提供する」ところに利点がある。各OSでのインストール方法は公式ドキュメントを確認すること。<br>
+<a href="https://docs.docker.jp/docker-for-mac/index.html">Docker for Mac</a>
+<br>
+<a href="https://docs.docker.jp/docker-for-windows/install.html">Docker for Windows</a><br>
+<br><br>
+以下のコードは「OpenFaceを利用可能な仮想環境を起動する」コマンドだ。「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダがコンテナ内で作成される。コマンドラインでは以下のように入力する：
 <br>
 <br></p>
-<pre class="docker:run"><code>docker run -it --rm -v /c/user/name/ImageFolder:/home/openface-build/data alegbr/openface:latest</code></pre>
+<pre class="docker:run"><code>docker run -it --rm -v [ここにローカルPATHを入力する]:/home/openface-build/data alegbr/openface:latest</code></pre>
 <p><br>
-しばらく経つとOpenFaceが使えるコンテナが立ち上がる。<br><br></p>
+<br>
+Powershellなどのコマンドラインで以下のように入力してEnterをおす。<br>
+<img src="/img/OF1_1.png" width=80%>
+<br>
+しばらく経つとOpenFaceが使えるコンテナ(上の画像で言うと、<a href="mailto:root@わけわからん英数字" class="email">root@わけわからん英数字</a>)が立ち上がる。これで、「OpenFaceを利用可能な仮想環境が準備できた状態」なのだ。<br><br></p>
+</div>
+<div id="動画を解析する" class="section level2">
+<h2>動画を解析する</h2>
+<p>まずはlsでフォルダの中身を確認しよう。</p>
+<pre class="docker:ls"><code>ls</code></pre>
+<p>lsはLinuxの基本的コマンドで、ファイルやディレクトリの情報を一覧で表示する。<br></p>
+<p>/dataフォルダは上記コマンドの[コンテナPATH]と対応している。中身は[ローカルPATH]内のファイルが入っている。<br>
+ls data でdataフォルダ内の中身を確認しよう。<br>
+<br></p>
+<p>早速、dataフォルダ内のmp4を対象として表情分析を行おう。<br>
+コンテナ上で解析を行うときには build/bin/FeatureExtractionで解析を開始する。<br>
+対象がファイルの場合には引数に「-f “[動画 or 静止画ファイル]”」 を設定する。<br>
+<br></p>
+<pre class="docker:d_feature"><code>build/bin/FeatureExtraction -f &quot;data/AU12.mp4&quot;</code></pre>
+<p>ここまでのコマンドは以下の画像の通りである。<br>
+<img src="/img/OF2.png" width=80%></p>
+<p>「Closed successfully」という出力を確認したら改めてlsコマンドでディレクトリ内を一覧表示してみよう。<br>
+すると以下の通り、processedができている。この中に解析出力のファイルがあることを確認できる。<br>
+<br>
+<img src="/img/OF3.png" width=80%></p>
+<p><br>
+ファイルの保存には仮想環境内のファイルをローカル（今君が使っているPCだゾ☆）にコピーする必要がある。<br>
+別のコマンドラインを新たに立ち上げて「docker ps」で確認する。<br>
+以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
+最後の部分には保存用のPATHを記述する。<br>
+<br></p>
+<pre class="docker:copy"><code>docker ps
+docker cp [contaier ID]:home/openface-build/processed [保存したいPATH]</code></pre>
+<p><br>
+画像的には以下のような感じです。<br>
+<img src="/img/OF4.png" width=80%>
+<br></p>
+<p>これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが保存PATHに書いたところから出てくる。ヤッタネ！！<br>
+FeatureExtractionで特に指定をしなければ視線・Landmark・AUなどの出力が出てくる。<br>
+<br><br></p>
+</div>
+<div id="複数の静止画像を解析する" class="section level2">
+<h2>複数の静止画像を解析する</h2>
+<p>今回はフォルダ内に複数のフォルダが入っている場合には以下の通りだ。<br>
+まずは中身の確認をlsコマンドで確認。<br>
+<br><br />
+<img src="/img/OF5.png" width=80%>
+<br></p>
+<p>このフォルダを解析すべく、コンテナ内では以下のコマンドを回す。<br></p>
+<pre class="docker:for_do"><code>build/bin/FeatureExtraction -fdir &quot;data/Images&quot;</code></pre>
+<p>基本的には、「-fdir [コンテナ内の複数画像があるフォルダ]」以外はほぼ同じ。<br>
+この解析をするとフォルダ内の画像すべてが同一人物によるシーケンスと仮定して、一つにまとめる。フォルダ内の画像が全て異なる人物である場合には、「FeatureExtraction」の代わりに「FaceLandmarkImg」を使う。<br>
+解析後は動画解析で説明した通りのことをすればよし。<br><br><br></p>
 </div>
 <div id="for文使った自動解析" class="section level2">
 <h2>For文使った自動解析</h2>
-<p>今回はフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。「build/bin/FearureExtraction -fdir フォルダパス」は各フォルダ内の複数画像を動画として処理する。静止画として解析する際には「FaceLandmarkImg」を使う。詳しくは<a href="https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments">本家</a>を確認。<br>
+<p>最後にフォルダ内に複数のフォルダが階層的に入っているような状況を想定する。UbuntuでのFor文の書き方を活用して、ぶん回しまくる。<br>
 <br></p>
 <pre class="docker:for_do"><code>for i in ./data/Images/Images/*/*; do build/bin/FeatureExtraction -fdir $i; done</code></pre>
 <p><br>
-<br>解析後はコンテナ内にprocessedというフォルダができあがるので、それをローカルにコピーする。コンテナIDは別途コマンドラインを立ち上げて「docker ps」で確認する。<br>
-以下のように入力してコピーしたファイルをローカルに持ってくる（別のShellを開く）<br>
-最後の部分には保存用のローカルPATHを記述する。<br>
-<br></p>
-<pre class="docker:copy"><code>docker cp [contaier ID]:home/openface-build/processed /users/???</code></pre>
-<p><br>
-これで解析済みの表情運動・視線・頭部位置等のFrameごとのデータが出てくる。ヤッタネ！！<br>
-<br></p>
+さらに「AUのみの出力を見たいとき」、「Landmark検出に異なる学習済みモデルを適用したいとき」などは<a href="https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments#featureextraction-and-facelandmarkvidmulti">本家のWiki</a>を確認してください。<br>
+ではでは！<br><br></p>
 <div id="他にこんな記事があるよ" class="section level5">
 <h5>他にこんな記事があるよ</h5>
 <p><a href="https://susishushi.github.io/my_blog/post/cw/">Crowdworksでオンライン実験</a><br>
