@@ -1,0 +1,41 @@
+---
+title: "[お役立ち]ffmpegで静止画像を動画に変換"
+date: "2021-09-27T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/image_PC.png"
+tags: ["お役立ち", "研究"]
+summary: "ffmpeg×PowerShellで静止画像を動画に変換しよう"
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>自分用に複数の静止画像を動画に変換するだけの記事を書くぞ！<br>
+Powershell上で<a href="https://www.ffmpeg.org/">ffmpeg</a>を使う。<br>
+<br></p>
+<div id="ファイル名取得" class="section level2">
+<h2>ファイル名取得</h2>
+<p>以下のコードは「ファイル名を取得する」コマンド。前者は静止画像の名前が入ってるフォルダで、後者は動画の名前が入ってるフォルダで入力する。
+<br>
+<br></p>
+<pre class="powershell:dirname"><code>$Item = dir -name
+$Outlist = dir -name</code></pre>
+<p><br>
+<br></p>
+</div>
+<div id="静止画像動画に変換" class="section level2">
+<h2>静止画像→動画に変換</h2>
+<p>Powershellのfor文が独特。各種設定はもうググれ。<br></p>
+<pre class="powershell:for"><code>for($m=0; $m -lt 288; $m++){ffmpeg -framerate 30 -loop 1 -i $Item[$m] -c:v libx264 -t 00:00:02 -pix_fmt yuv420p -vf scale=512:512  $Outlist[$m]}</code></pre>
+<p><br>
+ほな！<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/ged/">The Great Expression Debateについて</a><br>
+<a href="https://susishushi.github.io/my_blog/post/joint_cor/">質問紙と行動指標の相関分析</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
+</div>
+</div>

@@ -111,8 +111,9 @@
 <pre class="r"><code>library(brms)</code></pre>
 <pre><code>## Warning: パッケージ &#39;brms&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
 <pre><code>## Warning: パッケージ &#39;Rcpp&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
-<pre class="r"><code>library(lme4)
-library(performance)</code></pre>
+<pre class="r"><code>library(lme4)</code></pre>
+<pre><code>## Warning: パッケージ &#39;lme4&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
+<pre class="r"><code>library(performance)</code></pre>
 <pre><code>## Warning: パッケージ &#39;performance&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
 <pre class="r"><code>data(&quot;epilepsy&quot;)
 summary(epilepsy)</code></pre>
@@ -160,6 +161,19 @@ model_performance(fit1)</code></pre>
 <pre class="r"><code># plot
 x &lt;- check_collinearity(fit1)
 plot(x)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;parameters&#39;:
+##   method                           from      
+##   as.double.parameters_kurtosis    datawizard
+##   as.double.parameters_skewness    datawizard
+##   as.double.parameters_smoothness  datawizard
+##   as.numeric.parameters_kurtosis   datawizard
+##   as.numeric.parameters_skewness   datawizard
+##   as.numeric.parameters_smoothness datawizard
+##   print.parameters_distribution    datawizard
+##   print.parameters_kurtosis        datawizard
+##   print.parameters_skewness        datawizard
+##   summary.parameters_kurtosis      datawizard
+##   summary.parameters_skewness      datawizard</code></pre>
 <p><img src="../../post/performance_files/figure-html/poisson1-1.png" width="672" /></p>
 </div>
 <div id="bayesian用の使い方" class="section level2">
@@ -302,6 +316,12 @@ model_performance(fit1b)</code></pre>
         </div>
         <div class="content">
           <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="../../post/ffps/" class="item">[お役立ち]ffmpegで静止画像を動画に変換</a>
+              </div>
+            </div>
           
             <div class="item">
               <div class="content">

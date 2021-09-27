@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[お役立ち]Airbnbを利用しないか？ | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]ffmpegで静止画像を動画に変換 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,22 +17,22 @@
 
 <meta name="generator" content="Hugo 0.84.1" />
 
-<link rel="canonical" href="../../post/airbnb/" />
+<link rel="canonical" href="../../post/ffps/" />
 
 
-<meta property="og:title" content="[お役立ち]Airbnbを利用しないか？" />
-<meta property="og:description" content="国際学会・短期留学にはAirbnbがオヌヌメ" />
+<meta property="og:title" content="[お役立ち]ffmpegで静止画像を動画に変換" />
+<meta property="og:description" content="ffmpeg×PowerShellで静止画像を動画に変換しよう" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/airbnb/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-02-29T20:59:19&#43;09:00" />
-<meta property="article:modified_time" content="2020-02-29T20:59:19&#43;09:00" />
+<meta property="og:url" content="/post/ffps/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-27T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-09-27T00:00:00&#43;00:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[お役立ち]Airbnbを利用しないか？"/>
-<meta name="twitter:description" content="国際学会・短期留学にはAirbnbがオヌヌメ"/>
+<meta name="twitter:title" content="[お役立ち]ffmpegで静止画像を動画に変換"/>
+<meta name="twitter:description" content="ffmpeg×PowerShellで静止画像を動画に変換しよう"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -84,39 +84,44 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [お役立ち]Airbnbを利用しないか？
-          <div class="sub header">@ なんばいきん · Saturday, Feb 29, 2020 · 2 minute read · Update at Feb 29, 2020</div>
+          [お役立ち]ffmpegで静止画像を動画に変換
+          <div class="sub header">@ なんばいきん · Monday, Sep 27, 2021 · 1 minute read · Update at Sep 27, 2021</div>
         </h1>
       </header>
 
       
 
-      <article style="margin-top: 2rem;"><h2 id="国際学会短期留学にはairbnbがおすすめって話">国際学会・短期留学にはAirbnbがおすすめって話</h2>
-<p>職業柄(研究者)、僕は国際学会で海外出張が結構あるのね。そういう時に安価で宿泊できる民泊サイトは便利です。<br>
-※民泊サイト＝一般の民家に宿泊するよ～てやつ</p>
-<p>特におすすめなのが、 <strong><a href="https://www.airbnb.jp/">Airbnb</a></strong> 。</p>
-<p><a href="https://www.airbnb.jp/"><img src="../../img/image_airbnb.png" alt="Airbnb"></a><br></p>
-<p>Airbnbは以下の人におすすめです。</p>
-<ol>
-<li>海外に旅行する機会がある</li>
-<li>なるべく費用は安く抑えたい</li>
-<li>他人（主に家を提供するホスト）が一緒でもOK</li>
-</ol>
-<p>僕の場合は特に安さが決め手ですね。<br>
-ぼくはこれまで、オーストラリアやらオランダやらの国際学会参加時や、英国への短期留学時にAirbnbを使用してました。</p>
-<p>とある宿泊先では三泊四日で一人約一万円ですませたこともあります。</p>
-<p>一泊3000円くらいですね。</p>
-<p>部屋はさぞひどかったろうって？<br>
-それがなかなかすばらしいとこだったんですよ。</p>
-<p><img src="../../img/image_hotel.JPG" alt="Australia">  <br>
-オーストラリアの中心地でこれすごない？（自慢）<br>
-しかもNetflix, PS4完備だったんで一緒に泊まった友達とナチョス食いながら映画見て、よくわからん格ゲーを夜通しやってました。</p>
-<p>『使ってみよっかな～』って人は<a href="https://www.airbnb.jp/">こちら</a>から登録ぅ！</p>
-<p><a href="https://www.airbnb.jp/c/shushin1?currency=JPY">このリンク</a>から登録すれば、<strong>宿泊料金3700円分オフ</strong> (2020年3月1日現在)になるので通常通り登録するよりもお得です！</p>
-<p>注意点としてはホストとメッセージのやり取りをする必要があるので、最低限の英語力は必要、ということくらいですかね！</p>
-<p>ちなみにぼくはごりごりにGoogle翻訳を利用しました！</p>
-<p>Airbnb使ってお得に海外をEnjoyしましょう！<br>
-ほな。</p>
+      <article style="margin-top: 2rem;">
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>自分用に複数の静止画像を動画に変換するだけの記事を書くぞ！<br>
+Powershell上で<a href="https://www.ffmpeg.org/">ffmpeg</a>を使う。<br>
+<br></p>
+<div id="ファイル名取得" class="section level2">
+<h2>ファイル名取得</h2>
+<p>以下のコードは「ファイル名を取得する」コマンド。前者は静止画像の名前が入ってるフォルダで、後者は動画の名前が入ってるフォルダで入力する。
+<br>
+<br></p>
+<pre class="powershell:dirname"><code>$Item = dir -name
+$Outlist = dir -name</code></pre>
+<p><br>
+<br></p>
+</div>
+<div id="静止画像動画に変換" class="section level2">
+<h2>静止画像→動画に変換</h2>
+<p>Powershellのfor文が独特。各種設定はもうググれ。<br></p>
+<pre class="powershell:for"><code>for($m=0; $m -lt 288; $m++){ffmpeg -framerate 30 -loop 1 -i $Item[$m] -c:v libx264 -t 00:00:02 -pix_fmt yuv420p -vf scale=512:512  $Outlist[$m]}</code></pre>
+<p><br>
+ほな！<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/ged/">The Great Expression Debateについて</a><br>
+<a href="https://susishushi.github.io/my_blog/post/joint_cor/">質問紙と行動指標の相関分析</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
+</div>
+</div>
 </article>
     </section>
 
@@ -125,9 +130,7 @@
         
           <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
         
-          <a class="ui label" href="../../tags/%E6%97%85%E8%A1%8C" title="旅行">旅行</a>
-        
-          <a class="ui label" href="../../tags/%E5%87%BA%E5%BC%B5" title="出張">出張</a>
+          <a class="ui label" href="../../tags/%E7%A0%94%E7%A9%B6" title="研究">研究</a>
         
       
       <div

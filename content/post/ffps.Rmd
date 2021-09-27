@@ -1,0 +1,48 @@
+---
+title: "[お役立ち]ffmpegで静止画像を動画に変換"
+date: "2021-09-27T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/image_PC.png"
+tags: ["お役立ち", "研究"]
+summary: "ffmpeg×PowerShellで静止画像を動画に変換しよう"
+---
+
+自分用に複数の静止画像を動画に変換するだけの記事を書くぞ！<br>
+Powershell上で[ffmpeg](https://www.ffmpeg.org/)を使う。<br>
+<br>
+
+
+## ファイル名取得
+
+以下のコードは「ファイル名を取得する」コマンド。前者は静止画像の名前が入ってるフォルダで、後者は動画の名前が入ってるフォルダで入力する。
+<br>
+<br>
+```powershell:dirname
+$Item = dir -name
+$Outlist = dir -name
+```  
+<br>
+<br>
+
+## 静止画像→動画に変換
+
+
+Powershellのfor文が独特。各種設定はもうググれ。<br>
+
+  
+```powershell:for
+for($m=0; $m -lt 288; $m++){ffmpeg -framerate 30 -loop 1 -i $Item[$m] -c:v libx264 -t 00:00:02 -pix_fmt yuv420p -vf scale=512:512  $Outlist[$m]}
+```  
+  
+<br>
+ほな！<br><br>
+
+##### 他にこんな記事があるよ
+ [The Great Expression Debateについて](https://susishushi.github.io/my_blog/post/ged/)<br>
+[質問紙と行動指標の相関分析](https://susishushi.github.io/my_blog/post/joint_cor/)
+<br>
+[OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)
+
+
