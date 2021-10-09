@@ -406,6 +406,10 @@ qplot() +
 Enjoy Stan! <br>
 <br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 
 ##### 他にこんな記事があるよ
  [部屋とYシャツとわたしとベイズ塾](https://susishushi.github.io/my_blog/post/bjuku/)<br>

@@ -99,6 +99,10 @@ git clone https://github.com/nhtran93/DDM_priors.git
 あるいは[Open and Reproducible Science Advent Calender](https://adventar.org/calendars/5106)にとうろくし、おまえじしんが真の男としてオープンな科学に関係する情報をブロゴの投稿を通して発信する……それもまた、タフな選択なのではないかとおれは思う。<br>
 <br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 ##### 参考文献
 [ダイハードテイルズ所属作家紹介：逆噴射聡一郎とは？](https://diehardtales.com/n/n73ec21c8457b)<br>
 [蛮英の入り口にたつための逆噴射文体講座(逆噴射同時通訳付き)](https://note.com/a01_naut/n/nb2f2b3fc39cb)<br>

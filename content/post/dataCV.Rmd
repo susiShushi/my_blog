@@ -64,6 +64,10 @@ datadrivencv::use_datadriven_cv(
 クソ重い。<br><br>
 <br><br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 
 ##### 他の記事
  [測りすぎ――なぜパフォーマンスは失敗するのか？](https://susishushi.github.io/my_blog/post/mmeasure/)

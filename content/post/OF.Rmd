@@ -133,6 +133,10 @@ for i in ./data/Images/Images/*/*; do build/bin/FeatureExtraction -fdir $i; done
 さらに「AUのみの出力を見たいとき」、「Landmark検出に異なる学習済みモデルを適用したいとき」などは[本家のWiki](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments#featureextraction-and-facelandmarkvidmulti)を確認してください。<br>
 ではでは！<br><br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 ##### 他にこんな記事があるよ
  [Crowdworksでオンライン実験](https://susishushi.github.io/my_blog/post/cw/)<br>
 [WindowsでDockerつこてR環境構築](https://susishushi.github.io/my_blog/post/docker_new/)
