@@ -8,8 +8,14 @@ cover: "/img/image_PC.png"
 tags: ["お役立ち", "研究"]
 summary: "fIMDb(The Face Image Meta-Database)で研究に活用する表情データベースを見つけよう"
 ---
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript">
+$(document).ready( function () {
+   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+})
+</script>
 
-いろんなサイトや論文が散発的に表情データの情報を提供していて(例えば、日本人の表情刺激に関する論文で絞ると[これ](https://repository.dl.itc.u-tokyo.ac.jp/record/30963/files/edu_55_17.pdf)とか[これ](https://www.jstage.jst.go.jp/article/ems/6/1/6_ES610/_pdf/-char/ja)とか)、「誰かリアルタイムで更新できるような表情データベースのプラットフォームを作ってくれ～」と思ってたんですよ。<br>
+いろんなサイトや論文が散発的に表情データの情報を提供していて(例えば、日本人の表情刺激に関する論文で絞ると<a href="https://repository.dl.itc.u-tokyo.ac.jp/record/30963/files/edu_55_17.pdf" target="_blank">これ</a>とか<a href="https://www.jstage.jst.go.jp/article/ems/6/1/6_ES610/_pdf/-char/ja" target="_blank">これ</a>とか)、「誰かリアルタイムで更新できるような表情データベースのプラットフォームを作ってくれ～」と思ってたんですよ。<br>
 そしたら[Workman & Chatterjee, 2021](https://www.sciencedirect.com/science/article/pii/S2590260121000205?via%3Dihub)がそういうメタデータベースを作ってくれたみたいです。<br>
 それが[The Face Image Meta-Database(fIMDb)](https://cliffordworkman.com/resources/#fIMDb_Information)！<br>
 ここではその使い方を画像で簡単に解説する。<br>
