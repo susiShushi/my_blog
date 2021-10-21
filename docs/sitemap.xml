@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/post/fimdb/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/ffps/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/%E7%A0%94%E7%A9%B6/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2021feb_book/</loc>
@@ -42,9 +48,6 @@
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/ged/</loc>
-    <lastmod>2021-01-26T20:59:19+09:00</lastmod>
-  </url><url>
-    <loc>/categories/%E7%A0%94%E7%A9%B6/</loc>
     <lastmod>2021-01-26T20:59:19+09:00</lastmod>
   </url><url>
     <loc>/post/voyage/</loc>

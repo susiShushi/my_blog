@@ -1,0 +1,54 @@
+---
+title: "[研究]表情刺激のデータベース(fIMDb)"
+date: "2021-10-21T00:00:00"
+draft: True
+
+categories: ["研究"]
+cover: "/img/image_PC.png"
+tags: ["お役立ち", "研究"]
+summary: "fIMDb(The Face Image Meta-Database)で研究に活用する表情データベースを見つけよう"
+---
+
+いろんなサイトや論文が散発的に表情データの情報を提供していて(例えば、日本人の表情刺激に関する論文で絞ると[これ](https://repository.dl.itc.u-tokyo.ac.jp/record/30963/files/edu_55_17.pdf)とか[これ](https://www.jstage.jst.go.jp/article/ems/6/1/6_ES610/_pdf/-char/ja)とか)、「誰かリアルタイムで更新できるような表情データベースのプラットフォームを作ってくれ～」と思ってたんですよ。<br>
+そしたら[Workman & Chatterjee, 2021](https://www.sciencedirect.com/science/article/pii/S2590260121000205?via%3Dihub)がそういうメタデータベースを作ってくれたみたいです。<br>
+それが[The Face Image Meta-Database(fIMDb)](https://cliffordworkman.com/resources/#fIMDb_Information)！<br>
+ここではその使い方を画像で簡単に解説する。<br>
+表情を用いた研究がしたくなったときは是非。表情刺激を作った人は登録よろしく！<br>
+<br>
+
+## fIMDbを使ってみるゾ
+
+
+早速[ここ](https://cliffordworkman.com/resources/#fIMDb_Information)から、WorkmanのHPに飛ぼう。<br>
+  <img src="/img/fIMDb1.png" width=80%>
+<br>
+クソでか「CLICK HERE TO OPEN」があるんで、まぁ普通は迷わないけど指示された通り押すと以下の画面に飛ぶ。<br>
+<br>
+  <img src="/img/fIMDb2.png" width=80%>
+<br>
+するとちっちゃく「[fIMDB SEARCH TOOLS +] 押してね」と言われるんで押すと検索画面になる。<br>
+<br>
+  <img src="/img/fIMDb3.png" width=80%>
+<br>
+
+なんか複雑なのがいっぱい出てくるけどよくわかんないのでなにも入力せず、「Submit Query」を押す。（もちろん条件を入力してもよい）<br>
+<br>
+  <img src="/img/fIMDb4.png" width=80%>
+<br>
+おしまい。<br>
+あとは研究の目的に応じて、カテゴリをクリックして昇順に並べ替えたりしてよいし、csvを一気に保存してデータ分析(?)に使ってもよい。
+
+<br>
+ではでは！<br><br>
+
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
+##### 他にこんな記事があるよ
+ [OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)<br>
+[The Great Expression Debateについて](https://susishushi.github.io/my_blog/post/ged/)
+<br>
+[表情表出の日米比較研究について](https://susishushi.github.io/my_blog/post/friesen_1972/)
+
+

@@ -90,6 +90,10 @@ Crowdworksになんやかんやで登録すると以下の画像のように「�
 <br>
 <br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 
 ##### 他にこんな記事があるよ
 [The Ascent of Affect](https://susishushi.github.io/my_blog/post/ascaff/)<br>

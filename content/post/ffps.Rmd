@@ -39,6 +39,11 @@ for($m=0; $m -lt 288; $m++){ffmpeg -framerate 30 -loop 1 -i $Item[$m] -c:v libx2
 <br>
 ほな！<br><br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
+
 ##### 他にこんな記事があるよ
  [The Great Expression Debateについて](https://susishushi.github.io/my_blog/post/ged/)<br>
 [質問紙と行動指標の相関分析](https://susishushi.github.io/my_blog/post/joint_cor/)

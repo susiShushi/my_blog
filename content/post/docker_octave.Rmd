@@ -121,6 +121,10 @@ http://127.0.0.1:8888/?token=めっちゃながいしこのリンクの先には
 <br>うまくいかんかったら[Twitter](https://twitter.com/NSushi)で聞いて下せえ（解決できるとはいっていない）
 <br><br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 ##### 他にこんな記事があるよ
  [Gorilla.scでオンライン実験](https://susishushi.github.io/my_blog/post/gorilla/)
   <br>

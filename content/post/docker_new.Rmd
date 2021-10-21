@@ -93,6 +93,10 @@ Usernameに"rstudio", passwordには"任意のパスワード"を入力する。
 泳ぎつかれたら「docker stop コンテナID」で止めたり、「docker rm コンテナID」で消したりしよう！<br>
 <br><br>
 
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
 ##### 他にこんな記事があるよ
  [Gorilla.scでオンライン実験](https://susishushi.github.io/my_blog/post/gorilla/)
   <br>
