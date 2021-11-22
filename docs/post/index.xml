@@ -6,7 +6,16 @@
     <description>Recent content in Posts on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[お役立ち]CODEとトリマでポイ活</title>
+      <link>/post/poikatsu/</link>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/poikatsu/</guid>
+      <description>お前もポイ活の鬼にならないか？</description>
+    </item>
+    
     <item>
       <title>[研究]表情刺激のデータベース(fIMDb)</title>
       <link>/post/fimdb/</link>
