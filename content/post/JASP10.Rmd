@@ -1,0 +1,44 @@
+---
+title: "[日記]「JASPで統計を学ぼう」の翻訳を一部した"
+date: "2021-12-06T00:00:00"
+draft: True
+
+categories: ["日記"]
+cover: "/img/image_book.png"
+tags: ["研究", "日記"]
+summary: "JASPでカテゴリカルデータ分析を学ぼう！"
+---
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript">
+$(document).ready( function () {
+   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+})
+</script>
+
+
+この記事は，[JASPアドカレ2021](https://adventar.org/calendars/6498)の6日目の記事ですYo。<br>
+<br>
+タイトルのまんまですが、「[JASP で統計を学ぼう！](https://jasp-user-jp.github.io/LSwithJASP/)」の「[9か10章：カテゴリカルデータの分析](https://jasp-user-jp.github.io/LSwithJASP/pdf/chapter10.pdf)」というチャプターの翻訳を担当しました。アドカレまでに終わらすという期日を設定することで無事今日までに翻訳をすますことができましたぜ。<br>
+<br>
+[JASP](https://jasp-stats.org/)、僕も先日相関行列出したいときに久々に使ってみたんですけど、直観的に使えて知りたい情報が一気に簡単に出る感じだったのでマジでおすすめです。ネット上にも資料がいっぱいあるゾ (e.g., [これ](https://osf.io/2wfrj/))<br>
+<br>
+<br>
+以下翻訳担当してみての感想<br>
+・カテゴリカルデータの分析(よく使われるもの)、がんばれば手計算でできるなーってことがわかった。<br>
+・データの分析方法とそのデータ (あるいは分析結果) が反映しているもの、というのは全然異なるんだよ～っていう、統計教育でとても大事なポイントが楽しい例で紹介されていて、「こういう感じで教えるのがいいのか～」って思った。アニメを見ることにした。<br>
+<br>
+<br>
+そういうことだ！みんなもアニメを見よう！我が家は娘を黙らすときに[ポケモンKidsTV](https://www.youtube.com/channel/UCH0JJtRn2syic5xxavMKQ4Q)を見てるぞ！今の時期だと[ぽかぽかマグマッグハウス](https://www.youtube.com/watch?v=kvXocHmMKQc)とかいいぞ！ほな！
+<br><br><br>
+
+<br>
+[<img src="/img/violet-button.png" width=20%>](https://www.buymeacoffee.com/nsushishushi)
+<br>
+
+##### 他にこんな記事があるよ
+ [CODEとトリマでポイ活](https://susishushi.github.io/my_blog/post/poikatsu/)<br>
+[表情刺激のデータベース(fIMDb)](https://susishushi.github.io/my_blog/post/fimdb/)
+<br>
+[OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)
+
+
