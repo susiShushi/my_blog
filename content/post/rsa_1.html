@@ -18,6 +18,21 @@ $(document).ready( function () {
    $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
 })
 </script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+  });
+</script>
 <p>本記事は、<a href="https://adventar.org/calendars/6267">Open and Reproducible Scienceアドカレ2021</a>の8日目の記事です。昨年は<a href="https://susishushi.github.io/my_blog/post/gh/">Githubをつかえ</a>というアクの強い記事を書いたので、今年もGithubに関する記事を書きます。<br>
 <br></p>
 <div id="なにをするのか" class="section level2">
