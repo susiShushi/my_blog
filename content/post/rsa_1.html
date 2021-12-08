@@ -1,0 +1,151 @@
+---
+title: "[お役立ち]コミュニケーションの計算論モデルをGithubで再現"
+date: "2021-12-08T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/image_PC.png"
+tags: ["研究", "お役立ち"]
+summary: "理性的言語行為モデルを再現しよう！"
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript">
+$(document).ready( function () {
+   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+})
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+  });
+</script>
+<p>本記事は、<a href="https://adventar.org/calendars/6267">Open and Reproducible Scienceアドカレ2021</a>の8日目の記事です。昨年は<a href="https://susishushi.github.io/my_blog/post/gh/">Githubをつかえ</a>というアクの強い記事を書いたので、今年もGithubに関する記事を書きます。<br>
+<br></p>
+<div id="なにをするのか" class="section level2">
+<h2>なにをするのか</h2>
+<p>最近読んでおもしろかった<a href="https://psyarxiv.com/yd9k4">コミュニケーションの計算論モデルに関する論文 (Bohn et al., 2021, PsyArXiv)</a>がGithubで情報を公開しているので、それを再現しましょう。<br>
+<br></p>
+</div>
+<div id="bohn-et-al.-2021はどういう論文" class="section level2">
+<h2>Bohn et al. 2021はどういう論文？</h2>
+<ul>
+<li>人の言語コミュニケーションに適用される理性的言語行為フレームワーク (Rational Speech Act framework: RSA) を類人猿のコミュニケーションに適用しよう。<br></li>
+<li>推論モデルの予測がチンパンジーの行動データと合致。<br></li>
+<li>チンパンジーの (推論の結果として生じる) 接近・回避行動は、対象個体との関係性と関連が高く、次いで表情と関連している (モダリティ間の相対的重要性から複数のモダリティを対象とするコミュニケ―ションの検討が必要であることを指摘)。</li>
+</ul>
+<p><br>
+大体こんな感じ。詳細は読んでください。<br>
+<br></p>
+</div>
+<div id="計算論モデルの詳細" class="section level2">
+<h2>計算論モデルの詳細</h2>
+<p>ここでは対象論文で用いる数式を簡単に紹介しておきます。面倒な人は一気に読み飛ばしてください (ここは自分用のメモに近いです)。まず、ある特定の<span class="math inline">\(発話u\)</span>が所与の時にその発話者が<span class="math inline">\(意図i\)</span>を持っている確率を<span class="math inline">\(P(意図i | 発話u)\)</span>とします。これは以下のように定義されます：<br><br></p>
+<p>$P(意図i | 発話u) P(発話u | 意図i)P(意図i) $
+<br></p>
+<p>このとき<span class="math inline">\(P(意図i | 発話u)\)</span>は、意図iが所与のときの<span class="math inline">\(発話u\)</span>が生じる尤度<span class="math inline">\((P(発話u | 意図i)\)</span>, チンパンジーの例：親和意図を持った時に腕を上げる) とそもそも<span class="math inline">\(意図i\)</span>を持つことに関する事前確率 (<span class="math inline">\(P(意図i)\)</span>, 例：親和意図を持つ) に分解できます。<br>
+<br>
+今回の例は類人猿のコミュニケーションが対象なので、<span class="math inline">\(発話u\)</span>は<span class="math inline">\(ジェスチャーg\)</span>と<span class="math inline">\(表情f\)</span>に分解して以下のように尤度を定義します：<br><br></p>
+<p><span class="math inline">\(P(発話u | 意図i) = P(ジェスチャーg, 表情f | 意図i) = \mathcal{L}(ジェスチャーg, 意図i | \theta_{g})\mathcal{L}(表情f, 意図i | \theta_{f})\)</span></p>
+<p><br></p>
+<p>ある信号 <span class="math inline">\((g, f)\)</span> とある意図 (<span class="math inline">\(i\)</span>) の意味空間に関する確率的マッピングを<span class="math inline">\(\theta\)</span>としてここでは表現しています。<span class="math inline">\(\mathcal{L}(表情f, 意図i | \theta_{f})\)</span>は「<span class="math inline">\(表情f\)</span>の中でも<span class="math inline">\(意図i\)</span>と確率的に対応する<span class="math inline">\(表情f\)</span>の表現なんだなぁ」くらいに理解しといてください。少なくとも僕の理解度はその程度です。<br><br></p>
+<p>さて、発話は意図の事前確率 (<span class="math inline">\(P(意図i)\)</span>) によって文脈化されるので、これは個体間の<span class="math inline">\(社会関係s\)</span>とその<span class="math inline">\(発話文脈c\)</span>の関数として考えることができます：<br></p>
+<p><span class="math inline">\(P(意図i) = P(意図i | 文脈c, 社会関係s) = \rho_c \rho_s\)</span>
+<br>
+このとき<span class="math inline">\(\rho\)</span>は文脈および社会的関係の方向性と強度に関するパラメータとします。
+<br><br></p>
+</div>
+<div id="観測データの詳細-oña-et-al.-2019" class="section level2">
+<h2>観測データの詳細 <a href="https://peerj.com/articles/7623/">Oña et al., 2019</a></h2>
+<p>次に推論モデルによる予測と比較するための観測データに関する詳細は以下の通りです。<br>
+・対象：半野生のチンパンジー72人<br>
+・データ：信号とその受け手による反応 (人によるCoding)。<br>
+・ジェスチャー：腕を伸ばす・曲げる (<span class="math inline">\(\theta_g\)</span>)<br>
+・表情：真顔・歯むき出し・とんがり唇 (<span class="math inline">\(\theta_f\)</span>)<br>
+・文脈：ポジティブ・ネガティブ (<span class="math inline">\(\rho_c\)</span>)<br>
+・送り手との関係性：支配・従属 (<span class="math inline">\(\rho_s\)</span>)<br>
+・相互作用の結果：接近・回避 (受け手による意図iの解釈と想定)<br>
+<br>
+数理的表現の設定 (先行研究と経験に基づいてるけど恣意的な設定であることは筆者も認めてる) <br>
+・目的変数 (相互作用の結果)：0-1の値 (<span class="math inline">\(0-0.5 = 接近；0.5-1 = 回避\)</span>)<br>
+・ジェスチャー：腕を伸ばす = 少しネガティブ (<span class="math inline">\(\theta_gs = 0.53\)</span>); 腕を曲げる = 少しポジティブ (<span class="math inline">\(\theta_gb = 0.47\)</span>)<br>
+・表情：真顔 = 完全中立 (<span class="math inline">\(\theta_fn = 0.5\)</span>); 歯むき出し = 少しネガティブ (<span class="math inline">\(\theta_fb = 0.6\)</span>); とんがり唇 = かなりネガティブ (<span class="math inline">\(\theta_ff = 0.9\)</span>)<br>
+・文脈：ネガティブ (<span class="math inline">\(\rho_cn = 0.7\)</span>); ポジティブ (<span class="math inline">\(\rho_cp = 0.3\)</span>)<br>
+・関係性：支配 = ネガティブ (<span class="math inline">\(\rho_sd = 0.25\)</span>); 従属 = ポジティブ (<span class="math inline">\(\rho_ss = 0.75\)</span>)<br><br></p>
+<p>さて、素材がそろいました。これらのモデルによる予測と実データの対応を自分のPCで確認してみましょう。<br><br></p>
+</div>
+<div id="githubからあなたのpcへ" class="section level2">
+<h2>GithubからあなたのPCへ</h2>
+<p>ここでは、<a href="https://psyarxiv.com/yd9k4">Bohn et al., 2021</a>が用意してくれたGithubのリポジトリから情報を取得します。<br>
+<a href="https://susishushi.github.io/my_blog/post/gh/">昨年の記事</a>では、Githubからgitを使ってリポジトリを持ってくる解説をした（したのか？）けど、今回はWindowsのWSL2(いわゆる仮想環境でのUbuntu)でRstudio serverを立ち上げます。<br><br>
+Windowsの人は、<a href="https://kscscr.com/archives/windows-wsl-ubuntu-cmdstan.html">関西学院大学柏原さんの記事</a>を参考にしてWSL2を使ったRserverの環境を構築しなさい。<br><br>
+「な、なぜそんなことを…。」と思われるかもしれませんが、このリポジトリでは<a href="https://github.com/mhtess/rwebppl">RwebPPL</a>と呼ばれるパッケージをインストールする必要があり、このパッケージはUbuntuとMacしかサポートしてないからです (だからWindowsじゃなかったら<a href="https://susishushi.github.io/my_blog/post/gh/">メキシコ流のやり方</a>でおっけーです)。ちなみに<a href="http://webppl.org/">Webppl</a>はJavascriptに埋め込まれた機能豊富な確率的プログラミング言語です。<br><br></p>
+<p>Rstudio serverが立ち上がったら「File」→「New Project…」→「Version Control」→「Git」→「”Repository URL”に下画像のようにコピーした情報を入力して”Create Project”」で筆者が提供していた環境を丸々ローカルな環境で再現できます。<br>
+<img src="/img/rsa/rsa1.png" width=80%></p>
+<p>上手くいけば以下のような画面が出てます。<br>
+<img src="/img/rsa/rsa2.png" width=80%></p>
+<p>Filesウィンドウ内の「analysis」を開いて「model.rmd」を開いてみましょう。RmdとはRmarkdownファイルのことで、Rコードが埋め込まれたイカしたドキュメントファイルです。<br>
+「model.rmd」を無事開けたら、まずはインストールされてないパッケージを適宜インストールしてください（rmdファイル開いたら、「おい、このパッケージがないぞ！」と言われるので適宜必要パッケージをインストールしてください）。ただし、<a href="https://github.com/mhtess/rwebppl">RwebPPL</a>は、<a href="https://nodejs.org/en/">node</a>, <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm</a> などをターミナル上(sudoなど)でインストールしたうえで</p>
+<pre class="r:devtool_install"><code>devtools::install_github(&quot;mhtess/rwebppl&quot;)</code></pre>
+<p>でインストールしなければならないので注意しましょう。<br>
+<br>
+<br></p>
+</div>
+<div id="ふるえるぞハート燃えつきるほどニット" class="section level2">
+<h2>ふるえるぞハート！燃えつきるほどニット！</h2>
+<p>お疲れ様です。結果を再現しましょう。下の画像の位置にあるknitボタンを押しましょう (もしくはCtrl+Shift+K)。すると自動で全てのRコードが回って、htmlファイルを出力してくれるはずです。<br>
+<br></p>
+<p><img src="/img/rsa/rsa3.png" width=80%></p>
+<p><br>
+最終的には以下のような画面が出るはずです。Congratulation！<br>
+逐一読んでいけば、どういうデータを使ってどういうモデルを回しているかが理解できるはずです。ちょっと量がありすぎるのでこの記事では逐一解説はしませんが…。<br><br>
+<img src="/img/rsa/rsa4.png" width=80%></p>
+<p><br></p>
+</div>
+<div id="で結果はどうなのよ" class="section level2">
+<h2>…で、結果はどうなのよ？</h2>
+<p>model.rmd：Lines 166~247が全体モデルとしての結果と対応したコードになります。結果としては、下図の通り今回用いたパラメータ設定によるモデルの予測は観測データとかなり似た結果が得られたようです(y軸がモデルの予測、x軸が実際のデータ)。<br>
+<img src="/img/rsa/rsa5.png" width=80%></p>
+<p><br>
+表情、ジェスチャー、文脈、関係性のみ (model.rmd：250-325 linesでパラメータの設定) でモデルを作成した場合の結果が以下の通りです。<br>
+<br>
+<img src="/img/rsa/rsa6.png" width=80%></p>
+<p><br>
+図の通り、関係性がとても大事だよ。表情も回避行動の予測ができなくはないよ（パラメータ設定段階で自明ですが…）ということがわかります。<br><br>
+このRmdファイルをニットするまでは「よーし、パパ、他のパラメータ設定も試してみちゃうぞ～」と思ってたんですが筆者が事前に別のパラメータ設定（ジェスチャーと表情の重要性を反転させた設定：ジェスチャーの意味の強度を増やし、表情の重要度を減らす）を試した結果もちゃんと確認してました。<br><br>
+その結果、データとモデルの予測はいまいちであったことも報告されており、ジェスチャーの相対的重要度はいまいちなのが現実を反映していそう、というインプリケーションも得られたっぽいです。<br>
+<br>
+<img src="/img/rsa/rsa7.png" width=80%></p>
+<p><br></p>
+</div>
+<div id="感想open-scienceの大変さ" class="section level2">
+<h2>感想：Open Scienceの大変さ</h2>
+<p>WSL2を導入する必要性の話からも分かる通り、ある論文の解析結果を再現する、というのは結構大変な作業であることがままあります (恥ずかしながらWebPPLという言語があることもこれまで知りませんでしたし…)。<br><br>
+現在査読している論文も「データと解析はOSFにアップロードしているので結果を再現できますよ！」と書かれていたので、解析の詳細を確認するため（階層モデルの設定とか多重共線性とかいろいろ気になりまして…）、早速中身を確認しようとRmdファイルを開いたんですね。そしたら必要なデータファイルがアップロードされてなかった…なんてこととかも経験しました（採択・出版された論文でもこういう事例がないこともない、いやそれは筆者に連絡しろよって話なんですけど）。<br><br>
+いろいろと仕組みが必要だなぁと感じますた。<br>
+ほな！
+<br></p>
+<p><br>
+<a href="https://www.buymeacoffee.com/nsushishushi"><img src="/img/violet-button.png" width=20%></a>
+<br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/poikatsu/">CODEとトリマでポイ活</a><br>
+<a href="https://susishushi.github.io/my_blog/post/fimdb/">表情刺激のデータベース(fIMDb)</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
+</div>
+</div>
