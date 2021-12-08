@@ -42,18 +42,15 @@ $(document).ready( function () {
 <div id="計算論モデルの詳細" class="section level2">
 <h2>計算論モデルの詳細</h2>
 <p>ここでは対象論文で用いる数式を簡単に紹介しておきます。面倒な人は一気に読み飛ばしてください (ここは自分用のメモに近いです)。まず、ある特定の<span class="math inline">\(発話u\)</span>が所与の時にその発話者が<span class="math inline">\(意図i\)</span>を持っている確率を<span class="math inline">\(P(意図i | 発話u)\)</span>とします。これは以下のように定義されます：<br></p>
-<p>$P(意図i | 発話u) P(発話u | 意図i)P(意図i) $
-<br></p>
+<p><span class="math display">\[P(意図i | 発話u) \propto P(発話u | 意図i)P(意図i)\]</span></p>
 <p>このとき<span class="math inline">\(P(意図i | 発話u)\)</span>は、意図iが所与のときの<span class="math inline">\(発話u\)</span>が生じる尤度<span class="math inline">\((P(発話u | 意図i)\)</span>, チンパンジーの例：親和意図を持った時に腕を上げる) とそもそも<span class="math inline">\(意図i\)</span>を持つことに関する事前確率 (<span class="math inline">\(P(意図i)\)</span>, 例：親和意図を持つ) に分解できます。<br>
 <br>
 今回の例は類人猿のコミュニケーションが対象なので、<span class="math inline">\(発話u\)</span>は<span class="math inline">\(ジェスチャーg\)</span>と<span class="math inline">\(表情f\)</span>に分解して以下のように尤度を定義します：<br></p>
-<p><span class="math inline">\(P(発話u | 意図i) = P(ジェスチャーg, 表情f | 意図i) = \mathcal{L}(ジェスチャーg, 意図i | \theta_{g})\mathcal{L}(表情f, 意図i | \theta_{f})\)</span></p>
-<p><br>
-ある信号 <span class="math inline">\((g, f)\)</span> とある意図 (<span class="math inline">\(i\)</span>) の意味空間に関する確率的マッピングを<span class="math inline">\(\theta\)</span>としてここでは表現しています。<span class="math inline">\(\mathcal{L}(表情f, 意図i | \theta_{f})\)</span>は「<span class="math inline">\(表情f\)</span>の中でも<span class="math inline">\(意図i\)</span>と確率的に対応する<span class="math inline">\(表情f\)</span>の表現なんだなぁ」くらいに理解しといてください。少なくとも僕の理解度はその程度です。<br></p>
+<p><span class="math display">\[P(発話u | 意図i) = P(ジェスチャーg, 表情f | 意図i) = \mathcal{L}(ジェスチャーg, 意図i | \theta_{g})\mathcal{L}(表情f, 意図i | \theta_{f})\]</span></p>
+<p>ある信号 <span class="math inline">\((g, f)\)</span> とある意図 (<span class="math inline">\(i\)</span>) の意味空間に関する確率的マッピングを<span class="math inline">\(\theta\)</span>としてここでは表現しています。<span class="math inline">\(\mathcal{L}(表情f, 意図i | \theta_{f})\)</span>は「<span class="math inline">\(表情f\)</span>の中でも<span class="math inline">\(意図i\)</span>と確率的に対応する<span class="math inline">\(表情f\)</span>の表現なんだなぁ」くらいに理解しといてください。少なくとも僕の理解度はその程度です。<br></p>
 <p>さて、発話は意図の事前確率 (<span class="math inline">\(P(意図i)\)</span>) によって文脈化されるので、これは個体間の<span class="math inline">\(社会関係s\)</span>とその<span class="math inline">\(発話文脈c\)</span>の関数として考えることができます：<br></p>
-<p><span class="math inline">\(P(意図i) = P(意図i | 文脈c, 社会関係s) = \rho_c \rho_s\)</span>
-<br>
-このとき<span class="math inline">\(\rho\)</span>は文脈および社会的関係の方向性と強度に関するパラメータとします。
+<p><span class="math display">\[P(意図i) = P(意図i | 文脈c, 社会関係s) = \rho_c \rho_s\]</span></p>
+<p>このとき<span class="math inline">\(\rho\)</span>は文脈および社会的関係の方向性と強度に関するパラメータとします。
 <br><br></p>
 </div>
 <div id="観測データの詳細-oña-et-al.-2019" class="section level2">
