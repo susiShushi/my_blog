@@ -6,7 +6,16 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 08 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[日記]オンライン実験の難しさについて</title>
+      <link>/post/online/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/online/</guid>
+      <description>この記事を読んでも特にいいことはないです</description>
+    </item>
+    
     <item>
       <title>[お役立ち]コミュニケーションの計算論モデルをGithubで再現</title>
       <link>/post/rsa_1/</link>
