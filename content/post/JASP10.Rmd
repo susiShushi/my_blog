@@ -36,7 +36,6 @@ $(document).ready( function () {
 <br>
 
 ##### 他にこんな記事があるよ
- [CODEとトリマでポイ活](https://susishushi.github.io/my_blog/post/poikatsu/)<br>
 [表情刺激のデータベース(fIMDb)](https://susishushi.github.io/my_blog/post/fimdb/)
 <br>
 [OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)
