@@ -1,0 +1,78 @@
+---
+title: "[お役立ち]Py-featで表情分析"
+date: "2022-01-15T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/py-feat.png"
+tags: ["お役立ち", "研究"]
+summary: "Py-featで表情分析しよう"
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>表情から感情とか表情運動の推定をお手軽にやっちゃおう！<br>
+<a href="https://py-feat.org/content/intro.html">Py-feat</a>の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br></p>
+<div id="google-colaboratoryを用いた使い方" class="section level2">
+<h2>Google colaboratoryを用いた使い方</h2>
+<p>Googleでログインして、Google drive上で分析する画像を分析対象としてのフォルダ (なければ作る) に全部つっこむ。
+<br>
+<br>
+左上の「＋　新規」ボタンから「新規」→「その他」→「Google colaboratory」を押して新しいipynbファイルを作成（名前は任意につける。最初はUntitle数字.ipynb）
+<br>
+※使ったことない人は選択肢にColaboratoryが出てこないので、<a href="https://colab.research.google.com/">https://colab.research.google.com/</a>
+からノートブックを新規作成<br>
+<br>
+ドキュメントのInstallページにlある情報を全部コピペ<br>
+<a href="https://py-feat.org/content/installation.htm">https://py-feat.org/content/installation.htm</a>
+<br><br>
+以下のようにコードの端にある再生ボタン押す（この灰色の四角はすぐ上の「＋コード」を押したら作れる）
+<br>
+<br>
+<img src="/img/py_f1.png" width=90%>
+<br>
+（ここから新しいコードを回すときには「＋コード」で新しいブロック作ってからにすると再生可能性・可読性が高まる）<br>
+以下のコードをコピペして、また再生ボタンを押す<br></p>
+<pre class="python:prepare"><code>from google.colab import drive
+drive.mount(&#39;/content/drive&#39;)</code></pre>
+<p><br>
+<img src="/img/py_f2.png" width=90%>
+<br>
+上図のようにアクセス許可を聞かれるので全部おーけー。
+<br>
+<br>
+次はデータを読み込む。以下をコピペ
+<br></p>
+<pre class="python:dataload"><code># data読み込み
+import glob
+ 
+files = glob.glob(&quot;/content/drive/MyDrive/(任意のフォルダ名)/*&quot;)
+print(files)</code></pre>
+<p>出力に[‘/content/drive/MyDrive/(対象フォルダ)/(対象ファイル)’, ←こういう感じのが出てきたらちゃんと読み込めてる。
+<br>
+*は「ここにあるやつ全部もってきてくれ～」ってやつ
+<br>
+<br>
+次は分析を行う画像ごとにFor文を使って何度も解析を回しています。<br>
+（ここではbmpファイルが対象となってますが、対象となる画像の保存形式によって変えてください：e.g., png）
+<br></p>
+<pre class="python:run"><code># これで回りはするはず
+# csvは画像フォルダ内に保存されます
+for image in files: 
+    detector.detect_image(image, outputFname = image.replace(&quot;.bmp&quot;, &quot;.csv&quot;))
+</code></pre>
+<p>以上です。ここまで回し切ればGoogle drive内のフォルダに解析済みデータが全部入っています。Congratulation！
+<br>
+ではでは！<br></p>
+<p><br>
+<a href="https://www.buymeacoffee.com/nsushishushi"><img src="/img/violet-button.png" width=20%></a>
+<br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a><br>
+<a href="https://susishushi.github.io/my_blog/post/fimdb/">表情刺激のデータベース(fIMDb)</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/rsa_1/">コミュニケーションの計算論モデルをGithubで再現</a></p>
+</div>
+</div>

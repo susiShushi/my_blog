@@ -6,7 +6,16 @@
     <description>Recent content in お役立ち on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 08 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[お役立ち]Py-featで表情分析</title>
+      <link>/post/py-feat/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/py-feat/</guid>
+      <description>Py-featで表情分析しよう</description>
+    </item>
+    
     <item>
       <title>[お役立ち]コミュニケーションの計算論モデルをGithubで再現</title>
       <link>/post/rsa_1/</link>

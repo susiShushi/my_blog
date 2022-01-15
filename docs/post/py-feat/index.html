@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[日記]オンライン実験の難しさについて | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]Py-featで表情分析 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,22 +17,22 @@
 
 <meta name="generator" content="Hugo 0.84.1" />
 
-<link rel="canonical" href="../../post/online/" />
+<link rel="canonical" href="../../post/py-feat/" />
 
 
-<meta property="og:title" content="[日記]オンライン実験の難しさについて" />
-<meta property="og:description" content="この記事を読んでも特にいいことはないです" />
+<meta property="og:title" content="[お役立ち]Py-featで表情分析" />
+<meta property="og:description" content="Py-featで表情分析しよう" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/online/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-12-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-12-13T00:00:00&#43;00:00" />
+<meta property="og:url" content="/post/py-feat/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-01-15T00:00:00&#43;00:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[日記]オンライン実験の難しさについて"/>
-<meta name="twitter:description" content="この記事を読んでも特にいいことはないです"/>
+<meta name="twitter:title" content="[お役立ち]Py-featで表情分析"/>
+<meta name="twitter:description" content="Py-featで表情分析しよう"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -84,8 +84,8 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [日記]オンライン実験の難しさについて
-          <div class="sub header">@ なんばいきん · Monday, Dec 13, 2021 · 2 minute read · Update at Dec 13, 2021</div>
+          [お役立ち]Py-featで表情分析
+          <div class="sub header">@ なんばいきん · Saturday, Jan 15, 2022 · 2 minute read · Update at Jan 15, 2022</div>
         </h1>
       </header>
 
@@ -95,70 +95,69 @@
 <script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script language="JavaScript">
-$(document).ready( function () {
-   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
-})
-</script>
-<p>この記事は<a href="https://adventar.org/calendars/6320">psyJSアドカレ</a>13日目の記事です。私のようなずぶの素人がオンラインで心理実験をしようとすると、いろいろな壁にぶちあたるものです。特にオンライン心理実験の壁といえばデータ保存関連です。もちろんサーバーを自前で用意するなど、最近ではいろいろと便利なものがあるので、、、、<br>
+<p>表情から感情とか表情運動の推定をお手軽にやっちゃおう！<br>
+<a href="https://py-feat.org/content/intro.html">Py-feat</a>の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br></p>
+<div id="google-colaboratoryを用いた使い方" class="section level2">
+<h2>Google colaboratoryを用いた使い方</h2>
+<p>Googleでログインして、Google drive上で分析する画像を分析対象としてのフォルダ (なければ作る) に全部つっこむ。
+<br>
+<br>
+左上の「＋　新規」ボタンから「新規」→「その他」→「Google colaboratory」を押して新しいipynbファイルを作成（名前は任意につける。最初はUntitle数字.ipynb）
+<br>
+※使ったことない人は選択肢にColaboratoryが出てこないので、<a href="https://colab.research.google.com/">https://colab.research.google.com/</a>
+からノートブックを新規作成<br>
+<br>
+ドキュメントのInstallページにlある情報を全部コピペ<br>
+<a href="https://py-feat.org/content/installation.htm">https://py-feat.org/content/installation.htm</a>
 <br><br>
-<img src="../../img/hiphop/hip.png" width=70%>
-<br>…ｱｯ！<br>
+以下のようにコードの端にある再生ボタン押す（この灰色の四角はすぐ上の「＋コード」を押したら作れる）
 <br>
 <br>
-<img src="../../img/hiphop/hiphop.jpg" width=70%>
-<br>ラッパーだ！<br>
-<br><br>
-<img src="../../img/hiphop/hiphop.jpg" width=70%>
-<br>YO。<br>
-<br><br>
-<img src="../../img/hiphop/hiphop.jpg" width=70%>
+<img src="../../img/py_f1.png" width=90%>
 <br>
-心理の実験、信念持ったらすぐさま実践<br>
-いまからやるならonline、ノー勉でやるのはノータリン<br>
-食べてろ娘のハイハイン、学べばお前がsunshine<br>
-YO, <a href="https://www.jspsych.org/7.1/">jspsych</a>、オレからしてみりゃイージーサービス<br>
-刻むぜ魂のcss、見てみりゃ画面が支離滅裂<br>
-七転八倒、ありえん改行<br>
-案ずるな同士、奥義は常時勝利まで正気<br>
-codeの世界を生き抜き(ｲｷﾇｷ！)dopeなﾗｲﾑで息抜き(ｲｷﾇｷ！)<br>
-聞いてんの？いや引いてんの？<br>
-夢半ばで散った仲間の想い、無駄にはできないevery night<br>
-<br><br><br>
-<img src="../../img/hiphop/live.jpg" width=80%>
+（ここから新しいコードを回すときには「＋コード」で新しいブロック作ってからにすると再生可能性・可読性が高まる）<br>
+以下のコードをコピペして、また再生ボタンを押す<br></p>
+<pre class="python:prepare"><code>from google.colab import drive
+drive.mount(&#39;/content/drive&#39;)</code></pre>
+<p><br>
+<img src="../../img/py_f2.png" width=90%>
 <br>
-ヴォイッヴォイッヴォイッヴォイッ<br>
-<br><br>
+上図のようにアクセス許可を聞かれるので全部おーけー。
 <br>
-<img src="../../img/hiphop/hiphop.jpg" width=70%>
 <br>
-<a href="https://www.cognition.run/">cognition</a>でお手軽セーブ、ポジショントークはお口にチャック<br>
-参加者集まる<a href="https://px.a8.net/svt/ejp?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" rel="nofollow">クラウドワークス</a>
-<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3BDLSW+6FLN3M+2OM2+TYQVM" alt="">
-、承認ボタン押すラストワルツ<br>
-一発かますぜanalysis、執筆はかどる祝祭日<br>
-若手を悩ます任期はMONDAI、そんな毎日リアルなSONZAI<br>
-世論を切り裂くおれの意見、集中投資はだれの利権？<br>
-研究結果は全部ネタ、デビュー戦ならtake care<br>
-サブミッションする君は主人公、雑誌の形式注意報<br>
-この原稿こそがquestion、聞かせて査読のジャスティスを！<br>
-<br><br>
-<br>
-<img src="../../img/hiphop/reviewer.png" width=60%>
-<br>
-…accept!!!<br>
-<br>
-<br><br>
-<img src="../../img/hiphop/live.jpg" width=70%>
-<br>
-ワーワーワーワー<br>
-<br>
+次はデータを読み込む。以下をコピペ
 <br></p>
-<div id="inspired-by" class="section level5">
-<h5>Inspired by</h5>
-<p><a href="https://www.evernote.com/shard/s692/client/snv?noteGuid=2624b5e4-3f25-1067-001d-e7a63805fb3d&amp;noteKey=703a4b57ebbbe8718d050cd2a268961a&amp;sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs692%2Fsh%2F2624b5e4-3f25-1067-001d-e7a63805fb3d%2F703a4b57ebbbe8718d050cd2a268961a&amp;title=%25E8%25A6%2596%25E5%258A%259B%25E3%2581%25AE%25E5%25A3%2581">視力の壁</a><br>
-<a href="https://wikiwiki.jp/moudameder/%E3%82%B3%E3%83%94%E3%83%9A/%E6%9C%AC%E7%89%A9%E3%81%AE%E3%83%92%E3%83%83%E3%83%97%E3%83%9B%E3%83%83%E3%83%97%E3%81%8C%E3%80%81%E3%81%93%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E3%81%AE%E3%81%A0%E3%80%82">本物のヒップホップ</a></p>
+<pre class="python:dataload"><code># data読み込み
+import glob
+ 
+files = glob.glob(&quot;/content/drive/MyDrive/(任意のフォルダ名)/*&quot;)
+print(files)</code></pre>
+<p>出力に[‘/content/drive/MyDrive/(対象フォルダ)/(対象ファイル)’, ←こういう感じのが出てきたらちゃんと読み込めてる。
+<br>
+*は「ここにあるやつ全部もってきてくれ～」ってやつ
+<br>
+<br>
+次は分析を行う画像ごとにFor文を使って何度も解析を回しています。<br>
+（ここではbmpファイルが対象となってますが、対象となる画像の保存形式によって変えてください：e.g., png）
+<br></p>
+<pre class="python:run"><code># これで回りはするはず
+# csvは画像フォルダ内に保存されます
+for image in files: 
+    detector.detect_image(image, outputFname = image.replace(&quot;.bmp&quot;, &quot;.csv&quot;))
+</code></pre>
+<p>以上です。ここまで回し切ればGoogle drive内のフォルダに解析済みデータが全部入っています。Congratulation！
+<br>
+ではでは！<br></p>
+<p><br>
+<a href="https://www.buymeacoffee.com/nsushishushi"><img src="../../img/violet-button.png" width=20%></a>
+<br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a><br>
+<a href="https://susishushi.github.io/my_blog/post/fimdb/">表情刺激のデータベース(fIMDb)</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/rsa_1/">コミュニケーションの計算論モデルをGithubで再現</a></p>
+</div>
 </div>
 </article>
     </section>
@@ -166,7 +165,9 @@ codeの世界を生き抜き(ｲｷﾇｷ！)dopeなﾗｲﾑで息抜き(ｲｷ
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+        
+          <a class="ui label" href="../../tags/%E7%A0%94%E7%A9%B6" title="研究">研究</a>
         
       
       <div
