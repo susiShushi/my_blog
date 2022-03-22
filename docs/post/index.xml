@@ -6,7 +6,16 @@
     <description>Recent content in Posts on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[日記]イギリス留学の備忘録1</title>
+      <link>/post/england1/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/england1/</guid>
+      <description>誰かに話そうと思ってたけど誰にも話すことのなかった話題の供養その１</description>
+    </item>
+    
     <item>
       <title>[お役立ち]Py-featで表情分析</title>
       <link>/post/py-feat/</link>
