@@ -1,0 +1,58 @@
+---
+title: "[お役立ち]Psychopyで表情撮影"
+date: "2022-06-03T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/image_PC.png"
+tags: ["お役立ち", "研究"]
+summary: "Psychopyで表情撮影する実験プログラムを書いたぞ！"
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>自分用に実験課題中の表情反応を撮影するためだけの記事を書くぞ！<br>
+ここでは映像を見てる時の表情反応を撮影するやつを書くぞ！<br>
+<br>
+<a href="https://www.psychopy.org/">Psychopy</a>のBuilderでまずMovieを提示するプログラムをひょひょい～と作る。<br>
+「あとは表情撮影するやつ挟むだけ」っていうのができたら、「実験をコンパイルしてPythonスクリプトを作成します」ボタンをクリックしてあっというまに実験用Pythonスクリプトができる。<br>
+<br></p>
+<div id="コード撮影に関する情報をガンガン書き込む" class="section level2">
+<h2>コード撮影に関する情報をガンガン書き込む</h2>
+<p>最初の部分で、CV2を読み込む。
+<br></p>
+<pre class="python:cv2"><code>import cv2</code></pre>
+<p><br></p>
+<p>撮影を行うためのRoutine（# —–Prepare to start Routine “hogehoge” ——あたり）で以下のようにcv2でmp4を撮影するためのコードをかきかきする。<br>
+※ここのStimはLoop指定の刺激名をとってきてるだけ。<br></p>
+<pre class="python:cv2_write"><code>writer = cv2.VideoWriter(_thisDir + os.sep + u&#39;data/%s_%s_%s&#39; % (expInfo[&#39;participant&#39;], Stim[6:9], &#39;.mp4&#39;),
+        cv2.VideoWriter_fourcc(&#39;m&#39;, &#39;p&#39;, &#39;4&#39;, &#39;v&#39;), 30, (640,480))
+capture = cv2.VideoCapture(0)
+</code></pre>
+<p><br>
+実験中断用に# check for quitのところでCaptureを解放させておく。<br></p>
+<pre class="python:quit"><code>capture.release()</code></pre>
+<p><br></p>
+<p>ほんで # refresh the screen の箇所 (win.flip()) でひたすら以下のIf文をぶん回す。<br></p>
+<pre class="powershell:win_flip"><code>    if continueRoutine:  # don&#39;t flip if this routine is over or we&#39;ll get a blank screen
+        retval, image = capture.read()
+        if retval:
+            reversed = image[:,::-1,:] # 左右反転
+            writer.write(reversed) # 動画として書き出し
+            win.flip()
+</code></pre>
+<p><br>
+最後に # ——-Ending Routine “Stim”——-のmovie.stop()の直前でcapture.release()をぶち込む。
+<br></p>
+<p><br>
+多分これでおk。バージョン変更するとまたかわるかもやけどまぁどうにかなるべや。</p>
+<p><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/grice/">グライス　理性の哲学を読んだ</a><br>
+<a href="https://susishushi.github.io/my_blog/post/poimon/">楽天とポイントインカムとおれとモンスター</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
+</div>
+</div>

@@ -1,0 +1,77 @@
+---
+title: "[お役立ち]Psychopyで表情撮影"
+date: "2022-06-03T00:00:00"
+draft: True
+
+categories: ["お役立ち"]
+cover: "/img/image_PC.png"
+tags: ["お役立ち", "研究"]
+summary: "Psychopyで表情撮影する実験プログラムを書いたぞ！"
+---
+
+自分用に実験課題中の表情反応を撮影するためだけの記事を書くぞ！<br>
+ここでは映像を見てる時の表情反応を撮影するやつを書くぞ！<br>
+<br>
+[Psychopy](https://www.psychopy.org/)のBuilderでまずMovieを提示するプログラムをひょひょい～と作る。<br>
+「あとは表情撮影するやつ挟むだけ」っていうのができたら、「実験をコンパイルしてPythonスクリプトを作成します」ボタンをクリックしてあっというまに実験用Pythonスクリプトができる。<br>
+<br>
+
+
+## コード撮影に関する情報をガンガン書き込む
+
+最初の部分で、CV2を読み込む。
+<br>
+```python:cv2
+import cv2
+```  
+<br>
+
+
+
+撮影を行うためのRoutine（# —--Prepare to start Routine “hogehoge” —---あたり）で以下のようにcv2でmp4を撮影するためのコードをかきかきする。<br>
+※ここのStimはLoop指定の刺激名をとってきてるだけ。<br>
+
+```python:cv2_write
+writer = cv2.VideoWriter(_thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], Stim[6:9], '.mp4'),
+        cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), 30, (640,480))
+capture = cv2.VideoCapture(0)
+
+```  
+<br>
+実験中断用に# check for quitのところでCaptureを解放させておく。<br>
+
+```python:quit
+capture.release()
+```  
+<br>
+
+ほんで # refresh the screen の箇所 (win.flip()) でひたすら以下のIf文をぶん回す。<br>
+
+  
+```powershell:win_flip
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        retval, image = capture.read()
+        if retval:
+            reversed = image[:,::-1,:] # 左右反転
+            writer.write(reversed) # 動画として書き出し
+            win.flip()
+
+```  
+  
+<br>
+最後に # -------Ending Routine "Stim"-------のmovie.stop()の直前でcapture.release()をぶち込む。
+<br>
+
+<br>
+多分これでおk。バージョン変更するとまたかわるかもやけどまぁどうにかなるべや。
+
+<br>
+
+
+##### 他にこんな記事があるよ
+ [グライス　理性の哲学を読んだ](https://susishushi.github.io/my_blog/post/grice/)<br>
+[楽天とポイントインカムとおれとモンスター](https://susishushi.github.io/my_blog/post/poimon/)
+<br>
+[OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)
+
+

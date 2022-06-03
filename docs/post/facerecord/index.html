@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>[読書感想文]なぜ心を読みすぎるのか | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]Psychopyで表情撮影 | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,22 +17,22 @@
 
 <meta name="generator" content="Hugo 0.84.1" />
 
-<link rel="canonical" href="../../post/kokoro/" />
+<link rel="canonical" href="../../post/facerecord/" />
 
 
-<meta property="og:title" content="[読書感想文]なぜ心を読みすぎるのか" />
-<meta property="og:description" content="「なぜ心を読みすぎるのか: みきわめと対人関係の心理学」を読みました" />
+<meta property="og:title" content="[お役立ち]Psychopyで表情撮影" />
+<meta property="og:description" content="Psychopyで表情撮影する実験プログラムを書いたぞ！" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/kokoro/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-07-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-07-12T00:00:00&#43;00:00" />
+<meta property="og:url" content="/post/facerecord/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-03T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-06-03T00:00:00&#43;00:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[読書感想文]なぜ心を読みすぎるのか"/>
-<meta name="twitter:description" content="「なぜ心を読みすぎるのか: みきわめと対人関係の心理学」を読みました"/>
+<meta name="twitter:title" content="[お役立ち]Psychopyで表情撮影"/>
+<meta name="twitter:description" content="Psychopyで表情撮影する実験プログラムを書いたぞ！"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -84,8 +84,8 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h1 class="ui large header">
-          [読書感想文]なぜ心を読みすぎるのか
-          <div class="sub header">@ なんばいきん · Sunday, Jul 12, 2020 · 3 minute read · Update at Jul 12, 2020</div>
+          [お役立ち]Psychopyで表情撮影
+          <div class="sub header">@ なんばいきん · Friday, Jun 3, 2022 · 2 minute read · Update at Jun 3, 2022</div>
         </h1>
       </header>
 
@@ -95,48 +95,48 @@
 <script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<!-- START MoshimoAffiliateEasyLink -->
-<script type="text/javascript">
-(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
-b[a]=b[a]||function(){arguments.currentScript=c.currentScript
-||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
-c.getElementById(a)||(d=c.createElement(f),d.src=g,
-d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
-(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js","msmaflink");
-msmaflink({"n":"なぜ心を読みすぎるのか: みきわめと対人関係の心理学","b":"","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/51cMJ4RGBFL.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4130133101","t":"amazon","r_v":""},"aid":{"amazon":"1842760","rakuten":"1824263","yahoo":"1845435"},"eid":"XVfBH","s":"s"});
-</script>
-<div id="msmaflink-XVfBH">
-リンク
-</div>
-<!-- MoshimoAffiliateEasyLink END -->
-<div id="なぜ心を読みすぎるのか" class="section level2">
-<h2>なぜ心を読みすぎるのか</h2>
-<p>結構前に半分くらい読んだ本、『<a target="_blank" href="//af.moshimo.com/af/c/click?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4130133101" rel="nofollow">なぜ心を読みすぎるのか: みきわめと対人関係の心理学</a><img src="//i.moshimo.com/af/i/impression?a_id=1842760&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" />』を読み直した。<br>
-初めて読んだ時も「なんて面白い本なんだ！」と思った気がするんですけど、読み直したらほぼすべての記憶を失っていたので、また「なんて面白い本なんだ！」と思った。対人認知の構造について、社会心理学における重要な諸々の知見も含めながら理論的な観点も含めて考察していく。個人の抱える認知のクセからマクロな観点まで加味した考察まで書籍内ではされていて、こういう教科書・講義資料が作れるようになりたいと思った。
+<p>自分用に実験課題中の表情反応を撮影するためだけの記事を書くぞ！<br>
+ここでは映像を見てる時の表情反応を撮影するやつを書くぞ！<br>
 <br>
-<br>
-この本を要約すると「我々は他者の行動やふるまいをもたらす内的な『心』の存在を仮定し、観察可能な情報（行動やふるまい）から他者がどういった人物であるのかを評価する。心を読むこととはなにか、ということを対人認知に関する諸研究・理論を引用しつつ考察・展開していき、なぜそれらを行うのか、ということについて議論を深めていくことで、社会の構造やマクロな集団のふるまいについても考えていく」みたいな感じかなぁ？まぁ読んでくださいまし。<br>
-共感とかコミュニケーションとかそういうのに興味がある人はぜひ目を通してみてほしい。<br>
-<br>
+<a href="https://www.psychopy.org/">Psychopy</a>のBuilderでまずMovieを提示するプログラムをひょひょい～と作る。<br>
+「あとは表情撮影するやつ挟むだけ」っていうのができたら、「実験をコンパイルしてPythonスクリプトを作成します」ボタンをクリックしてあっというまに実験用Pythonスクリプトができる。<br>
 <br></p>
-</div>
-<div id="おもしろかったところ" class="section level2">
-<h2>おもしろかったところ</h2>
-<p>本書のお話では、何度か「しろうと科学者」というメタファーが出てくる。<br>
-これはハイダーが用いたアナロジーであり、個人のナイーブな対人認知や帰属において原因の追求と行動の説明を実際に我々が日常生活でも行っており、そうした意味で「『しろうと』科学者」なのである、っていう話。<br><br>
-近年では、特に対人認知での『心の推論』という課題に関するFork Psychology（しろうと心理学）について計算論的に説明しようとする枠組みがZakiらの研究チームによって提案されている（例えば<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tops.12371">こちら</a>)。<br><br>
-この枠組みでは、観察した事象からその原因についての推論を条件付の確率として想定して、いろいろ考えちゃおう、というものである (例えば笑顔を観察した際の、そのTargetの内的状態に関する推論を条件付確率で捉えることをイメージしてみてほしい)。<br>
-実際の研究では、ギャンブルの勝敗や期待値を参加者に呈示して、特定の感情推定に寄与する影響を調べたりしている (<a href="https://www.sciencedirect.com/science/article/pii/S0010027715300196">Ong et al. 2015</a>)。わざわざその計算論モデルにとらえることで、どういう風にうれしいのか、をぼく自身まだ完全に把握しきれているわけではないが、今後の動向に注目したいな、とは考えている。<br>
-結局ぼくが知りたいのは、推論の際に用いられる表象や既存の知識の抽出でその辺の検討って難しいんですよねぇ…。<br>
-<br>
+<div id="コード撮影に関する情報をガンガン書き込む" class="section level2">
+<h2>コード撮影に関する情報をガンガン書き込む</h2>
+<p>最初の部分で、CV2を読み込む。
 <br></p>
-<div id="他にこんな本読んだ" class="section level5">
-<h5>他にこんな本読んだ</h5>
-<p><a href="https://susishushi.github.io/my_blog/post/cul_evo/">文化がヒトを進化させた</a>
+<pre class="python:cv2"><code>import cv2</code></pre>
+<p><br></p>
+<p>撮影を行うためのRoutine（# —–Prepare to start Routine “hogehoge” ——あたり）で以下のようにcv2でmp4を撮影するためのコードをかきかきする。<br>
+※ここのStimはLoop指定の刺激名をとってきてるだけ。<br></p>
+<pre class="python:cv2_write"><code>writer = cv2.VideoWriter(_thisDir + os.sep + u&#39;data/%s_%s_%s&#39; % (expInfo[&#39;participant&#39;], Stim[6:9], &#39;.mp4&#39;),
+        cv2.VideoWriter_fourcc(&#39;m&#39;, &#39;p&#39;, &#39;4&#39;, &#39;v&#39;), 30, (640,480))
+capture = cv2.VideoCapture(0)
+</code></pre>
+<p><br>
+実験中断用に# check for quitのところでCaptureを解放させておく。<br></p>
+<pre class="python:quit"><code>capture.release()</code></pre>
+<p><br></p>
+<p>ほんで # refresh the screen の箇所 (win.flip()) でひたすら以下のIf文をぶん回す。<br></p>
+<pre class="powershell:win_flip"><code>    if continueRoutine:  # don&#39;t flip if this routine is over or we&#39;ll get a blank screen
+        retval, image = capture.read()
+        if retval:
+            reversed = image[:,::-1,:] # 左右反転
+            writer.write(reversed) # 動画として書き出し
+            win.flip()
+</code></pre>
+<p><br>
+最後に # ——-Ending Routine “Stim”——-のmovie.stop()の直前でcapture.release()をぶち込む。
+<br></p>
+<p><br>
+多分これでおk。バージョン変更するとまたかわるかもやけどまぁどうにかなるべや。</p>
+<p><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/grice/">グライス　理性の哲学を読んだ</a><br>
+<a href="https://susishushi.github.io/my_blog/post/poimon/">楽天とポイントインカムとおれとモンスター</a>
 <br>
-<a href="https://susishushi.github.io/my_blog/post/factful/">FACTFULNESS</a><br>
-<a href="https://susishushi.github.io/my_blog/post/visual_revo/">ヒトの目、驚異の進化</a><br>
-<a href="https://susishushi.github.io/my_blog/post/buildingemp/">The War for Kindness</a></p>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
 </div>
 </div>
 </article>
@@ -145,9 +145,9 @@ msmaflink({"n":"なぜ心を読みすぎるのか: みきわめと対人関係�
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="../../tags/%E6%97%A5%E8%A8%98" title="日記">日記</a>
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
         
-          <a class="ui label" href="../../tags/%E8%AA%AD%E6%9B%B8%E6%84%9F%E6%83%B3%E6%96%87" title="読書感想文">読書感想文</a>
+          <a class="ui label" href="../../tags/%E7%A0%94%E7%A9%B6" title="研究">研究</a>
         
       
       <div

@@ -6,7 +6,16 @@
     <description>Recent content on とある心理学系研究者のブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[お役立ち]Psychopyで表情撮影</title>
+      <link>/post/facerecord/</link>
+      <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/facerecord/</guid>
+      <description>Psychopyで表情撮影する実験プログラムを書いたぞ！</description>
+    </item>
+    
     <item>
       <title>[読書感想文]グライス　理性の哲学</title>
       <link>/post/grice/</link>
