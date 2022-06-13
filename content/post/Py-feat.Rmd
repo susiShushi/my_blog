@@ -10,7 +10,7 @@ summary: "Py-featで表情分析しよう"
 ---
 
 表情から感情とか表情運動の推定をお手軽にやっちゃおう！<br>
-[Py-feat](https://py-feat.org/content/intro.html)の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br>
+[Py-feat](https://py-feat.org/pages/intro.html)の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br>
 
 ## Google colaboratoryを用いた使い方
 
@@ -23,7 +23,7 @@ Googleアカウントにログインして、Google drive上で分析する画�
 からノートブックを新規作成<br>
 <br>
 ドキュメントのInstallページにある情報を全部コピペ<br>
-[https://py-feat.org/content/installation.html](https://py-feat.org/content/installation.html)
+[https://py-feat.org/pages/installation.html](https://py-feat.org/pages/installation.html)
 <br><br>
 以下のようにコードの端にある再生ボタン押す（この灰色の四角はすぐ上の「＋コード」を押したら作れる）
 <br>
