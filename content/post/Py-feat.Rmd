@@ -8,7 +8,14 @@ cover: "/img/py-feat.png"
 tags: ["お役立ち", "研究"]
 summary: "Py-featで表情分析しよう"
 ---
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript">
+$(document).ready( function () {
+   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+})
+</script>
 
+(2022/6/13:リンク先更新)<br>
 表情から感情とか表情運動の推定をお手軽にやっちゃおう！<br>
 [Py-feat](https://py-feat.org/pages/intro.html)の使い方を解説する。とっても便利なツールなので、表情の研究したくなったときには是非。<br>
 
