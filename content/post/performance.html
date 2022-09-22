@@ -9,7 +9,6 @@ tags: ["お役立ち","R"]
 summary: "モデルのVIFとか決定係数とか出すパッケージ"
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="performance-package" class="section level2">
@@ -29,10 +28,10 @@ summary: "モデルのVIFとか決定係数とか出すパッケージ"
 <pre><code>## Warning: パッケージ &#39;brms&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
 <pre><code>## Warning: パッケージ &#39;Rcpp&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
 <pre class="r"><code>library(lme4)</code></pre>
-<pre><code>## Warning: パッケージ &#39;lme4&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
-<pre class="r"><code>library(performance)</code></pre>
-<pre><code>## Warning: パッケージ &#39;performance&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
-<pre class="r"><code>data(&quot;epilepsy&quot;)
+<pre><code>## Warning: パッケージ &#39;Matrix&#39; はバージョン 4.0.5 の R の下で造られました</code></pre>
+<pre class="r"><code>library(performance)
+
+data(&quot;epilepsy&quot;)
 summary(epilepsy)</code></pre>
 <pre><code>##       Age             Base        Trt        patient    visit 
 ##  Min.   :18.00   Min.   :  6.00   0:112   1      :  4   1:59  
@@ -60,9 +59,9 @@ summary(epilepsy)</code></pre>
 model_performance(fit1)</code></pre>
 <pre><code>## # Indices of model performance
 ## 
-## AIC      |      BIC | R2 (cond.) | R2 (marg.) |   ICC |  RMSE | Sigma | Score_log | Score_spherical
-## ---------------------------------------------------------------------------------------------------
-## 1357.583 | 1378.366 |      0.819 |      0.532 | 0.612 | 4.957 | 1.000 |    -2.501 |           0.055</code></pre>
+## AIC      |     AICc |      BIC | R2 (cond.) | R2 (marg.) |   ICC |  RMSE | Sigma | Score_log | Score_spherical
+## --------------------------------------------------------------------------------------------------------------
+## 1357.583 | 1357.950 | 1378.366 |      0.819 |      0.532 | 0.612 | 4.957 | 1.000 |    -2.501 |           0.055</code></pre>
 <p>R2_conditionalはmixed modelの, R2_marginalは固定要因のみのモデル指標になります！<br>
 さらにcheck_collinearity()で多重共線性を評価しましょう:</p>
 <pre class="r"><code>check_collinearity(fit1)</code></pre>
@@ -70,27 +69,14 @@ model_performance(fit1)</code></pre>
 ## 
 ## Low Correlation
 ## 
-##       Term  VIF Increased SE Tolerance
-##       zAge 1.10         1.05      0.91
-##      zBase 2.28         1.51      0.44
-##        Trt 1.02         1.01      0.98
-##  zBase:Trt 2.39         1.55      0.42</code></pre>
+##       Term  VIF    VIF 95% CI Increased SE Tolerance Tolerance 95% CI
+##       zAge 1.10 [1.02,  1.44]         1.05      0.91     [0.69, 0.98]
+##      zBase 2.28 [1.91,  2.80]         1.51      0.44     [0.36, 0.52]
+##        Trt 1.02 [1.00, 35.80]         1.01      0.98     [0.03, 1.00]
+##  zBase:Trt 2.39 [1.99,  2.95]         1.55      0.42     [0.34, 0.50]</code></pre>
 <pre class="r"><code># plot
 x &lt;- check_collinearity(fit1)
 plot(x)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;parameters&#39;:
-##   method                           from      
-##   as.double.parameters_kurtosis    datawizard
-##   as.double.parameters_skewness    datawizard
-##   as.double.parameters_smoothness  datawizard
-##   as.numeric.parameters_kurtosis   datawizard
-##   as.numeric.parameters_skewness   datawizard
-##   as.numeric.parameters_smoothness datawizard
-##   print.parameters_distribution    datawizard
-##   print.parameters_kurtosis        datawizard
-##   print.parameters_skewness        datawizard
-##   summary.parameters_kurtosis      datawizard
-##   summary.parameters_skewness      datawizard</code></pre>
 <p><img src="/post/performance_files/figure-html/poisson1-1.png" width="672" /></p>
 </div>
 <div id="bayesian用の使い方" class="section level2">

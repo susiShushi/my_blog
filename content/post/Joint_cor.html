@@ -9,7 +9,6 @@ tags: ["お役立ち","R"]
 summary: "生成モデルを用いて行動指標と主観報告指標の相関を見る。"
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
@@ -49,7 +48,7 @@ Pr(x_{i,t} = 1) = p_i = 1 - Pr(x_{i,t} = 0) = 1- q_i
 <p><span class="math inline">\(p_i\)</span>＝個人<span class="math inline">\(i\)</span>の成功確率、<span class="math inline">\(q_i\)</span>＝個人<span class="math inline">\(i\)</span>の失敗確率である。簡単！<br>
 ここでは<span class="math inline">\(p_i\)</span>を以下のように定義する。<br></p>
 <p><span class="math display">\[
-p_i = \cfrac{1}{1+exp(-\theta_i)} 
+p_i = \cfrac{1}{1+exp(-\theta_i)}
 \]</span></p>
 <p><span class="math inline">\(\theta_i\)</span>は個人<span class="math inline">\(i\)</span>の回答確率と対応する能力と解釈でき(-∞～∞)、<span class="math inline">\(\theta_i\)</span>にロジスティック関数かました<span class="math inline">\(p_i\)</span>は0～1の値をとる。<br>
 知りたいのは、観測された確率<span class="math inline">\(p_i\)</span>の背後に存在する<span class="math inline">\(\theta_i\)</span>である。<br>
@@ -120,7 +119,7 @@ RT_{i,t} ～ Normal(\delta_i, \sigma_i)
 \delta_i ～ Normal(\mu_{\delta}, \sigma_{\delta})
 \]</span>
 <span class="math display">\[
-\mu_{\delta} ～ Normal(1, 1) 
+\mu_{\delta} ～ Normal(1, 1)
 \]</span>
 <span class="math display">\[
 log(\sigma_{\delta}) ～ Normal(0, 0.5)
@@ -129,7 +128,7 @@ log(\sigma_{\delta}) ～ Normal(0, 0.5)
 log(\sigma_i) ～ Normal(\mu_{\sigma}, \sigma_{\sigma})
 \]</span>
 <span class="math display">\[
-\mu_{\sigma} ～ Normal(-1, 0.2) 
+\mu_{\sigma} ～ Normal(-1, 0.2)
 \]</span>
 <span class="math display">\[
 log(\sigma_\sigma) ～ Normal(0,0.5)
