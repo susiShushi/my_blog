@@ -40,15 +40,15 @@ $(document).ready( function () {
 ### どうはじめるか？
 Googleアカウントがあれば即アカウントを作れます。<br>
 <br>
-  <img src="/img/RH/RH_LOGIN1.png" width=70%>
-<br>
+  <img src="/img/RH/RH_LOGIN1.png" width=60%>
+<br><br>
 あからさまなボタンをくりっくすれば
-<br>
-  <img src="/img/RH/RH_LOGIN2.png" width=70%>
-<br>
+<br><br>
+  <img src="/img/RH/RH_LOGIN2.png" width=60%>
+<br><br>
 Googleアカウント選択してログインできるわけです。<br>
 
-  <img src="/img/RH/RH_ACCOUNT.png" width=70%>
+  <img src="/img/RH/RH_ACCOUNT.png" width=60%>
 
 できた。<br>
 <br>
@@ -56,12 +56,12 @@ Googleアカウント選択してログインできるわけです。<br>
 ### それじゃやるぞ
 すでに公開済みの論文（Open Accessなりプレプリントなりアクセス可能なもの：CCBY, CC0）のDOIを登録すれば自動的に追加できる。かんた～ん。<br>
 
-  <img src="/img/RH/RH_NEW.png" width=70%>
-  <br>
+  <img src="/img/RH/RH_NEW.png" width=60%>
+  <br><br>
 この「NEW」ボタンを押すとDOIを入力する画面が出てくるのでそれを入力。<br>
 適当に「Psychology」などのタグをつけたりして…<br>
-  <img src="/img/RH/RH_UPLOAD.png" width=70%>
-<br>
+  <img src="/img/RH/RH_UPLOAD.png" width=60%>
+<br><br>
 できる。<br>
 <br>
 少なくとも2022年12月段階で一本論文をアップロードすると50RSCくらいもらえました。うれし～い。<br>
@@ -74,7 +74,10 @@ Googleアカウント選択してログインできるわけです。<br>
 <br>
 
 ### 今後どうなる
-正直いうと、このRSCがなにに使えるのかまだよくわかってない。現段階では、二つの使い方があるらしく、1．研究者に「チップ」としてRSCを支払う、という方法と、2．特定コンテンツに報奨金を支払う、という方法があるみたいです。今後、どんどんRSCエコノミーをロバストなものにしていくことを考えてるみたいですよ ([参照](https://researchhub.notion.site/ResearchCoin-RSC-1e8e25b771ec4b92b9095e060c4095f6))。<br>
+正直いうと、このRSCがなにに使えるのかまだよくわかってない。現段階では、二つの使い方があるらしく、<br>
+1．研究者に「チップ」としてRSCを支払う、<br>
+2．特定コンテンツに報奨金を支払う<br>
+という二種類の方法があるみたいです。今後、どんどんRSCエコノミーをロバストなものにしていくことを考えてるみたいですよ ([参照](https://researchhub.notion.site/ResearchCoin-RSC-1e8e25b771ec4b92b9095e060c4095f6))。<br>
 <br>
 結構自分自身わかってない部分も多いですが、こういう取り組みを中から体験することで得るものがあるといいなぁと思っています。<br>
 みんなも試してみてなんかわかったら[Twitter上で僕](https://twitter.com/NSushi)に共有してもらえたらうれしいです。<br>
