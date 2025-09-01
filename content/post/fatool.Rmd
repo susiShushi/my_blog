@@ -1,0 +1,78 @@
+---
+title: "[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った"
+date: "2025-08-28T00:00:00"
+draft: True
+
+categories: ["お役立ち", "研究"]
+cover: "/img/image_pikon.png"
+tags: ["お役立ち", "研究"]
+summary: "FEAFAで自前の顔面運動推定システムを作った"
+---
+
+表情の分析をお手軽にやっちゃおう！<br>
+顔面運動をManualでアノテーションしてる表情データセットである[FEAFA](https://www.iiplab.net/feafa+/)で訓練した学習機の使い方を解説する。適当に試した感じめっちゃ便利っぽいので、日本人を対象とした表情の研究したくなったときには是非。<br>
+<br>
+利点<br>
+・Action Unitの種類がこれまでにないほど豊富（圧巻の24種類）<br>
+<br>
+欠点<br>
+・性能評価がまだ（論文にしてない）<br>
+<br>
+
+## FEAFAとは
+
+Ke Lu氏の研究チームによって開発された表情データベース。子ども、成人、高齢者127人ほどに、意図的に様々な顔面運動を行ってもらったデータベース。99356のフレームがあり、そのすべてにAUが付与された激アツなデータベース。
+
+機構としては以下の流れである。<br>
+１．顔検出＆ランドマーク取得（MediaPipe）<br>
+２．ランドマークの向きから傾きを補正して224×224にリサイズ<br>
+３．顔の正規化<br>
+４．正規化した顔にモデルをあてはめてAU推定<br>
+<br>
+こういったシステムに採用されがちなランドマークやHOGなどの特徴量は特に採用してません。
+
+<br>
+<br><br>
+
+## Dockerによる使い方
+
+ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使った顔面運動検出システムの使用方法を紹介する。
+<br><br>
+以下のコードは「顔面運動検出システムを利用可能な仮想環境を起動する」コマンドだ。「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダがコンテナ内で作成される。コマンドラインでは以下のように入力する（ここではPowerShellを想定してます）：
+<br>
+<br>
+```docker:run
+docker run --rm `
+  -v "C:\Users\ほげほげ\Documents\データが入ったフォルダ\frames:/data:ro" `
+  -v "${PWD}:/out" `
+  nambaikin/hiroshima-fatool:cpu-v3 `
+  --dir /data --recursive --out /out/preds.csv
+```  
+<br>
+<br>
+一応簡単に説明すると、data:roのコロンの左側に表情画像を入れておく。複数あれば勝手に回してくれる。${PWD}は今いるディレクトリでデータを保存してくれる（末尾のpreds.csvを保存する場所）。<br>
+<br>
+出力されるのは、瞳を閉じる動き（AU43左・右）、瞳を開く動き（AU5左・右）、眉間にしわを寄せる（AU4左・右）、眉を上げる動き（AU1+2左・右）、下あごの平行動き（AD30左・右）、笑顔の動き（AU12左・右）、口角を横に引っ張る動き（AU20左・右）、唇を中に埋める動き（AU28上・下）、下唇を外側に動かす（AD29）、上唇を上げる動き（AU10）、下唇を下げる動き（AU16）、下唇を上げる動き（AU17）、キス顔（AU18）、ふくれっ面（AD34：使うか？）、鼻にしわを作る動き（AU9）<br>
+上記２４種類の顔の出現確率・強度・生起の有無、が出力される。<br>
+<br><br>
+
+ではでは！<br><br>
+
+##### 他にこんな記事があるよ
+[『Science of Facial Expression』を翻訳しました](https://susishushi.github.io/my_blog/post/sciencefacial/)<br>
+[Py-featで表情分析](https://susishushi.github.io/my_blog/post/py-feat/)
+<br>
+[OpenFaceで表情分析](https://susishushi.github.io/my_blog/post/of/)
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"表情の科学: 歴史と論争,研究の最前線","b":"北大路書房","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/51PZjtSVBhL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4762832952","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4762832952","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E8%A1%A8%E6%83%85%E3%81%AE%E7%A7%91%E5%AD%A6%3A%20%E6%AD%B4%E5%8F%B2%E3%81%A8%E8%AB%96%E4%BA%89%2C%E7%A0%94%E7%A9%B6%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E8%A1%A8%E6%83%85%E3%81%AE%E7%A7%91%E5%AD%A6%3A%20%E6%AD%B4%E5%8F%B2%E3%81%A8%E8%AB%96%E4%BA%89%2C%E7%A0%94%E7%A9%B6%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"K1Yst","s":"s"});
+</script>
+<div id="msmaflink-K1Yst">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->

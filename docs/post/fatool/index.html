@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>研究 | とある心理学系研究者のブログ</title>
+    <title>[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った | とある心理学系研究者のブログ</title>
 
     
 
@@ -17,20 +17,22 @@
 
 <meta name="generator" content="Hugo 0.84.1" />
 
-<link rel="canonical" href="../../tags/%E7%A0%94%E7%A9%B6/" />
+<link rel="canonical" href="../../post/fatool/" />
 
 
-<meta property="og:title" content="研究" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/tags/%E7%A0%94%E7%A9%B6/" />
+<meta property="og:title" content="[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った" />
+<meta property="og:description" content="FEAFAで自前の顔面運動推定システムを作った" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/fatool/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2025-08-28T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2025-08-28T00:00:00&#43;00:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="研究"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った"/>
+<meta name="twitter:description" content="FEAFAで自前の顔面運動推定システムを作った"/>
 
 
 <link rel="stylesheet" href="../../css/github-markdown.css" />
@@ -77,7 +79,112 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h1 class="ui large header">
+          [お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った
+          <div class="sub header">@ なんばいきん · Thursday, Aug 28, 2025 · 5 minute read · Update at Aug 28, 2025</div>
+        </h1>
+      </header>
+
+      
+
+      <article style="margin-top: 2rem;">
+
+
+<p>表情の分析をお手軽にやっちゃおう！<br>
+顔面運動をManualでアノテーションしてる表情データセットである<a href="https://www.iiplab.net/feafa+/">FEAFA</a>で訓練した学習機の使い方を解説する。適当に試した感じめっちゃ便利っぽいので、日本人を対象とした表情の研究したくなったときには是非。<br>
+<br>
+利点<br>
+・Action Unitの種類がこれまでにないほど豊富（圧巻の24種類）<br>
+<br>
+欠点<br>
+・性能評価がまだ（論文にしてない）<br>
+<br></p>
+<div id="feafaとは" class="section level2">
+<h2>FEAFAとは</h2>
+<p>Ke Lu氏の研究チームによって開発された表情データベース。子ども、成人、高齢者127人ほどに、意図的に様々な顔面運動を行ってもらったデータベース。99356のフレームがあり、そのすべてにAUが付与された激アツなデータベース。</p>
+<p>機構としては以下の流れである。<br>
+１．顔検出＆ランドマーク取得（MediaPipe）<br>
+２．ランドマークの向きから傾きを補正して224×224にリサイズ<br>
+３．顔の正規化<br>
+４．正規化した顔にモデルをあてはめてAU推定<br>
+<br>
+こういったシステムに採用されがちなランドマークやHOGなどの特徴量は特に採用してません。</p>
+<p><br>
+<br><br></p>
+</div>
+<div id="dockerによる使い方" class="section level2">
+<h2>Dockerによる使い方</h2>
+<p>ここではWindows、Ubuntu、Macだろうが関係なし。OSに依存しないDockerを使った顔面運動検出システムの使用方法を紹介する。
+<br><br>
+以下のコードは「顔面運動検出システムを利用可能な仮想環境を起動する」コマンドだ。「-v [ローカルPATH]:[コンテナ内パス]」の[ローカルPATH]には表情画像・映像の入ったフォルダのパスを設定しておく。[コンテナ内パス]のフォルダ内には設定した表情画像・映像のフォルダがコンテナ内で作成される。コマンドラインでは以下のように入力する（ここではPowerShellを想定してます）：
+<br>
+<br></p>
+<pre class="docker:run"><code>docker run --rm `
+  -v &quot;C:\Users\ほげほげ\Documents\データが入ったフォルダ\frames:/data:ro&quot; `
+  -v &quot;${PWD}:/out&quot; `
+  nambaikin/hiroshima-fatool:cpu-v3 `
+  --dir /data --recursive --out /out/preds.csv</code></pre>
+<p><br>
+<br>
+一応簡単に説明すると、<a href="data:roのコロンの左側に表情画像を入れておく。複数あれば勝手に回してくれる。$%7BPWD%7Dは今いるディレクトリでデータを保存してくれる（末尾のpreds.csvを保存する場所" class="uri">data:roのコロンの左側に表情画像を入れておく。複数あれば勝手に回してくれる。${PWD}は今いるディレクトリでデータを保存してくれる（末尾のpreds.csvを保存する場所</a>）。<br>
+<br>
+出力されるのは、瞳を閉じる動き（AU43左・右）、瞳を開く動き（AU5左・右）、眉間にしわを寄せる（AU4左・右）、眉を上げる動き（AU1+2左・右）、下あごの平行動き（AD30左・右）、笑顔の動き（AU12左・右）、口角を横に引っ張る動き（AU20左・右）、唇を中に埋める動き（AU28上・下）、下唇を外側に動かす（AD29）、上唇を上げる動き（AU10）、下唇を下げる動き（AU16）、下唇を上げる動き（AU17）、キス顔（AU18）、ふくれっ面（AD34：使うか？）、鼻にしわを作る動き（AU9）<br>
+上記２４種類の顔の出現確率・強度・生起の有無、が出力される。<br>
+<br><br></p>
+<p>ではでは！<br><br></p>
+<div id="他にこんな記事があるよ" class="section level5">
+<h5>他にこんな記事があるよ</h5>
+<p><a href="https://susishushi.github.io/my_blog/post/sciencefacial/">『Science of Facial Expression』を翻訳しました</a><br>
+<a href="https://susishushi.github.io/my_blog/post/py-feat/">Py-featで表情分析</a>
+<br>
+<a href="https://susishushi.github.io/my_blog/post/of/">OpenFaceで表情分析</a></p>
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"表情の科学: 歴史と論争,研究の最前線","b":"北大路書房","t":"","d":"https:\/\/m.media-amazon.com","c_p":"","p":["\/images\/I\/51PZjtSVBhL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/4762832952","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/4762832952","a_id":1842760,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E8%A1%A8%E6%83%85%E3%81%AE%E7%A7%91%E5%AD%A6%3A%20%E6%AD%B4%E5%8F%B2%E3%81%A8%E8%AB%96%E4%BA%89%2C%E7%A0%94%E7%A9%B6%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A\/","a_id":1824263,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E8%A1%A8%E6%83%85%E3%81%AE%E7%A7%91%E5%AD%A6%3A%20%E6%AD%B4%E5%8F%B2%E3%81%A8%E8%AB%96%E4%BA%89%2C%E7%A0%94%E7%A9%B6%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A","a_id":1845435,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"K1Yst","s":"s"});
+</script>
+<div id="msmaflink-K1Yst">
+リンク
+</div>
+<!-- MoshimoAffiliateEasyLink END -->
+</div>
+</div>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="../../tags/%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1" title="お役立ち">お役立ち</a>
+        
+          <a class="ui label" href="../../tags/%E7%A0%94%E7%A9%B6" title="研究">研究</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+    
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -87,8 +194,8 @@
     </div>
 
     
-    <div class="ui medium header">なんばいきん&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">表情の研究してます。左上のアイコンで夜モードにできるけどそしたらRコードが全部見えなくなるクソみたいなブログ。それがここ。</div>
-    </div>
+    <h1 class="ui medium header">なんばいきん&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">表情の研究してます。左上のアイコンで夜モードにできるけどそしたらRコードが全部見えなくなるクソみたいなブログ。それがここ。</div>
+    </h1>
     
 
     <div class="ui horizontal list">
@@ -548,395 +655,7 @@
 </article>
 
   </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/fatool/">
-    
-      <img src="../../img/image_pikon.png" alt="[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/fatool/">[お役立ち]アジア人のAction Unitで学習した顔面運動検出システムを作った</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Thursday, Aug 28, 2025
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      FEAFAで自前の顔面運動推定システムを作った
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      5 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/sciencefacial/">
-    
-      <img src="../../img/image_pikon.png" alt="『Science of Facial Expression』を翻訳しました" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/sciencefacial/">『Science of Facial Expression』を翻訳しました</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Friday, Aug 8, 2025
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      『表情の科学（science of facial expressions）』を翻訳したよって話
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      6 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/researchhub/">
-    
-      <img src="../../img/image_pikon.png" alt="[研究]ResearchHubやってみた" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/researchhub/">[研究]ResearchHubやってみた</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Tuesday, Dec 6, 2022
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      ResearchHubはDAOだお～ｗｗ
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      3 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/flavor_2022/">
-    
-      <img src="../../img/image_pikon.png" alt="[研究]胎児はお腹の中で母親が食べたものの「味」に表情で反応するのか" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/flavor_2022/">[研究]胎児はお腹の中で母親が食べたものの「味」に表情で反応するのか</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Tuesday, Sep 27, 2022
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      妊婦が摂取した食べ物の味に胎児が表情で反応するのか？
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      11 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/facerecord/">
-    
-      <img src="../../img/image_PC.png" alt="[お役立ち]Psychopyで表情撮影" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/facerecord/">[お役立ち]Psychopyで表情撮影</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Friday, Jun 3, 2022
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      Psychopyで表情撮影する実験プログラムを書いたぞ！
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/py-feat/">
-    
-      <img src="../../img/py-feat.png" alt="[お役立ち]Py-featで表情分析" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/py-feat/">[お役立ち]Py-featで表情分析</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Saturday, Jan 15, 2022
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      Py-featで表情分析しよう
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      3 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/rsa_1/">
-    
-      <img src="../../img/image_PC.png" alt="[お役立ち]コミュニケーションの計算論モデルをGithubで再現" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/rsa_1/">[お役立ち]コミュニケーションの計算論モデルをGithubで再現</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Wednesday, Dec 8, 2021
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      理性的言語行為モデルを再現しよう！
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      8 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/jasp10/">
-    
-      <img src="../../img/image_book.png" alt="[日記]「JASPで統計を学ぼう」の翻訳を一部した" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/jasp10/">[日記]「JASPで統計を学ぼう」の翻訳を一部した</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Monday, Dec 6, 2021
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      JASPでカテゴリカルデータ分析を学ぼう！
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/fimdb/">
-    
-      <img src="../../img/image_PC.png" alt="[研究]表情刺激のデータベース(fIMDb)" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/fimdb/">[研究]表情刺激のデータベース(fIMDb)</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Thursday, Oct 21, 2021
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      fIMDb(The Face Image Meta-Database)で研究に活用する表情データベースを見つけよう
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      2 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <a class="image" href="../../post/ffps/">
-    
-      <img src="../../img/image_PC.png" alt="[お役立ち]ffmpegで静止画像を動画に変換" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../post/ffps/">[お役立ち]ffmpegで静止画像を動画に変換</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Monday, Sep 27, 2021
-        
-      </p>
-      <p class="author">@ なんばいきん</p>
-    </div>
-    <div class="description">
-      ffmpeg×PowerShellで静止画像を動画に変換しよう
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
-
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-  <div class="item">
-    <a href="../../tags/%E7%A0%94%E7%A9%B6/page/2/">
-    
-      <i class="large arrow alternate circle right inverted icon link" title="Next page"></i>
-    
-    </a>
-  </div>
-  
-</div>
-
 
         </section>
         <section class="back">
@@ -1016,7 +735,9 @@
 <script src="../../js/main.js"></script>
 <script src="../../js/theme.js"></script>
 
-     
+    
+<script src="../../js/html2canvas.min.js"></script>
+
 
     
       
